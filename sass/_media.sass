@@ -1,6 +1,11 @@
 @media (max-width: 1200px)
   .container
     max-width: 900px
+  .hero
+    &-wrapper
+      gap: 30px
+    &__background
+      padding: 58px 70px 58px 70px
   .navbar
     &-top
       &__menu
@@ -13,6 +18,14 @@
 @media (max-width: 992px)
   .container
     max-width: 740px
+  .hero
+    &-wrapper
+      flex-wrap: wrap
+      flex-direction: column
+    &__text
+      text-align: center
+    &__background
+      padding: 97px 119px 97px 119px
   .navbar
     &-top
       &__menu
@@ -25,6 +38,15 @@
 @media (max-width: 768px)
   .container
     max-width: 550px
+  .hero
+    &-wrapper
+      gap: 50px
+    &__text
+      margin-bottom: 0
+    &__info
+      margin-bottom: 25px
+    &__background
+      padding: 58px 70px 58px 70px
   .navbar
     &-top
       &__menu
@@ -38,6 +60,21 @@
   .container
     max-width: 450px
     width: 87%
+  .hero
+    &__button
+      height: 40px
+      width: 176px
+      padding-left: 12px
+      padding-right: 12px
+      padding-top: 7px
+      font-size: 16px
+      line-height: 22px
+      text-align: center
+      font-style: normal
+      font-weight: bold
+      &-buy
+        margin: 0
+        margin-right: 15px
   .navbar
     &-top
       padding-top: 18px
@@ -55,3 +92,52 @@
     padding-bottom: 4px
     &__line
       width: 22px
+
+@media (max-width: 440px)
+  .container
+    max-width: 280px
+    width: 87%
+  .navbar
+    &-top
+      padding-top: 17px
+      padding-bottom: 43px
+      &__menu
+        &-button
+          margin-top: 3px
+  .hero
+    &-wrapper
+      gap: 37px
+    &__author
+      margin-bottom: 33px
+    &__button
+      &-buy
+        margin-bottom: 13px
+        margin-right: 0
+    &__image
+      width: 143px
+      height: 214px
+    &__background
+      padding: 58px 68px 55px 68px
+    &__title
+      font-size: 32px
+      line-height: 40px
+      text-align: center
+      letter-spacing: 0.2px
+    &__subtitle
+      margin-bottom: 24px
+      font-size: 32px
+      line-height: 40px
+      text-align: center
+      letter-spacing: 0.2px
+    &__author
+      font-size: 16px
+      line-height: 24px
+      text-align: center
+      letter-spacing: 0.2px
+    &__info
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 23px
+      text-align: center
+      margin-bottom: 16px
