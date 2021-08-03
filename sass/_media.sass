@@ -15,6 +15,30 @@
         margin-left: 350px
         gap: 15px
 
+  .recommendations
+    &-wrapper
+      flex-wrap: wrap
+      align-items: center
+    &__books
+      align-items: center
+      justify-content: center
+    &__title
+      text-align: center
+    &__bottom-title
+      padding-top: 11px
+    &__top
+      &-background
+        display: flex
+        gap: 15px
+        flex-wrap: wrap
+        justify-content: space-around
+    &__best-line
+      width: 600px
+      margin-bottom: -6px
+
+  .month-top-wrapper
+    width: auto
+
 @media (max-width: 992px)
   .container
     max-width: 740px
@@ -34,6 +58,11 @@
         margin-top: 14px
         margin-left: 230px
         gap: 15px
+
+  .recommendations
+    &__books
+      row-gap: 24px
+      column-gap: 24px
 
 @media (max-width: 768px)
   .container
@@ -56,7 +85,50 @@
         margin-left: 0
         gap: 10px
 
+  .recommendations
+    &__top-card
+      max-width: 255px
+      gap: 15px
+      padding-left: 0px
+      &--1
+        padding: 29px 49px 0 0
+    &__card-title
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.2px
+
+@media (max-width: 660px)
+  .recommendations
+    &__best-line
+      width: 400px
+    &__info
+      // align-items: center
+    &__card
+      &-title
+        &--top
+          font-size: 14px
+
+    &__top-background
+      max-width: 550px
+    &__top-card
+      flex-direction: column
+      align-items: center
+      &--1
+        padding-right: 0
+      &--2
+        padding-right: 0
+      &--3
+        padding-right: 0
+      &--4
+        padding-right: 0
+
 @media (max-width: 600px)
+  .recommendations
+    &__top-background
+      max-width: 400px
+    &__info
+      &--top
+        align-items: center
   .container
     max-width: 450px
     width: 87%
@@ -94,22 +166,174 @@
       width: 22px
 
 @media (max-width: 440px)
+  .mobile-hide
+    display: none
+
+  .title-br
+    display: block
+  .recommendations
+    &__button-buy
+      padding-left: 20px
+    &__top-card
+      &--2
+        padding-top: 16px
+      &--3
+        padding-top: 16px
+      &--4
+        padding-top: 14px
+
+    &__button-buy
+      &--top
+        margin-top: -21px
+    &__info
+      align-items: baseline
+      &--top
+        gap: 10px
+    &__top-background
+      justify-content: space-between
+      padding-left: 9px
+    &__cover-image
+      width: 95px
+      height: 142px
+    &__title
+      font-style: normal
+      font-weight: bold
+      font-size: 28px
+      line-height: 36px
+      text-align: center
+      letter-spacing: 0.2px
+      margin-top: 56.56px
+      margin-left: 3px
+      &--top
+        // margin-top: -9px
+        font-family: Roboto Condensed
+        font-style: normal
+        font-weight: bold
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.2px
+        margin-top: 4px
+
+    &__top-card
+      flex-direction: row
+    &__best-line
+      width: 240px
+    &__more-recs
+      width: 280px
+      height: 48px
+    &__bottom-title
+      padding-top: 22px
+      padding-left: 15px
+      text-transform: none
+      font-family: Roboto Condensed
+      font-style: normal
+      font-weight: bold
+      font-size: 16px
+      line-height: 20px
+      text-align: center
+      letter-spacing: 0.2px
+      color: #1565D8
+      margin-bottom: 0px
+      padding-bottom: 0px
+      margin-top: 0px
+      &--rec
+        padding-top: 14px
+        padding-right: 18px
+
+    &__heart-image
+      &--main
+        margin-left: -3px
+        padding-bottom: 3px
+        margin-right: 4px
+
+    &__button-buy
+      &--main
+        width: 115px
+        margin-left: 8px
+    &__book-price
+      font-family: Roboto Condensed
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 24px
+      letter-spacing: 0.2px
+      &--main
+        font-style: normal
+        font-weight: bold
+        font-size: 16px
+        line-height: 20px
+        padding-right: 10px
+    &__book-genre
+      &--main
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 20px
+        margin-bottom: 15px
+    &__info
+      &--main
+        align-items: center
+        padding-top: 100px
+        padding-left: 12px
+    &__card-title
+      font-size: 16px
+      &--top
+        margin-top: -9px
+        margin-top: 0px
+        margin-bottom: 0px
+      &--main
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        text-align: center
+        letter-spacing: 0.2px
+        padding-top: 8px
+        margin-bottom: 12px
+    &__title
+      &--main
+        margin-top: 15.24px
+        margin-bottom: 47px
+        font-size: 28px
+        line-height: 36px
+        text-align: center
+        letter-spacing: 0.2px
+    &__book-image
+      &--main
+        position: absolute
+        bottom: 192px
+        left: 92px
+    &__book-card
+      &--main
+        position: relative
+        width: 280px
+        min-height: 312px
+        margin-bottom: 0
+    &__maincover
+      &-image
+        &--main
+          width: 95px
+          height: 137px
+
   .container
     max-width: 280px
     width: 87%
   .navbar
     &-top
       padding-top: 17px
-      padding-bottom: 43px
+      padding-bottom: 40px
       &__menu
         &-button
           margin-top: 3px
   .hero
+    padding-bottom: 0px
     &-wrapper
       gap: 37px
+    &__cover
+      margin-bottom: 39px
     &__author
       margin-bottom: 33px
     &__button
+      min-height: auto
       &-buy
         margin-bottom: 13px
         margin-right: 0
