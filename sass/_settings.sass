@@ -1,24 +1,61 @@
 *
   box-sizing: border-box
+  margin: 0
+  padding: 0
 
 body
-  color: #183B56
+  font-family: "Open Sans", sans-serif
+  color: #183b56
+  position: relative
+  scroll-behavior: smooth
+
+a
+  text-decoration: none
+  color: inherit
+
+a,
+button
+  cursor: pointer
+  outline: none
 
 .container
   max-width: 1140px
-  margin: auto
+  margin: 0 auto
+  width: 100%
+
+.invalid
+  color: #EC1F46
+  flex-basis: 100%
+
+.error
+  color: #EC1F46
+  flex-basis: 100%
+
+img
+  max-width: 100%
 
 .button
-  color: $button-color-blue
-  font-family: Open Sans
-  font-style: normal
-  font-weight: 700
-  font-size: 16px
-  line-height: 22px
-  background-color: Transparent
-  background-repeat: no-repeat
-  border: 2px solid $button-color-blue
-  overflow: hidden
-  outline: none
-  border-radius: 8px
   cursor: pointer
+
+label
+  &.invalid
+    position: absolute
+    left: 0
+    bottom: -14px
+    font-size: 11px
+    line-height: 15px
+    margin-left: 5px
+
+label
+  &.error
+    position: absolute
+    left: 0
+    bottom: -14px
+    font-size: 11px
+    line-height: 15px
+    margin-left: 5px
+
+textarea:focus,
+input:focus,
+button:focus
+  outline: none

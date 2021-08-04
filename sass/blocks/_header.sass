@@ -1,53 +1,56 @@
 .navbar
-  &-top
-    padding-top: 37px
-    padding-bottom: 98px
-    font-family: 'Open Sans', sans-serif
-    &__menu-button
-      background-color: #fff
-    &__image
-      &-link
-        align-self: center
-    &-wrapper
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 36px 0
+
+    &-menu
       display: flex
-      align-content: center
+      align-items: center
       justify-content: space-between
-    &__menu
-      display: flex
-      padding: 0
-      margin-top: 14px
-      margin-left: 524px
-      gap: 25px
+
+  &__button
+    border: 2px solid #1565d8
+    border-radius: 8px
+    text-align: center
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    padding: 11px 20px
+    min-width: 148px
+    color: #1565d8
+    background-color: #fff
+    margin-left: 65px
+
+  &-menu
+    list-style-type: none
+    margin: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    color: #183b56
+
     &__item
-      list-style: none
-      color: $menu-color
-    &__link
-      text-decoration: none
-      color: inherit
+      font-style: normal
       font-weight: 600
       font-size: 16px
       line-height: 22px
-    &__button
-      margin-bottom: 5px
-      margin-top: 1px
-      padding: 10px 27px
-      min-height: 48px
-      min-width: 148px
+      margin-right: 24px
+
+      &:last-child
+        margin: 0
+
+    &__link
+      color: inherit
 
 .menu-button
   display: none
-  width: 24px
-  height: 24px
-  border: none
-  align-items: center
-  justify-content: space-between
-  flex-direction: column
-  cursor: pointer
-  &__line
-    width: 22px
-    height: 2.2px
-    border-radius: 6px
-    background-color: $button-lines-dark
-// font-family: 'Open Sans', sans-serif;
-// font-family: 'Roboto', sans-serif;
-// font-family: 'Roboto Condensed', sans-serif;
+
+.logo
+  &__link
+    display: block
+
+    &-img
+      display: block

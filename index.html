@@ -1,256 +1,748 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Ehya</title>
-  </head>
-  <body>
-    <header class="navbar-top">
-      <div class="container">
-        <div class="navbar-top-wrapper">
-          <a class="navbar-top__image-link" href="#"
-            ><img class="logo" src="img/logo.svg" alt="[logo]"
-          /></a>
-          <ul class="navbar-top__menu">
-            <li class="navbar-top__item">
-              <a class="navbar-top__link" href="#">Рекомендации</a>
-            </li>
-            <li class="navbar-top__item">
-              <a class="navbar-top__link" href="#">Книги</a>
-            </li>
-            <li class="navbar-top__item">
-              <a class="navbar-top__link" href="#">Блог</a>
-            </li>
-          </ul>
-          <button class="button navbar-top__button">Получить</button>
-          <button class="menu-button navbar-top__menu-button">
-            <span class="menu-button__line"> </span>
-            <span class="menu-button__line"> </span>
-            <span class="menu-button__line"> </span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ehya - сайт книг</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image./x-icon" />
+  <link rel="icon" href="images/favicon.ico" type="image./x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="navbar navbar-fixed">
+    <div class="container navbar__container">
+      <div class="navbar__wrapper">
+        <div class="logo navbar__logo">
+          <a href="index.html" class="logo__link"><img src="images/logo-header.svg" alt="логотип издания"
+              class="logo__link-img" /></a>
+        </div>
+        <!-- /.logo navbar__logo -->
+
+        <div class="navbar__wrapper-menu">
+          <nav class="navbar__menu navbar__menu--mobile">
+            <ul class="navbar-menu">
+              <li class="navbar-menu__item">
+                <a href="#reference" class="navbar-menu__link">Рекомендации</a>
+              </li>
+              <li class="navbar-menu__item">
+                <a href="#theme" class="navbar-menu__link">Книги</a>
+              </li>
+              <li class="navbar-menu__item">
+                <a href="#blog" class="navbar-menu__link">Блог</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.navbar__menu-mobile -->
+
+          <button class="button navbar__button" data-toggle="modal">
+            Получить
+          </button>
+
+          <!-- кнопка меню для мобильных экранов -->
+          <button class="menu-button navbar__menu-button">
+            <img src="images/menu-button.svg" alt="картинка кнопки вызова меню" class="menu-button__line" />
           </button>
         </div>
-        <!-- /.navbar-wrapper -->
+        <!-- /.navbar__menu -->
       </div>
-      <!-- /.container -->
-    </header>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-wrapper">
-          <div class="hero__text">
-            <h2 class="hero__title">Design Theory:</h2>
-            <h2 class="hero__subtitle">
-              The Psychology&nbsp;of <br> Graphic Design Pricing
-            </h2>
-            <span class="hero__author">КНИГА МИШЕЛЯ ЯНГА</span>
-            <p class="hero__info">
-              Спустя 15 лет я управляю собственной студией, выполнив тысячи
-              проектов для крупных клиентов. Теперь я делюсь своими золотыми
-              стратегиями ценообразования на творческую работу.
-            </p>
+      <!-- /.navbar-menu -->
+    </div>
+    <!-- /.container -->
+  </header>
 
-            <button class="button hero__button hero__button-buy">КУПИТЬ СЕЙЧАС</button>
-            <button class="button hero__button hero__button-read"">ЧИТАТЬ ДЕМО</button>
+  <section class="book">
+    <div class="container book__container">
+      <div class="book-info book__info">
+        <div class="book-info__text book__text">
+          <h1 class="book__title">
+            <span class="book__title-color">Design Theory:</span>The
+            Psychology of Graphic Design Pricing
+          </h1>
+          <h3 class="book__autor">книга мишеля янга</h3>
+          <p class="book__text-about">
+            Спустя 15 лет я управляю собственной студией, выполнив тысячи
+            проектов для крупных клиентов. Теперь я делюсь своими золотыми
+            стратегиями ценообразования на творческую работу.
+          </p>
+          <div class="button-wrapper book__button-wrapper">
+            <button data-toggle="modal" class="button book__button">
+              Купить сейчас
+            </button>
+            <a href="#" class="book__read">Читать демо</a>
           </div>
-          <!-- /.hero__text -->
-          <div class="hero__cover">
-            <div class="hero__background">
-              <div>
-              <img
-                class="hero__image"
-                src="img/hero-book.jpg"
-                alt="Design Theory:The Psychology of Graphic Design Pricing"
-              />
-              </div>
-            </div>
-          </div>
-          <!-- /.hero__cover -->
+          <!-- /.book__wrapper-button -->
         </div>
-        <!-- /.hero-wrapper -->
+        <!-- /.book-info__text -->
+
+        <div class="book-image book__image">
+          <div class="book__image-cover">
+            <img class="image image-book" src="images/book-image.jpg" alt="обложка книги" />
+          </div>
+          <!-- /.book-image__cover -->
+        </div>
+        <!-- /.book-image -->
       </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.hero -->
+      <!-- /.book-info -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.book -->
 
-    <section class="recommendations">
-      <div class="container">
-        <div class="recommendations-wrapper">
-          <div class="recommendations__books">
-            <h2 class="recommendations__title recommendations__title--main ">Рекомендации</h2>
+  <section class="reference">
+    <div class="container">
+      <div class="reference-container reference__container">
+        <!-- предложения -->
+        <div class="reference-offer reference__offer">
+          <h2 class="reference-title reference__title" id="reference">
+            Рекомендации
+          </h2>
 
-            <div class="recommendations__book-card recommendations__book-card--main">
-              <div class="recommendations__book-image recommendations__book-image--main">
-              <img class="recommendations__maincover-image recommendations__maincover-image--main" src="img/recommend-books/book-1.png" alt="The World of Abstract Art">
-            </div>
-            <div class="recommendations__info recommendations__info--main">
-              <h3 class="recommendations__card-title recommendations__card-title--main">The World of Abstract Art</h3>
-              <span class="recommendations__book-genre recommendations__book-genre--main"">Art & Design</span>
-              <span class="recommendations__book-price recommendations__book-price--main">$25.00</span>
-
-              <div class="recommendations-buttons recommendations-buttons--main">
-                <button class="recommendations__button-buy recommendations__button-buy--main">Купить</button>
-                <button class="recommendations__like recommendations__like--main"><img class="recommendations__heart-image recommendations__heart-image--main" src="img/heart.svg" alt="heart"></button>   
+          <div class="reference-cards reference__cards">
+            <!-- card1 -->
+            <div class="card card-reference reference__card reference__card--mb">
+              <div class="card__image card-reference__image-wrapper">
+                <img src="images/reference-1.jpg" alt="обложка книги" class="card-reference__image" />
               </div>
-            </div>
-          </div>
-          <!-- /.recommendations__book-card -->
-          <div class="recommendations__book-card mobile-hide">
-            <div class="recommendations__book-image">
-              <img class="recommendations__maincover-image" src="img/recommend-books/book-2.png" alt="Educated : a Memoir">
-            </div>
-            <div class="recommendations__info">
-              <h3 class="recommendations__card-title">Educated : a&nbsp;Memoir</h3>
-              <span class="recommendations__book-genre">Education</span>
-              <span class="recommendations__book-price">$28.00</span>
+              <!-- /.card__image reference__image-wrapper -->
 
-              <div class="recommendations-buttons">
-                <button class="recommendations__button-buy">Купить</button>
-                <button class="recommendations__like"><img class="recommendations__heart-image" src="img/heart.svg" alt="heart"></button>   
+              <div class="card__info card-reference__info-wrapper">
+                <h3 class="card__title card-reference__title">
+                  <a href="#!" class="card-reference__title">The World of Abstract Art</a>
+                </h3>
+                <a href="#!" class="card__genre card-reference__genre">Art & Design</a>
+                <div class="card__price card-reference__price">$25.00</div>
+
+                <div class="button-wrapper card-reference__button-wrapper">
+                  <button data-toggle="modal" class="card-reference__buy">
+                    Купить
+                  </button>
+
+                  <button class="card-reference__heart">
+                    <svg class="card-reference__heart-img card-reference__heart-img--pl"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
+                    </svg>
+                  </button>
+                </div>
+                <!-- /.book__wrapper-button -->
               </div>
+              <!-- /.card__info reference__info-wrapper -->
             </div>
-          </div>
-          <!-- /.recommendations__book-card -->
-          <div class="recommendations__book-card mobile-hide">
-            <div class="recommendations__book-image">
-              <img class="recommendations__maincover-image" src="img/recommend-books/book-3.png" alt="The Blue Flowers Ray…">
-            </div>
-            <div class="recommendations__info">
-              <h3 class="recommendations__card-title">The Blue Flowers Ray…</h3>
-              <span class="recommendations__book-genre">Novel</span>
-              <span class="recommendations__book-price">$19.50</span>
+            <!-- /.reference__card -->
 
-              <div class="recommendations-buttons">
-                <button class="recommendations__button-buy">Купить</button>
-                <button class="recommendations__like"><img class="recommendations__heart-image" src="img/heart.svg" alt="heart"></button>   
+            <!-- card2 -->
+            <div class="
+                  card card-secondary card-reference
+                  reference__card reference__card--mb
+                ">
+              <div class="card__image card-reference__image-wrapper">
+                <img src="images/reference-2.jpg" alt="обложка книги" class="card-reference__image" />
               </div>
-            </div>
-          </div>
-          <!-- /.recommendations__book-card -->
-          <div class="recommendations__book-card mobile-hide">
-            <div class="recommendations__book-image">
-              <img class="recommendations__maincover-image" src="img/recommend-books/book-4.png" alt="There There : a Novel by TO">
-            </div>
-            <div class="recommendations__info">
-              <h3 class="recommendations__card-title">There There : a&nbsp;Novel by TO</h3>
-              <span class="recommendations__book-genre">Novel</span>
-              <span class="recommendations__book-price">$20.00</span>
+              <!-- /.card__image reference__image-wrapper -->
 
-              <div class="recommendations-buttons">
-                <button class="recommendations__button-buy">Купить</button>
-                <button class="recommendations__like"><img class="recommendations__heart-image" src="img/heart.svg" alt="heart"></button>   
+              <div class="card__info card-reference__info-wrapper">
+                <h3 class="card__title card-reference__title">
+                  <a href="#!" class="card-reference__title">Educated : a&nbsp;Memoir</a>
+                </h3>
+                <a href="#!" class="card__genre card-reference__genre">Education</a>
+                <div class="card__price card-reference__price">$28.00</div>
+
+                <div class="button-wrapper card-reference__button-wrapper">
+                  <button data-toggle="modal" class="card-reference__buy">
+                    Купить
+                  </button>
+
+                  <button class="card-reference__heart">
+                    <svg class="card-reference__heart-img" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
+                    </svg>
+                  </button>
+                </div>
+                <!-- /.book__wrapper-button -->
               </div>
+              <!-- /.card__info reference__info-wrapper -->
             </div>
-          </div>
-          <!-- /.recommendations__book-card -->
-          <div class="recommendations__book-card mobile-hide">
-            <div class="recommendations__book-image">
-              <img class="recommendations__maincover-image" src="img/recommend-books/book-5.png" alt="WMNDFL : The Inspiration">
-            </div>
-            <div class="recommendations__info">
-              <h3 class="recommendations__card-title">WMNDFL : The&nbsp;Inspiration</h3>
-              <span class="recommendations__book-genre">Business</span>
-              <span class="recommendations__book-price">$23.00</span>
+            <!-- /.reference__card -->
 
-              <div class="recommendations-buttons">
-                <button class="recommendations__button-buy">Купить</button>
-                <button class="recommendations__like"><img class="recommendations__heart-image" src="img/heart.svg" alt="heart"></button>   
+            <!-- card3 -->
+            <div class="
+                  card card-secondary card-reference
+                  reference__card reference__card--mb
+                ">
+              <div class="card__image card-reference__image-wrapper">
+                <img src="images/reference-3.jpg" alt="обложка книги" class="card-reference__image" />
               </div>
-            </div>
-          </div>
-          <!-- /.recommendations__book-card -->
-          <div class="recommendations__book-card mobile-hide">
-            <div class="recommendations__book-image">
-              <img class="recommendations__maincover-image" src="img/recommend-books/book-6.png" alt="Making Things Happen">
-            </div>
-            <div class="recommendations__info">
-              <h3 class="recommendations__card-title">Making Things&nbsp;Happen</h3>
-              <span class="recommendations__book-genre">Motivation</span>
-              <span class="recommendations__book-price">$23.00</span>
+              <!-- /.card__image reference__image-wrapper -->
 
-              <div class="recommendations-buttons">
-                <button class="recommendations__button-buy">Купить</button>
-                <button class="recommendations__like"><img class="recommendations__heart-image" src="img/heart.svg" alt="heart"></button>   
+              <div class="card__info card-reference__info-wrapper">
+                <h3 class="card__title card-reference__title">
+                  <a class="card-reference__title" href="#!">The Blue Flowers Ray…</a>
+                </h3>
+                <a href="#!" class="card__genre card-reference__genre">Novel</a>
+                <div class="card__price card-reference__price">$19.50</div>
+
+                <div class="button-wrapper card-reference__button-wrapper">
+                  <button data-toggle="modal" class="card-reference__buy">
+                    Купить
+                  </button>
+
+                  <button class="card-reference__heart">
+                    <svg class="card-reference__heart-img" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
+                    </svg>
+                  </button>
+                </div>
+                <!-- /.book__wrapper-button -->
               </div>
+              <!-- /.card__info reference__info-wrapper -->
             </div>
-          </div>
-          <!-- /.recommendations__book-card -->
-          <div class="recommendations__more-recs">
-            <h3 class="recommendations__bottom-title recommendations__bottom-title--rec">Больше рекомендаций</h3>
+            <!-- /.reference__card -->
 
+            <!-- card4 -->
+            <div class="
+                  card card-last card-reference
+                  reference__card reference__card--mb
+                ">
+              <div class="card__image card-reference__image-wrapper">
+                <img src="images/reference-4.jpg" alt="обложка книги" class="card-reference__image" />
+              </div>
+              <!-- /.card__image reference__image-wrapper -->
+
+              <div class="card__info card-reference__info-wrapper">
+                <h3 class="card__title card-reference__title">
+                  <a class="card-reference__title" href="#!">There There : a&nbsp;Novel by TO</a>
+                </h3>
+                <a href="#!" class="card__genre card-reference__genre">Novel</a>
+                <div class="card__price card-reference__price">$20.00</div>
+
+                <div class="button-wrapper card-reference__button-wrapper">
+                  <button data-toggle="modal" class="card-reference__buy">
+                    Купить
+                  </button>
+
+                  <button class="card-reference__heart ">
+                    <svg class="card-reference__heart-img " xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
+                    </svg>
+                  </button>
+                </div>
+                <!-- /.book__wrapper-button -->
+              </div>
+              <!-- /.card__info reference__info-wrapper -->
+            </div>
+            <!-- /.reference__card -->
+
+            <!-- card5 -->
+            <div class="card card-last card-reference reference__card">
+              <div class="card__image card-reference__image-wrapper">
+                <img src="images/reference-5.jpg" alt="обложка книги" class="card-reference__image" />
+              </div>
+              <!-- /.card__image reference__image-wrapper -->
+
+              <div class="card__info card-reference__info-wrapper">
+                <h3 class="card__title card-reference__title">
+                  <a class="card-reference__title" href="#!">WMNDFL : The&nbsp;Inspiration</a>
+                </h3>
+                <a href="#!" class="card__genre card-reference__genre">Business</a>
+                <div class="card__price card-reference__price">$23.00</div>
+
+                <div class="button-wrapper card-reference__button-wrapper">
+                  <button data-toggle="modal" class="card-reference__buy">
+                    Купить
+                  </button>
+
+                  <button class="card-reference__heart">
+                    <svg class="card-reference__heart-img" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
+                    </svg>
+                  </button>
+                </div>
+                <!-- /.book__wrapper-button -->
+              </div>
+              <!-- /.card__info reference__info-wrapper -->
+            </div>
+            <!-- /.reference__card -->
+
+            <!-- card6 -->
+            <div class="card card-last card-reference reference__card">
+              <div class="card__image card-reference__image-wrapper">
+                <img src="images/reference-6.jpg" alt="обложка книги" class="card-reference__image" />
+              </div>
+              <!-- /.card__image reference__image-wrapper -->
+
+              <div class="card__info card-reference__info-wrapper">
+                <h3 class="card__title card-reference__title">
+                  <a href="#!" class="card-reference__title">Making Things&nbsp;Happen</a>
+                </h3>
+                <a href="#!" class="card__genre card-reference__genre">Motivation</a>
+                <div class="card__price card-reference__price">$23.00</div>
+
+                <div class="button-wrapper card-reference__button-wrapper">
+                  <button data-toggle="modal" class="card-reference__buy">
+                    Купить
+                  </button>
+
+                  <button class="card-reference__heart">
+                    <svg class="card-reference__heart-img" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
+                    </svg>
+                  </button>
+                </div>
+                <!-- /.book__wrapper-button -->
+              </div>
+              <!-- /.card__info reference__info-wrapper -->
+            </div>
+            <!-- /.reference__card -->
+
+            <a href="#!" class="link reference__link">Больше рекомендаций</a>
           </div>
+          <!-- /.reference-cards reference__cards -->
         </div>
-        <!-- /.recommendations-books -->
+        <!-- /.reference-offer reference__offer -->
 
-        <div class="recommendations__month-top">
-          <div class="month-top-wrapper">
-            <h2 class="recommendations__title">Топ Месяца</h2>
-            <div class="recommendations__top-background">
+        <!-- топ -->
+        <div class="reference-top reference__top">
+          <h2 class="reference-title reference__title reference__title-second">
+            Топ Месяца
+          </h2>
 
-              <div class="recommendations__top-card recommendations__top-card--1">
-                <div class="recommendations__book-image">
-                  <img class="recommendations__cover-image" src="img/recommend-books/top-book-1.png" alt="Sprint : Solve, Test in 5 Days">
+          <div class="reference-list reference__list">
+            <ul class="reference__list-top">
+              <!-- top1 -->
+              <li class="reference__list-item">
+                <div class="
+                      item item-reference
+                      reference__item reference__item--mb
+                    ">
+                  <div class="item__image item-reference__image-wrapper">
+                    <img src="images/top-1.jpg" alt="обложка книги" class="item-reference__image" />
+                  </div>
+                  <!-- /.item__image reference__image-wrapper -->
+
+                  <div class="item__info item-reference__info-wrapper">
+                    <h3 class="item__title item-reference__title">
+                      <a class="item-reference__title" href="#!">Sprint : Solve, Test in 5 Days</a>
+                    </h3>
+                    <div class="item__price item-reference__price">
+                      $23.00
+                    </div>
+
+                    <div class="button-wrapper item-reference__button-wrapper">
+                      <button data-toggle="modal" class="item-reference__buy">
+                        Купить
+                      </button>
+                    </div>
+                    <!-- /.book__wrapper-button -->
+                  </div>
+                  <!-- /.item__info reference__info-wrapper -->
                 </div>
-                <div class="recommendations__info recommendations__info--top">
-                  <h3 class="recommendations__card-title recommendations__card-title--top">Sprint : Solve, <span class="title-br">Test in 5 Days</span> </h3>
-                  <span class="recommendations__book-price">$23.00</span>
-                  <button class="recommendations__button-buy recommendations__button-buy--top">Купить</button>
+                <!-- /.reference__item -->
+              </li>
+
+              <!-- top2 -->
+              <li class="reference__list-item">
+                <div class="
+                      item item-reference
+                      reference__item reference__item--mb
+                    ">
+                  <div class="item__image item-reference__image-wrapper">
+                    <img src="images/top-2.jpg" alt="обложка книги" class="item-reference__image" />
+                  </div>
+                  <!-- /.item__image reference__image-wrapper -->
+
+                  <div class="item__info item-reference__info-wrapper">
+                    <h3 class="item__title item-reference__title">
+                      <a class="item-reference__title" href="#!">Hacking Growth Break Problem</a>
+                    </h3>
+                    <div class="item__price item-reference__price">
+                      $23.00
+                    </div>
+
+                    <div class="button-wrapper item-reference__button-wrapper">
+                      <button data-toggle="modal" class="item-reference__buy">
+                        Купить
+                      </button>
+                    </div>
+                    <!-- /.book__wrapper-button -->
+                  </div>
+                  <!-- /.item__info reference__info-wrapper -->
                 </div>
-              </div>
-              <!-- /.recommendations__top-card -->
-              <div class="recommendations__top-card recommendations__top-card--2">
-                <div class="recommendations__book-image">
-                  <img class="recommendations__cover-image" src="img/recommend-books/top-book-2.png" alt="Hacking Growth Break Problem">
+                <!-- /.reference__item -->
+              </li>
+
+              <!-- top3 -->
+              <li class="reference__list-item">
+                <div class="
+                      item item-reference
+                      reference__item reference__item--mb
+                    ">
+                  <div class="item__image item-reference__image-wrapper">
+                    <img src="images/top-3.jpg" alt="обложка книги" class="item-reference__image" />
+                  </div>
+                  <!-- /.item__image reference__image-wrapper -->
+
+                  <div class="item__info item-reference__info-wrapper">
+                    <h3 class="item__title item-reference__title">
+                      <a class="item-reference__title" href="#!">Very Nice&nbsp;a Novel&nbsp;by Mercy</a>
+                    </h3>
+                    <div class="item__price item-reference__price">
+                      $23.00
+                    </div>
+
+                    <div class="button-wrapper item-reference__button-wrapper">
+                      <button data-toggle="modal" class="item-reference__buy">
+                        Купить
+                      </button>
+                    </div>
+                    <!-- /.book__wrapper-button -->
+                  </div>
+                  <!-- /.item__info reference__info-wrapper -->
                 </div>
-                <div class="recommendations__info recommendations__info--top">
-                  <h3 class="recommendations__card-title recommendations__card-title--top">Hacking&nbsp;Growth Break Problem</h3>
-                  <span class="recommendations__book-price">$23.00</span>
-                  <button class="recommendations__button-buy recommendations__button-buy--top">Купить</button>
+                <!-- /.reference__item -->
+              </li>
+
+              <!-- top4 -->
+              <li class="reference__list-item">
+                <div class="item item-reference reference__item">
+                  <div class="item__image item-reference__image-wrapper">
+                    <img src="images/top-4.jpg" alt="обложка книги" class="item-reference__image" />
+                  </div>
+                  <!-- /.item__image reference__image-wrapper -->
+
+                  <div class="item__info item-reference__info-wrapper">
+                    <h3 class="item__title item-reference__title">
+                      <a href="#!" class="item-reference__title">Hooked : How to Build Products</a>
+                    </h3>
+                    <div class="item__price item-reference__price">
+                      $23.00
+                    </div>
+
+                    <div class="button-wrapper item-reference__button-wrapper">
+                      <button data-toggle="modal" class="item-reference__buy">
+                        Купить
+                      </button>
+                    </div>
+                    <!-- /.book__wrapper-button -->
+                  </div>
+                  <!-- /.item__info reference__info-wrapper -->
                 </div>
-              </div>
-              <!-- /.recommendations__top-card -->
-              <div class="recommendations__top-card recommendations__top-card--3">
-                <div class="recommendations__book-image">
-                  <img class="recommendations__cover-image" src="img/recommend-books/top-book-3.png" alt="Very Nice a Novel by Mercy">
-                </div>
-                <div class="recommendations__info recommendations__info--top">
-                  <h3 class="recommendations__card-title recommendations__card-title--top">Very Nice a Novel&nbsp;by&nbsp;Mercy</h3>
-                  <span class="recommendations__book-price">$23.00</span>
-                  <button class="recommendations__button-buy recommendations__button-buy--top">Купить</button>
-                </div>
-              </div>
-              <!-- /.recommendations__top-card -->
-              <div class="recommendations__top-card recommendations__top-card--4">
-                <div class="recommendations__book-image">
-                  <img class="recommendations__cover-image" src="img/recommend-books/top-book-4.png" alt="Hooked : How to Build Products">
-                </div>
-                <div class="recommendations__info recommendations__info--top">
-                  <h3 class="recommendations__card-title recommendations__card-title--top">Hooked&nbsp;:&nbsp;How&nbsp;to Build Products</h3>
-                  <span class="recommendations__book-price">$23.00</span>
-                  <button class="recommendations__button-buy recommendations__button-buy--top">Купить</button>
-                </div>
-              </div>
-              <!-- /.recommendations__top-card -->
-              <div class="recommendations__best-month">
-                <hr class="recommendations__best-line">
-                <h3 class="recommendations__bottom-title">ЛУЧШИЕ КНИГИ</h3>
-              </div>
-            </div>
-            <!-- /.recommendations__top-background -->
+                <!-- /.reference__item -->
+              </li>
+            </ul>
+            <!-- /.reference__list-top -->
+
+            <a href="#" class="link reference__link-top">Лучшие книги</a>
           </div>
-          <!-- /.recommendations__top-wrapper -->
+          <!-- /.reference-list reference__list -->
         </div>
-        <!-- /.recommendations-wrapper -->
+        <!-- /.reference-top reference__top -->
       </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.recommendations -->
-  </body>
+      <!-- /.reference-container -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.reference -->
+
+  <section class="theme" id="theme">
+    <div class="container theme__container">
+      <div class="slider-theme theme__slider">
+        <div class="swiper-container slider-theme__container">
+          <div class="swiper-wrapper slider-theme__wrapper">
+            <!-- Slid-1 -->
+            <div class="swiper-slide slide-theme">
+              <div class="slide-block">
+                <!-- ведущий -->
+                <div class="slide slide-theme__block">
+                  <div class="slide-block__image">
+                    <img src="images/slide-icon-1.svg" alt class="slide-img" />
+                  </div>
+                  <div class="slide-block__text">
+                    <h3 class="slide-block__title">Бизнес & Финансы</h3>
+                    <div class="slide-block__genre">
+                      Книги про мир бизнеса
+                    </div>
+                  </div>
+                  <!-- /.slide-block__text -->
+                </div>
+                <!-- /.slide-theme__block -->
+              </div>
+              <!-- /.slide-block -->
+            </div>
+
+            <div class="swiper-slide slide-theme">
+              <div class="slide-block">
+                <div class="slide-theme__block slide">
+                  <div class="slide-block__image">
+                    <img src="images/slide-icon-2.svg" alt class="slide-img" />
+                  </div>
+                  <div class="slide-block__text">
+                    <h3 class="slide-block__title">Самомотивация</h3>
+                    <div class="slide-block__genre slide-block-motivation">Книги о мотивации</div>
+                  </div>
+                  <!-- /.slide-block__text -->
+                </div>
+                <!-- /.slide-theme__block -->
+              </div>
+              <!-- /.slide-block -->
+            </div>
+
+            <div class="swiper-slide slide-theme">
+              <div class="slide-block">
+                <!-- ведущий -->
+                <div class="slide-theme__block slide">
+                  <div class="slide-block__image">
+                    <img src="images/slide-icon-3.svg" alt class="slide-img" />
+                  </div>
+                  <div class="slide-block__text">
+                    <h3 class="slide-block__title">Романы Теленовеллы</h3>
+                    <div class="slide-block__genre">
+                      Книги с крутыми историями
+                    </div>
+                  </div>
+                  <!-- /.slide-block__text -->
+                </div>
+                <!-- /.slide-theme__block -->
+              </div>
+              <!-- /.slide-block -->
+            </div>
+
+            <div class="swiper-slide slide-theme">
+              <div class="slide-block">
+                <!-- ведущий -->
+                <div class="slide-theme__block slide">
+                  <div class="slide-block__image">
+                    <img src="images/slide-icon-4.svg" alt class="slide-img" />
+                  </div>
+                  <div class="slide-block__text">
+                    <h3 class="slide-block__title">Навыки будущего</h3>
+                    <div class="slide-block__genre">
+                      Книги для самоподготовки
+                    </div>
+                  </div>
+                  <!-- /.slide-block__text -->
+                </div>
+                <!-- /.slide-theme__block -->
+              </div>
+              <!-- /.slide-block -->
+            </div>
+
+            <div class="swiper-slide slide-theme">
+              <div class="slide-block">
+                <div class="slide-theme__block slide">
+                  <div class="slide-block__image">
+                    <img src="images/slide-icon-4.svg" alt class="slide-img" />
+                  </div>
+                  <div class="slide-block__text">
+                    <h3 class="slide-block__title">Романы теленовеллы</h3>
+                    <div class="slide-block__genre">Книги с крутыми историями</div>
+                  </div>
+                  <!-- /.slide-block__text -->
+                </div>
+                <!-- /.slide-theme__block -->
+              </div>
+              <!-- /.slide-block -->
+            </div>
+            <!-- /.Slid-5 -->
+
+            <!-- Slid-6oops -->
+            <div class="swiper-slide slide-theme">
+              <div class="slide-block">
+                <!-- ведущий -->
+                <div class="slide-theme__block slide">
+                  <div class="slide-block__image">
+                    <img src="images/slide-icon-4.svg" alt class="slide-img" />
+                  </div>
+                  <div class="slide-block__text">
+                    <h3 class="slide-block__title">Навыки <br> будущего</h3>
+                    <div class="slide-block__genre">
+                      Книги для самоподготовки
+                    </div>
+                  </div>
+                  <!-- /.slide-block__text -->
+                </div>
+                <!-- /.slide-theme__block -->
+              </div>
+              <!-- /.slide-block -->
+            </div>
+            <!-- /.Slid-4 -->
+
+            <!-- Slid-5oops -->
+            <div class="swiper-slide slide-theme">
+              <div class="slide-block">
+                <!-- ведущий -->
+                <div class="slide-theme__block slide">
+                  <div class="slide-block__image">
+                    <img src="images/slide-icon-4.svg" alt class="slide-img" />
+                  </div>
+                  <div class="slide-block__text">
+                    <h3 class="slide-block__title">Ставь успешным</h3>
+                    <div class="slide-block__genre">Успешная литература</div>
+                  </div>
+                  <!-- /.slide-block__text -->
+                </div>
+                <!-- /.slide-theme__block -->
+              </div>
+              <!-- /.slide-block -->
+            </div>
+            <!-- /.Slid-5 -->
+
+            <!-- Slid-5oops -->
+            <div class="swiper-slide slide-theme">
+              <div class="slide-block">
+                <!-- ведущий -->
+                <div class="slide-theme__block slide">
+                  <div class="slide-block__image">
+                    <img src="images/slide-icon-4.svg" alt class="slide-img" />
+                  </div>
+                  <div class="slide-block__text">
+                    <h3 class="slide-block__title">Наука</h3>
+                    <div class="slide-block__genre">Научная литература</div>
+                  </div>
+                  <!-- /.slide-block__text -->
+                </div>
+                <!-- /.slide-theme__block -->
+              </div>
+              <!-- /.slide-block -->
+            </div>
+            <!-- /.Slid-5 -->
+          </div>
+          <!-- /.swiper-wrapper -->
+        </div>
+        <!-- /.swiper-container -->
+
+        <!-- If we need navigation buttons -->
+        <button class="slide-button slide-button--next">
+          <img src="images/slide-theme-next.svg" alt="стрелка вправо" class="slide-button__img" />
+        </button>
+
+        <button class="slide-button slide-button--prev">
+          <img src="images/slide-theme-prev.svg" alt="стрелка влево" class="slide-button__img" />
+        </button>
+      </div>
+      <!-- /.theme__slider -->
+    </div>
+    <!-- /.container theme-container -->
+  </section>
+  <!-- /.theme -->
+  <section class="unedited">
+    <div class="container unedited__container">
+      <div class="unedited__wrapper-top">
+        <h2 class="unedited-title unedited__title">Неизданные книги</h2>
+
+        <div class="unedited__wrapper-slide">
+          <!-- кнопка вперед -->
+          <div class="unedited__wrapper-button">
+            <button class="unedited__button unedited__button--prev">
+              <svg class="svg-unedited" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.317 12.938c.312-.313.281-.782 0-1.094L4.536 8.25h9a.74.74 0 0 0 .75-.75v-1a.76.76 0 0 0-.75-.75h-9l3.781-3.563c.281-.312.312-.78 0-1.093L7.629.406a.774.774 0 0 0-1.062 0L.504 6.5a.684.684 0 0 0 0 1.031l6.063 6.094c.281.281.75.281 1.062 0l.688-.688z" />
+              </svg></button><!-- /.unedited__button -->
+          </div>
+          <!-- /.unedited__button-wrapper -->
+
+          <div class="unedited__wrapper-button">
+            <button class="unedited__button unedited__button--next">
+              <svg class="svg-unedited" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.223 1.094c-.312.312-.281.781 0 1.093l3.782 3.563h-8.97a.74.74 0 0 0-.75.75v1c0 .438.313.75.75.75h8.97l-3.782 3.594a.814.814 0 0 0 0 1.094l.688.687c.312.281.781.281 1.062 0l6.094-6.094c.281-.281.281-.75 0-1.062L7.973.406c-.281-.281-.75-.281-1.062 0l-.688.688z" />
+              </svg></button><!-- /.unedited__button -->
+          </div>
+          <!-- /.unedited__button-wrapper -->
+        </div>
+        <!-- /.unedited__wrapper-button -->
+      </div>
+      <!-- /.unedited__wrapper-top -->
+
+      <div class="slider-unedited unedited__slider">
+        <div class="swiper-container slider-unedited__container">
+          <div class="swiper-wrapper slider-unedited__wrapper">
+            <!-- Slid-1 -->
+            <div class="swiper-slide slide-unedited">
+              <div class="slide-wrapp slide-unedited__wrapp">
+                <img src="images/unedited-1.jpg" alt class="slide-unedited__img" />
+              </div>
+              <!-- /.slide-theme__wrapp slide-wrapp -->
+            </div>
+
+            <div class="swiper-slide slide-unedited">
+              <div class="slide-wrapp slide-unedited__wrapp">
+                <img src="images/unedited-2.jpg" alt class="slide-unedited__img" />
+              </div>
+              <!-- /.slide-theme__wrapp slide-wrapp -->
+            </div>
+
+            <div class="swiper-slide slide-unedited">
+              <div class="slide-wrapp slide-unedited__wrapp">
+                <img src="images/unedited-3.jpg" alt class="slide-unedited__img" />
+              </div>
+              <!-- /.slide-theme__wrapp slide-wrapp -->
+            </div>
+
+            <div class="swiper-slide slide-unedited">
+              <div class="slide-wrapp slide-unedited__wrapp">
+                <img src="images/unedited-4.jpg" alt class="slide-unedited__img" />
+              </div>
+              <!-- /.slide-theme__wrapp slide-wrapp -->
+            </div>
+
+            <div class="swiper-slide slide-unedited">
+              <div class="slide-wrapp slide-unedited__wrapp">
+                <img src="images/unedited-5.jpg" alt class="slide-unedited__img" />
+              </div>
+              <!-- /.slide-theme__wrapp slide-wrapp -->
+            </div>
+
+            <div class="swiper-slide slide-unedited">
+              <div class="slide-wrapp slide-unedited__wrapp">
+                <img src="images/unedited-3.jpg" alt class="slide-unedited__img" />
+              </div>
+              <!-- /.slide-theme__wrapp slide-wrapp -->
+            </div>
+
+            <div class="swiper-slide slide-unedited">
+              <div class="slide-wrapp slide-unedited__wrapp">
+                <img src="images/unedited-4.jpg" alt class="slide-unedited__img slide__scale" />
+              </div>
+              <!-- /.slide-theme__wrapp slide-wrapp -->
+            </div>
+
+            <div class="swiper-slide slide-unedited">
+              <div class="slide-wrapp slide-unedited__wrapp">
+                <img src="images/unedited-5.jpg" alt class="slide-unedited__img" />
+              </div>
+              <!-- /.slide-theme__wrapp slide-wrapp -->
+            </div>
+            <!-- /.Slid-5 -->
+          </div>
+          <!-- /.swiper-wrapper -->
+        </div>
+        <!-- /.swiper-container -->
+      </div>
+      <!-- /.slider-unedited -->
+    </div>
+    <!-- /.container unedited-container -->
+  </section>
+  <!-- /.unedited -->
+
+  <script defer src="js/jquery-3.6.0.min.js"></script>
+  <script defer src="js/swiper-bundle.min.js"></script>
+
+  <script defer src="js/main.js"></script>
+</body>
+
 </html>

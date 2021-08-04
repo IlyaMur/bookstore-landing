@@ -1,0 +1,92 @@
+.footer
+  &__container
+    padding-bottom: 20px
+
+  &__grid
+    display: grid
+    grid-template-rows: minmax(280px, min-content) minmax(110px, min-content)
+    grid-template-columns: 280px repeat(3, 183px) 263px
+    grid-gap: 12px
+
+  &__copyright
+    grid-column: 1/6
+    text-align: center
+    margin-top: 60px
+
+  &__title
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 25px
+    color: #183b56
+    margin-bottom: 31px
+    margin-top: 0
+    text-align: left
+
+  &__list
+    list-style-type: none
+    padding-left: 0
+
+  &__item
+    margin-bottom: 24px
+
+  &__link
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 22px
+    color: #183b56
+    text-decoration: none
+
+.create
+  &__logo
+    margin-bottom: 24px
+    display: inline-block
+
+  &__text
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 28px
+    color: #5a7184
+    margin-bottom: 30px
+    width: 260px
+
+.social-network
+  display: flex
+  align-items: center
+
+  &__link
+    margin-right: 7px
+    display: inline-block
+    width: 41px
+    height: 42px
+
+    &:last-child
+      margin-right: 0
+
+.copyright
+  &__text
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    text-align: center
+    margin-top: 20px
+    color: $primary
+
+  &__like
+    display: inline-block
+    width: 56px
+    height: 56px
+
+.to-top
+  position: fixed
+  bottom: 113px
+  right: 50px
+  border-radius: 50%
+  width: 54px
+  height: 54px
+
+  &--fixed
+    display: inline-block
