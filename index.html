@@ -15,6 +15,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@500&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
 </head>
 
 <body>
@@ -737,9 +738,132 @@
   </section>
   <!-- /.unedited -->
 
-  <script defer src="js/jquery-3.6.0.min.js"></script>
-  <script defer src="js/swiper-bundle.min.js"></script>
 
+  <section class="video">
+    <div class="container video__container">
+      <div class="video-text video__text">
+        <h2 class="video__title">История Автора</h2>
+        <p class="video__description">
+          Это раздел авторского рассказа. Каждую неделю мы стараемся
+          рассказать вам историю писателя. Расскажем всем о&nbsp;закулисье их
+          книг.
+        </p>
+      </div>
+
+      <div class="video-main">
+        <div class="video video-main__wrapp" id="player">
+          <img src="images/video-1.jpg" alt class="video__back-first" />
+          <img src="images/play-main-icon.svg" alt="play" class="video__play-big video__img-cap" />
+          <img src="images/Bitmap.png" alt class="video__back-bitmap" />
+          <img src="images/play-main-icon.svg" alt="play" class="video__play-big video__img-cap" />
+        </div>
+        <!-- /.video-main__wrapp -->
+      </div>
+      <!-- /.video-main -->
+
+      <div class="video__play">
+        <div class="video-row">
+          <div class="video-row__wrapp video-row__wrapp--bg2">
+            <a class="video-row__wrapp video-row__wrapp--bg2" data-fancybox
+              href="https://www.youtube.com/watch?v=Boc7FcqyZFk">
+              <img src="images/video-2.jpg" alt class="video__back-second" />
+              <img src="images/play-row-icon.svg" alt="картинка видео-заглушка"
+                class="video__img-cap video__play-small" />
+            </a>
+          </div>
+          <!-- /.video-main__wrapp -->
+
+          <div class="video-row__info">
+            <div class="video-row__text">
+              <h3 class="video-row__title">
+                <a class="video-row__title" href="#!">Emelda Scandroot</a>
+              </h3>
+              <div class="video-row__description">
+                <a href="#!" class="video-row__description">Author of Books Tittle</a>
+              </div>
+            </div>
+            <!-- /.video-row__text -->
+
+            <button class="video-row__icon-wrapp">
+              <img src="images/flag.svg" alt="иконка флаг" class="video-row__icon" />
+            </button>
+          </div>
+          <!-- /.video-row__info -->
+        </div>
+        <!-- /.video-row -->
+
+        <div class="video-row">
+          <div class="video-row__wrapp video-row__wrapp--bg3">
+            <a class="video-row__wrapp video-row__wrapp--bg2" data-fancybox
+              href="https://www.youtube.com/watch?v=AxPaDbSqiRU">
+              <img src="images/video-3.jpg" alt class="video__back-second" />
+              <img src="images/play-row-icon.svg" alt="видео-заглушка" class="video__img-cap video__play-small" />
+            </a>
+          </div>
+          <!-- /.video-main__wrapp -->
+
+          <div class="video-row__info">
+            <div class="video-row__text">
+              <h3 class="video-row__title">
+                <a href="#!" class="video-row__title">Mar Rueda</a>
+              </h3>
+              <div class="video-row__description">
+                <a href="#!">Author of Books Tittle</a>
+              </div>
+            </div>
+            <!-- /.video-row__text -->
+
+            <button class="video-row__icon-wrapp">
+              <img src="images/flag.svg" alt="иконка флаг" class="video-row__icon" />
+            </button>
+          </div>
+          <!-- /.video-row__info -->
+        </div>
+        <!-- /.video-row -->
+
+        <div class="video-row video-row--last">
+          <div class="video-row__wrapp video-row__wrapp--bg4">
+            <a class="video-row__wrapp video-row__wrapp--bg2" data-fancybox
+              href="https://www.youtube.com/watch?v=e9DrCjnItI0">
+              <img src="images/video-4.jpg" alt class="video__back-second" />
+              <img src="images/play-row-icon.svg" alt="картинка видео-заглушка"
+                class="video__img-cap video__play-small" />
+            </a>
+          </div>
+          <!-- /.video-main__wrapp -->
+
+          <div class="video-row__info">
+            <div class="video-row__text">
+              <h3 class="video-row__title">
+                <a href="#!">Nembo Lukeni</a>
+              </h3>
+              <div class="video-row__description">
+                <a href="#!">Author of Books Tittle</a>
+              </div>
+            </div>
+            <!-- /.video-row__text -->
+            <button class="video-row__icon-wrapp">
+              <img src="images/flag.svg" alt="иконка флаг" class="video-row__icon" />
+            </button>
+          </div>
+          <!-- /.video-row__info -->
+        </div>
+        <!-- /.video-row -->
+      </div>
+      <!-- /.video__play -->
+    </div>
+    <!-- /.conrainer video__container -->
+  </section>
+
+
+
+  <script defer src="js/jquery-3.6.0.min.js"></script>
+  <script defer src="js/jquery.validate.min.js"></script>
+  <script defer src="js/jquery.mask.min.js"></script>
+  <script defer src="js/swiper-bundle.min.js"></script>
+  <script defer src="js/jquery.fancybox.min.js"></script>
+  <script defer src="js/iframe_api.js"></script>
+  <script defer src="js/swiper-bundle.min.js"></script>
   <script defer src="js/main.js"></script>
 </body>
 
