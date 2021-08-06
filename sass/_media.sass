@@ -97,6 +97,9 @@
   .container
     max-width: 85vw
 
+  .uber-1, .google-2
+    display: none
+
   .navbar
     &__container
       margin-bottom: 0
@@ -421,6 +424,9 @@
     max-width: 100vw
 
 @media (max-width: 880px)
+  .air-1, .fitbit-2
+    display: none
+
   .video
     &__text
       flex-direction: column
@@ -662,6 +668,13 @@
 @media (max-width: 640px)
   .container
     max-width: 90vw
+
+  .publishers
+    &-wrapper-2
+      display: none
+
+  .air-1, .uber-1
+    display: block
 
   .navbar
     &__mobile
@@ -1201,6 +1214,10 @@
       transform: translateX(50%)
 
 @media (max-width: 430px)
+  .publishers
+    &__title
+      padding-top: 35px
+
   .blog
     &__container
       margin-bottom: 40px
@@ -1278,6 +1295,26 @@
       line-height: 20px
 
 @media (min-width: 320px) and (max-width: 480px)
+  .container-publishers
+    width: 280px !important
+
+  .google-1
+    margin-left: -4px
+
+  .fitbit-1
+    margin-left: 13px
+
+  .uber-1
+    margin-left: -22px
+
+  .air-1
+    margin-left: 10px
+
+  .publishers
+    &-wrapper-1
+      padding-top: 23px
+      row-gap: 18px
+      column-gap: 16px
   .card
     &__price
       margin-left: -4px
