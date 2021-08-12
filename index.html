@@ -1,1008 +1,1120 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ehya - мир книг</title>
-  <link rel="shortcut icon" href="images/favicon.ico" type="image./x-icon" />
-  <link rel="icon" href="images/favicon.ico" type="image./x-icon" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@500&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<title>Bookstore</title>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@500&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
-  <header class="navbar navbar-fixed">
-    <div class="container navbar__container">
-      <div class="navbar__wrapper">
-        <div class="logo navbar__logo">
-          <a href="index.html" class="logo__link"><img src="images/logo-header.svg" alt="логотип издания"
-              class="logo__link-img" /></a>
-        </div>
-        <!-- /.logo navbar__logo -->
-
-        <div class="navbar__wrapper-menu">
-          <nav class="navbar__menu navbar__menu--mobile">
-            <ul class="navbar-menu">
-              <li class="navbar-menu__item">
-                <a href="#" class="navbar-menu__link">Рекомендации</a>
-              </li>
-              <li class="navbar-menu__item">
-                <a href="#" class="navbar-menu__link">Книги</a>
-              </li>
-              <li class="navbar-menu__item">
-                <a href="#" class="navbar-menu__link">Блог</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- /.navbar__menu-mobile -->
-
-          <button class="button navbar__button">
-            Получить
-          </button>
-
-          <button class="menu-button navbar__menu-button">
-            <img src="images/menu-button.svg" alt="вызов меню" class="menu-button__line" />
-          </button>
-        </div>
-        <!-- /.navbar__menu -->
-      </div>
-      <!-- /.navbar-menu -->
-    </div>
-    <!-- /.container -->
-  </header>
-
-  <section class="book">
-    <div class="container book__container">
-      <div class="book-info book__info">
-        <div class="book-info__text book__text">
-          <h1 class="book__title">
-            <span class="book__title-color">Design Theory:</span>The
-            Psychology of Graphic Design Pricing
-          </h1>
-          <h3 class="book__autor">книга мишеля янга</h3>
-          <p class="book__text-about">
-            Спустя 15 лет я управляю собственной студией, выполнив тысячи
-            проектов для крупных клиентов. Теперь я делюсь своими золотыми
-            стратегиями ценообразования на творческую работу.
-          </p>
-          <div class="button-wrapper book__button-wrapper">
-            <button class="button book__button">
-              Купить сейчас
-            </button>
-            <a href="#" class="book__read">Читать демо</a>
-          </div>
-          <!-- /.book__wrapper-button -->
-        </div>
-        <!-- /.book-info__text -->
-
-        <div class="book-image book__image">
-          <div class="book__image-cover">
-            <img class="image image-book" src="images/book-image.jpg" alt="обложка книги" />
-          </div>
-          <!-- /.book-image__cover -->
-        </div>
-        <!-- /.book-image -->
-      </div>
-      <!-- /.book-info -->
-    </div>
-    <!-- /.container -->
-  </section>
-  <!-- /.book -->
-
-  <section class="reference">
-    <div class="container">
-      <div class="reference-container reference__container">
-        <!-- предложения -->
-        <div class="reference-offer reference__offer">
-          <h2 class="reference-title reference__title" id="reference">
-            Рекомендации
-          </h2>
-
-          <div class="reference-cards reference__cards">
-            <!-- card1 -->
-            <div class="card card-reference reference__card reference__card--mb">
-              <div class="card__image card-reference__image-wrapper">
-                <a href="#"><img src="images/reference-1.jpg" alt="обложка книги" class="card-reference__image" /></a>
-              </div>
-              <!-- /.card__image reference__image-wrapper -->
-
-              <div class="card__info card-reference__info-wrapper">
-                <h3 class="card__title card-reference__title">
-                  <a href="#!" class="card-reference__title">The World of Abstract Art</a>
-                </h3>
-                <a href="#!" class="card__genre card-reference__genre">Art & Design</a>
-                <div class="card__price card-reference__price">$25.00</div>
-
-                <div class="button-wrapper card-reference__button-wrapper">
-                  <a href="#" class="card-reference__buy">
-                    Купить
-                  </a>
-                  <button class="card-reference__heart">
-                    <svg class="card-reference__heart-img card-reference__heart-img--pl"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
-                    </svg>
-                  </button>
-                </div>
-                <!-- /.book__wrapper-button -->
-              </div>
-              <!-- /.card__info reference__info-wrapper -->
-            </div>
-            <!-- /.reference__card -->
-
-            <!-- card2 -->
-            <div class="
-                  card card-secondary card-reference
-                  reference__card reference__card--mb
-                ">
-              <div class="card__image card-reference__image-wrapper">
-                <a href="#"><img src="images/reference-2.jpg" alt="обложка книги" class="card-reference__image" /></a>
-              </div>
-              <!-- /.card__image reference__image-wrapper -->
-
-              <div class="card__info card-reference__info-wrapper">
-                <h3 class="card__title card-reference__title">
-                  <a href="#!" class="card-reference__title">Educated : a&nbsp;Memoir</a>
-                </h3>
-                <a href="#!" class="card__genre card-reference__genre">Education</a>
-                <div class="card__price card-reference__price">$28.00</div>
-
-                <div class="button-wrapper card-reference__button-wrapper">
-                  <a href="#" class="card-reference__buy">
-                    Купить
-                  </a>
-
-                  <button class="card-reference__heart">
-                    <svg class="card-reference__heart-img" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
-                    </svg>
-                  </button>
-                </div>
-                <!-- /.book__wrapper-button -->
-              </div>
-              <!-- /.card__info reference__info-wrapper -->
-            </div>
-            <!-- /.reference__card -->
-
-            <!-- card3 -->
-            <div class="
-                  card card-secondary card-reference
-                  reference__card reference__card--mb
-                ">
-              <div class="card__image card-reference__image-wrapper">
-                <a href="#"> <img src="images/reference-3.jpg" alt="обложка книги" class="card-reference__image" /></a>
-              </div>
-              <!-- /.card__image reference__image-wrapper -->
-
-              <div class="card__info card-reference__info-wrapper">
-                <h3 class="card__title card-reference__title">
-                  <a class="card-reference__title" href="#!">The Blue Flowers Ray…</a>
-                </h3>
-                <a href="#!" class="card__genre card-reference__genre">Novel</a>
-                <div class="card__price card-reference__price">$19.50</div>
-
-                <div class="button-wrapper card-reference__button-wrapper">
-                  <a href="#" class="card-reference__buy">
-                    Купить
-                  </a>
-
-                  <button class="card-reference__heart">
-                    <svg class="card-reference__heart-img" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
-                    </svg>
-                  </button>
-                </div>
-                <!-- /.book__wrapper-button -->
-              </div>
-              <!-- /.card__info reference__info-wrapper -->
-            </div>
-            <!-- /.reference__card -->
-
-            <!-- card4 -->
-            <div class="
-                  card card-last card-reference
-                  reference__card reference__card--mb
-                ">
-              <div class="card__image card-reference__image-wrapper">
-                <a href="#"><img src="images/reference-4.jpg" alt="обложка книги" class="card-reference__image" /></a>
-              </div>
-              <!-- /.card__image reference__image-wrapper -->
-
-              <div class="card__info card-reference__info-wrapper">
-                <h3 class="card__title card-reference__title">
-                  <a class="card-reference__title" href="#!">There There : a&nbsp;Novel by TO</a>
-                </h3>
-                <a href="#!" class="card__genre card-reference__genre">Novel</a>
-                <div class="card__price card-reference__price">$20.00</div>
-
-                <div class="button-wrapper card-reference__button-wrapper">
-                  <a href="#" class="card-reference__buy">
-                    Купить
-                  </a>
-
-                  <button class="card-reference__heart ">
-                    <svg class="card-reference__heart-img " xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
-                    </svg>
-                  </button>
-                </div>
-                <!-- /.book__wrapper-button -->
-              </div>
-              <!-- /.card__info reference__info-wrapper -->
-            </div>
-            <!-- /.reference__card -->
-
-            <!-- card5 -->
-            <div class="card card-last card-reference reference__card">
-              <div class="card__image card-reference__image-wrapper">
-                <a href="#"><img src="images/reference-5.jpg" alt="обложка книги" class="card-reference__image" /></a>
-              </div>
-              <!-- /.card__image reference__image-wrapper -->
-
-              <div class="card__info card-reference__info-wrapper">
-                <h3 class="card__title card-reference__title">
-                  <a class="card-reference__title" href="#!">WMNDFL : The&nbsp;Inspiration</a>
-                </h3>
-                <a href="#!" class="card__genre card-reference__genre">Business</a>
-                <div class="card__price card-reference__price">$23.00</div>
-
-                <div class="button-wrapper card-reference__button-wrapper">
-                  <a href="#" class="card-reference__buy">
-                    Купить
-                  </a>
-
-                  <button class="card-reference__heart">
-                    <svg class="card-reference__heart-img" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
-                    </svg>
-                  </button>
-                </div>
-                <!-- /.book__wrapper-button -->
-              </div>
-              <!-- /.card__info reference__info-wrapper -->
-            </div>
-            <!-- /.reference__card -->
-
-            <!-- card6 -->
-            <div class="card card-last card-reference reference__card">
-              <div class="card__image card-reference__image-wrapper">
-                <a href="#"><img src="images/reference-6.jpg" alt="обложка книги" class="card-reference__image" /></a>
-              </div>
-              <!-- /.card__image reference__image-wrapper -->
-
-              <div class="card__info card-reference__info-wrapper">
-                <h3 class="card__title card-reference__title">
-                  <a href="#!" class="card-reference__title">Making Things&nbsp;Happen</a>
-                </h3>
-                <a href="#!" class="card__genre card-reference__genre">Motivation</a>
-                <div class="card__price card-reference__price">$23.00</div>
-
-                <div class="button-wrapper card-reference__button-wrapper">
-                  <a href="#" class="card-reference__buy">
-                    Купить
-                  </a>
-
-                  <button class="card-reference__heart">
-                    <svg class="card-reference__heart-img" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M17.242 1.465c-1.933-1.653-4.781-1.336-6.574.492L10 2.66l-.703-.703C7.539.129 4.657-.187 2.723 1.465.508 3.363.403 6.738 2.37 8.777l6.82 7.032c.422.457 1.16.457 1.582 0l6.82-7.032c1.97-2.039 1.864-5.414-.35-7.312z" />
-                    </svg>
-                  </button>
-                </div>
-                <!-- /.book__wrapper-button -->
-              </div>
-              <!-- /.card__info reference__info-wrapper -->
-            </div>
-            <!-- /.reference__card -->
-
-            <a href="#!" class="link reference__link">Больше рекомендаций</a>
-          </div>
-          <!-- /.reference-cards reference__cards -->
-        </div>
-        <!-- /.reference-offer reference__offer -->
-
-        <!-- топ -->
-        <div class="reference-top reference__top">
-          <h2 class="reference-title reference__title reference__title-second">
-            Топ Месяца
-          </h2>
-
-          <div class="reference-list reference__list">
-            <ul class="reference__list-top">
-              <!-- top1 -->
-              <li class="reference__list-item">
-                <div class="
-                      item item-reference
-                      reference__item reference__item--mb
-                    ">
-                  <div class="item__image item-reference__image-wrapper">
-                    <a href="#"><img src="images/top-1.jpg" alt="обложка книги" class="item-reference__image" /></a>
-                  </div>
-                  <!-- /.item__image reference__image-wrapper -->
-
-                  <div class="item__info item-reference__info-wrapper">
-                    <h3 class="item__title item-reference__title">
-                      <a class="item-reference__title" href="#!">Sprint : Solve, Test in 5 Days</a>
-                    </h3>
-                    <div class="item__price item-reference__price">
-                      $23.00
-                    </div>
-
-                    <div class="button-wrapper item-reference__button-wrapper">
-                      <a href="#" class="item-reference__buy">
-                        Купить
-                      </a>
-                    </div>
-                    <!-- /.book__wrapper-button -->
-                  </div>
-                  <!-- /.item__info reference__info-wrapper -->
-                </div>
-                <!-- /.reference__item -->
-              </li>
-
-              <!-- top2 -->
-              <li class="reference__list-item">
-                <div class="
-                      item item-reference
-                      reference__item reference__item--mb
-                    ">
-                  <div class="item__image item-reference__image-wrapper">
-                    <a href="#"><img src="images/top-2.jpg" alt="обложка книги" class="item-reference__image" /></a>
-                  </div>
-                  <!-- /.item__image reference__image-wrapper -->
-
-                  <div class="item__info item-reference__info-wrapper">
-                    <h3 class="item__title item-reference__title">
-                      <a class="item-reference__title" href="#!">Hacking Growth Break Problem</a>
-                    </h3>
-                    <div class="item__price item-reference__price">
-                      $23.00
-                    </div>
-
-                    <div class="button-wrapper item-reference__button-wrapper">
-                      <a href="#" class="item-reference__buy">
-                        Купить
-                      </a>
-                    </div>
-                    <!-- /.book__wrapper-button -->
-                  </div>
-                  <!-- /.item__info reference__info-wrapper -->
-                </div>
-                <!-- /.reference__item -->
-              </li>
-
-              <!-- top3 -->
-              <li class="reference__list-item">
-                <div class="
-                      item item-reference
-                      reference__item reference__item--mb
-                    ">
-                  <div class="item__image item-reference__image-wrapper">
-                    <a href="#"><img src="images/top-3.jpg" alt="обложка книги" class="item-reference__image" /></a>
-                  </div>
-                  <!-- /.item__image reference__image-wrapper -->
-
-                  <div class="item__info item-reference__info-wrapper">
-                    <h3 class="item__title item-reference__title">
-                      <a class="item-reference__title" href="#!">Very Nice&nbsp;a Novel&nbsp;by Mercy</a>
-                    </h3>
-                    <div class="item__price item-reference__price">
-                      $23.00
-                    </div>
-
-                    <div class="button-wrapper item-reference__button-wrapper">
-                      <a href="#" class="item-reference__buy">
-                        Купить
-                      </a>
-                    </div>
-                    <!-- /.book__wrapper-button -->
-                  </div>
-                  <!-- /.item__info reference__info-wrapper -->
-                </div>
-                <!-- /.reference__item -->
-              </li>
-
-              <!-- top4 -->
-              <li class="reference__list-item">
-                <div class="item item-reference reference__item">
-                  <div class="item__image item-reference__image-wrapper">
-                    <a href="#"><img src="images/top-4.jpg" alt="обложка книги" class="item-reference__image" /></a>
-                  </div>
-                  <!-- /.item__image reference__image-wrapper -->
-
-                  <div class="item__info item-reference__info-wrapper">
-                    <h3 class="item__title item-reference__title">
-                      <a href="#!" class="item-reference__title">Hooked : How to Build Products</a>
-                    </h3>
-                    <div class="item__price item-reference__price">
-                      $23.00
-                    </div>
-
-                    <div class="button-wrapper item-reference__button-wrapper">
-                      <a href="#" class="item-reference__buy">
-                        Купить
-                      </a>
-                    </div>
-                    <!-- /.book__wrapper-button -->
-                  </div>
-                  <!-- /.item__info reference__info-wrapper -->
-                </div>
-                <!-- /.reference__item -->
-              </li>
-            </ul>
-            <!-- /.reference__list-top -->
-
-            <a href="#" class="link reference__link-top">Лучшие книги</a>
-          </div>
-          <!-- /.reference-list reference__list -->
-        </div>
-        <!-- /.reference-top reference__top -->
-      </div>
-      <!-- /.reference-container -->
-    </div>
-    <!-- /.container -->
-  </section>
-  <!-- /.reference -->
-
-  <section class="theme" id="theme">
-    <div class="container theme__container">
-      <div class="slider-theme theme__slider">
-        <div class="swiper-container slider-theme__container">
-          <div class="swiper-wrapper slider-theme__wrapper">
-            <!-- Slid-1 -->
-            <div class="swiper-slide slide-theme">
-              <div class="slide-block">
-                <!-- ведущий -->
-                <div class="slide slide-theme__block">
-                  <div class="slide-block__image">
-                    <img src="images/slide-icon-1.svg" alt class="slide-img" />
-                  </div>
-                  <div class="slide-block__text">
-                    <h3 class="slide-block__title">Бизнес & Финансы</h3>
-                    <div class="slide-block__genre">
-                      Книги про мир бизнеса
-                    </div>
-                  </div>
-                  <!-- /.slide-block__text -->
-                </div>
-                <!-- /.slide-theme__block -->
-              </div>
-              <!-- /.slide-block -->
-            </div>
-
-            <div class="swiper-slide slide-theme">
-              <div class="slide-block">
-                <div class="slide-theme__block slide">
-                  <div class="slide-block__image">
-                    <img src="images/slide-icon-2.svg" alt class="slide-img" />
-                  </div>
-                  <div class="slide-block__text">
-                    <h3 class="slide-block__title">Самомотивация</h3>
-                    <div class="slide-block__genre slide-block-motivation">Книги о мотивации</div>
-                  </div>
-                  <!-- /.slide-block__text -->
-                </div>
-                <!-- /.slide-theme__block -->
-              </div>
-              <!-- /.slide-block -->
-            </div>
-
-            <div class="swiper-slide slide-theme">
-              <div class="slide-block">
-                <!-- ведущий -->
-                <div class="slide-theme__block slide">
-                  <div class="slide-block__image">
-                    <img src="images/slide-icon-3.svg" alt class="slide-img" />
-                  </div>
-                  <div class="slide-block__text">
-                    <h3 class="slide-block__title">Романы Теленовеллы</h3>
-                    <div class="slide-block__genre">
-                      Книги с крутыми историями
-                    </div>
-                  </div>
-                  <!-- /.slide-block__text -->
-                </div>
-                <!-- /.slide-theme__block -->
-              </div>
-              <!-- /.slide-block -->
-            </div>
-
-            <div class="swiper-slide slide-theme">
-              <div class="slide-block">
-                <!-- ведущий -->
-                <div class="slide-theme__block slide">
-                  <div class="slide-block__image">
-                    <img src="images/slide-icon-4.svg" alt class="slide-img" />
-                  </div>
-                  <div class="slide-block__text">
-                    <h3 class="slide-block__title">Навыки будущего</h3>
-                    <div class="slide-block__genre">
-                      Книги для самоподготовки
-                    </div>
-                  </div>
-                  <!-- /.slide-block__text -->
-                </div>
-                <!-- /.slide-theme__block -->
-              </div>
-              <!-- /.slide-block -->
-            </div>
-
-            <div class="swiper-slide slide-theme">
-              <div class="slide-block">
-                <div class="slide-theme__block slide">
-                  <div class="slide-block__image">
-                    <img src="images/slide-icon-4.svg" alt class="slide-img" />
-                  </div>
-                  <div class="slide-block__text">
-                    <h3 class="slide-block__title">Романы теленовеллы</h3>
-                    <div class="slide-block__genre">Книги с крутыми историями</div>
-                  </div>
-                  <!-- /.slide-block__text -->
-                </div>
-                <!-- /.slide-theme__block -->
-              </div>
-              <!-- /.slide-block -->
-            </div>
-            <!-- /.Slid-5 -->
-
-            <!-- Slid-6oops -->
-            <div class="swiper-slide slide-theme">
-              <div class="slide-block">
-                <!-- ведущий -->
-                <div class="slide-theme__block slide">
-                  <div class="slide-block__image">
-                    <img src="images/slide-icon-4.svg" alt class="slide-img" />
-                  </div>
-                  <div class="slide-block__text">
-                    <h3 class="slide-block__title">Навыки <br> будущего</h3>
-                    <div class="slide-block__genre">
-                      Книги для самоподготовки
-                    </div>
-                  </div>
-                  <!-- /.slide-block__text -->
-                </div>
-                <!-- /.slide-theme__block -->
-              </div>
-              <!-- /.slide-block -->
-            </div>
-            <!-- /.Slid-4 -->
-
-            <!-- Slid-5oops -->
-            <div class="swiper-slide slide-theme">
-              <div class="slide-block">
-                <!-- ведущий -->
-                <div class="slide-theme__block slide">
-                  <div class="slide-block__image">
-                    <img src="images/slide-icon-4.svg" alt class="slide-img" />
-                  </div>
-                  <div class="slide-block__text">
-                    <h3 class="slide-block__title">Ставь успешным</h3>
-                    <div class="slide-block__genre">Успешная литература</div>
-                  </div>
-                  <!-- /.slide-block__text -->
-                </div>
-                <!-- /.slide-theme__block -->
-              </div>
-              <!-- /.slide-block -->
-            </div>
-            <!-- /.Slid-5 -->
-
-            <!-- Slid-5oops -->
-            <div class="swiper-slide slide-theme">
-              <div class="slide-block">
-                <!-- ведущий -->
-                <div class="slide-theme__block slide">
-                  <div class="slide-block__image">
-                    <img src="images/slide-icon-4.svg" alt class="slide-img" />
-                  </div>
-                  <div class="slide-block__text">
-                    <h3 class="slide-block__title">Наука</h3>
-                    <div class="slide-block__genre">Научная литература</div>
-                  </div>
-                  <!-- /.slide-block__text -->
-                </div>
-                <!-- /.slide-theme__block -->
-              </div>
-              <!-- /.slide-block -->
-            </div>
-            <!-- /.Slid-5 -->
-          </div>
-          <!-- /.swiper-wrapper -->
-        </div>
-        <!-- /.swiper-container -->
-
-        <!-- If we need navigation buttons -->
-        <button class="slide-button slide-button--next">
-          <img src="images/slide-theme-next.svg" alt="стрелка вправо" class="slide-button__img" />
-        </button>
-
-        <button class="slide-button slide-button--prev">
-          <img src="images/slide-theme-prev.svg" alt="стрелка влево" class="slide-button__img" />
-        </button>
-      </div>
-      <!-- /.theme__slider -->
-    </div>
-    <!-- /.container theme-container -->
-  </section>
-  <!-- /.theme -->
-  <section class="unedited">
-    <div class="container unedited__container">
-      <div class="unedited__wrapper-top">
-        <h2 class="unedited-title unedited__title">Неизданные книги</h2>
-
-        <div class="unedited__wrapper-slide">
-          <!-- кнопка вперед -->
-          <div class="unedited__wrapper-button">
-            <button class="unedited__button unedited__button--prev">
-              <svg class="svg-unedited" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.317 12.938c.312-.313.281-.782 0-1.094L4.536 8.25h9a.74.74 0 0 0 .75-.75v-1a.76.76 0 0 0-.75-.75h-9l3.781-3.563c.281-.312.312-.78 0-1.093L7.629.406a.774.774 0 0 0-1.062 0L.504 6.5a.684.684 0 0 0 0 1.031l6.063 6.094c.281.281.75.281 1.062 0l.688-.688z" />
-              </svg></button><!-- /.unedited__button -->
-          </div>
-          <!-- /.unedited__button-wrapper -->
-
-          <div class="unedited__wrapper-button">
-            <button class="unedited__button unedited__button--next">
-              <svg class="svg-unedited" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M6.223 1.094c-.312.312-.281.781 0 1.093l3.782 3.563h-8.97a.74.74 0 0 0-.75.75v1c0 .438.313.75.75.75h8.97l-3.782 3.594a.814.814 0 0 0 0 1.094l.688.687c.312.281.781.281 1.062 0l6.094-6.094c.281-.281.281-.75 0-1.062L7.973.406c-.281-.281-.75-.281-1.062 0l-.688.688z" />
-              </svg></button><!-- /.unedited__button -->
-          </div>
-          <!-- /.unedited__button-wrapper -->
-        </div>
-        <!-- /.unedited__wrapper-button -->
-      </div>
-      <!-- /.unedited__wrapper-top -->
-
-      <div class="slider-unedited unedited__slider">
-        <div class="swiper-container slider-unedited__container">
-          <div class="swiper-wrapper slider-unedited__wrapper">
-            <!-- Slid-1 -->
-            <div class="swiper-slide slide-unedited">
-              <div class="slide-wrapp slide-unedited__wrapp">
-                <img src="images/unedited-1.jpg" alt class="slide-unedited__img" />
-              </div>
-              <!-- /.slide-theme__wrapp slide-wrapp -->
-            </div>
-
-            <div class="swiper-slide slide-unedited">
-              <div class="slide-wrapp slide-unedited__wrapp">
-                <img src="images/unedited-2.jpg" alt class="slide-unedited__img" />
-              </div>
-              <!-- /.slide-theme__wrapp slide-wrapp -->
-            </div>
-
-            <div class="swiper-slide slide-unedited">
-              <div class="slide-wrapp slide-unedited__wrapp">
-                <img src="images/unedited-3.jpg" alt class="slide-unedited__img" />
-              </div>
-              <!-- /.slide-theme__wrapp slide-wrapp -->
-            </div>
-
-            <div class="swiper-slide slide-unedited">
-              <div class="slide-wrapp slide-unedited__wrapp">
-                <img src="images/unedited-4.jpg" alt class="slide-unedited__img" />
-              </div>
-              <!-- /.slide-theme__wrapp slide-wrapp -->
-            </div>
-
-            <div class="swiper-slide slide-unedited">
-              <div class="slide-wrapp slide-unedited__wrapp">
-                <img src="images/unedited-5.jpg" alt class="slide-unedited__img" />
-              </div>
-              <!-- /.slide-theme__wrapp slide-wrapp -->
-            </div>
-
-            <div class="swiper-slide slide-unedited">
-              <div class="slide-wrapp slide-unedited__wrapp">
-                <img src="images/unedited-3.jpg" alt class="slide-unedited__img" />
-              </div>
-              <!-- /.slide-theme__wrapp slide-wrapp -->
-            </div>
-
-            <div class="swiper-slide slide-unedited">
-              <div class="slide-wrapp slide-unedited__wrapp">
-                <img src="images/unedited-4.jpg" alt class="slide-unedited__img slide__scale" />
-              </div>
-              <!-- /.slide-theme__wrapp slide-wrapp -->
-            </div>
-
-            <div class="swiper-slide slide-unedited">
-              <div class="slide-wrapp slide-unedited__wrapp">
-                <img src="images/unedited-5.jpg" alt class="slide-unedited__img" />
-              </div>
-              <!-- /.slide-theme__wrapp slide-wrapp -->
-            </div>
-            <!-- /.Slid-5 -->
-          </div>
-          <!-- /.swiper-wrapper -->
-        </div>
-        <!-- /.swiper-container -->
-      </div>
-      <!-- /.slider-unedited -->
-    </div>
-    <!-- /.container unedited-container -->
-  </section>
-  <!-- /.unedited -->
-
-
-  <section class="video">
-    <div class="container video__container">
-      <div class="video-text video__text">
-        <h2 class="video__title">История Автора</h2>
-        <p class="video__description">
-          Это раздел авторского рассказа. Каждую неделю мы стараемся
-          рассказать вам историю писателя. Расскажем всем о&nbsp;закулисье их
-          книг.
-        </p>
-      </div>
-
-      <div class="video-main">
-        <div class="video video-main__wrapp" id="player">
-          <img src="images/video-1.jpg" alt class="video__back-first" />
-          <img src="images/play-main-icon.svg" alt="play" class="video__play-big video__img-cap" />
-          <img src="images/Bitmap.png" alt class="video__back-bitmap" />
-          <img src="images/play-main-icon.svg" alt="play" class="video__play-big video__img-cap" />
-        </div>
-        <!-- /.video-main__wrapp -->
-      </div>
-      <!-- /.video-main -->
-
-      <div class="video__play">
-        <div class="video-row">
-          <div class="video-row__wrapp video-row__wrapp--bg2">
-            <a class="video-row__wrapp video-row__wrapp--bg2" data-fancybox
-              href="https://www.youtube.com/watch?v=Boc7FcqyZFk">
-              <img src="images/video-2.jpg" alt class="video__back-second" />
-              <img src="images/play-row-icon.svg" alt="картинка видео-заглушка"
-                class="video__img-cap video__play-small" />
-            </a>
-          </div>
-          <!-- /.video-main__wrapp -->
-
-          <div class="video-row__info">
-            <div class="video-row__text">
-              <h3 class="video-row__title">
-                <a class="video-row__title" href="#!">Emelda Scandroot</a>
-              </h3>
-              <div class="video-row__description">
-                <a href="#!" class="video-row__description">Author of Books Tittle</a>
-              </div>
-            </div>
-            <!-- /.video-row__text -->
-
-            <button class="video-row__icon-wrapp">
-              <img src="images/flag.svg" alt="иконка флаг" class="video-row__icon" />
-            </button>
-          </div>
-          <!-- /.video-row__info -->
-        </div>
-        <!-- /.video-row -->
-
-        <div class="video-row">
-          <div class="video-row__wrapp video-row__wrapp--bg3">
-            <a class="video-row__wrapp video-row__wrapp--bg2" data-fancybox
-              href="https://www.youtube.com/watch?v=AxPaDbSqiRU">
-              <img src="images/video-3.jpg" alt class="video__back-second" />
-              <img src="images/play-row-icon.svg" alt="видео-заглушка" class="video__img-cap video__play-small" />
-            </a>
-          </div>
-          <!-- /.video-main__wrapp -->
-
-          <div class="video-row__info">
-            <div class="video-row__text">
-              <h3 class="video-row__title">
-                <a href="#!" class="video-row__title">Mar Rueda</a>
-              </h3>
-              <div class="video-row__description">
-                <a href="#!">Author of Books Tittle</a>
-              </div>
-            </div>
-            <!-- /.video-row__text -->
-
-            <button class="video-row__icon-wrapp">
-              <img src="images/flag.svg" alt="иконка флаг" class="video-row__icon" />
-            </button>
-          </div>
-          <!-- /.video-row__info -->
-        </div>
-        <!-- /.video-row -->
-
-        <div class="video-row video-row--last">
-          <div class="video-row__wrapp video-row__wrapp--bg4">
-            <a class="video-row__wrapp video-row__wrapp--bg2" data-fancybox
-              href="https://www.youtube.com/watch?v=e9DrCjnItI0">
-              <img src="images/video-4.jpg" alt class="video__back-second" />
-              <img src="images/play-row-icon.svg" alt="картинка видео-заглушка"
-                class="video__img-cap video__play-small" />
-            </a>
-          </div>
-          <!-- /.video-main__wrapp -->
-
-          <div class="video-row__info">
-            <div class="video-row__text">
-              <h3 class="video-row__title">
-                <a href="#!">Nembo Lukeni</a>
-              </h3>
-              <div class="video-row__description">
-                <a href="#!">Author of Books Tittle</a>
-              </div>
-            </div>
-            <!-- /.video-row__text -->
-            <button class="video-row__icon-wrapp">
-              <img src="images/flag.svg" alt="иконка флаг" class="video-row__icon" />
-            </button>
-          </div>
-          <!-- /.video-row__info -->
-        </div>
-        <!-- /.video-row -->
-      </div>
-      <!-- /.video__play -->
-    </div>
-    <!-- /.conrainer video__container -->
-  </section>
-
-  <section class="publishers">
-    <div class="container container-publishers">
-
-      <h2 class="publishers__title">Некоторые из издателей, с которыми мы сотрудничали
-      </h2>
-      <div class="publishers-wrapper-1">
-        <div class="publishers__item slack-1"> <img class="publishers__logo-image" src="images/slack.svg" alt="slack">
-        </div>
-        <div class="publishers__item netflix-1"><img class="publishers__logo-image" src="images/netflix.svg"
-            alt="netflix"></div>
-        <div class="publishers__item fitbit-1"><img class="publishers__logo-image" src="images/fitbit.svg" alt="fitbit">
-        </div>
-        <div class="publishers__item google-1"><img class="publishers__logo-image" src="images/google.svg" alt="google">
-        </div>
-        <div class="publishers__item air-1"> <img class="publishers__logo-image" src="images/airbnb.svg" alt="airbnb">
-        </div>
-        <div class="publishers__item uber-1"><img class="publishers__logo-image" src="images/uber.svg" alt="uber"></div>
-      </div>
-
-      <div class="publishers-wrapper-2">
-        <div class="publishers__item netflix-2"><img class="publishers__logo-image" src="images/netflix.svg"
-            alt="netflix"></div>
-        <div class="publishers__item air-2 "><img class="publishers__logo-image" src="images/airbnb.svg" alt="airbnb">
-        </div>
-        <div class="publishers__item slack-2"> <img class="publishers__logo-image" src="images/slack.svg" alt="slack">
-        </div>
-        <div class="publishers__item uber-2"><img class="publishers__logo-image" src="images/uber.svg" alt="uber">
-        </div>
-        <div class="publishers__item fitbit-2"> <img class="publishers__logo-image" src="images/fitbit.svg"
-            alt="fitbit">
-        </div>
-        <div class="publishers__item google-2"> <img class="publishers__logo-image" src="images/google.svg"
-            alt="google">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /.publishers -->
-
-  <section class="blog">
-    <div class="container blog__container">
-      <!-- top -->
-      <div class="blog__wrapper">
-        <h2 class="blog__title" id="blog">Ehya Блог</h2>
-
-        <div class="blog__link-wrapper">
-          <a href="#" class="blog__link">Все Блоги</a>
-        </div>
-        <!-- /.link blog__link -->
-
-        <div class="articles blog__articles-wrapper">
-          <div class="article articles__block-first">
-            <div class="article__image-wrapper">
-              <img src="images/blog-first.jpg" alt="изображение рабочего стола - вид сверху"
-                class="article__image article__image-height" />
-            </div>
-            <!-- /.article__image-wrapper -->
-
-            <h3 class="article__title article__title-first">
-              <a href="#!" class="article__title article__title-first">Success Steps For Your Business Life</a>
-            </h3>
-            <p class="article__text">
-              This is the author story section. Every week we try to give you
-              the&nbsp;story of book writer. Tell all of you the behind the
-              scene of their&nbsp;books.
-            </p>
-          </div>
-          <!-- /.articles__block-first -->
-
-          <div class="article articles__block-list">
-            <ul class="article__list">
-              <li class="article__list-item item-blog">
-                <div class="item-blog__wrapper-image">
-                  <img src="images/blog-list-1.jpg" alt="фото части здания с видимыми стеллажами в окне"
-                    class="article__image article__image-list article__image-list--img" />
-                </div>
-                <!-- /.item__wrapper -->
-
-                <div class="item-blog__wrapper-text">
-                  <div class="item-blog__date">23 марта 2020</div>
-                  <h3 class="item-blog__title">
-                    <a href="#!" class="item-blog__title">29 Motivational Quotes for&nbsp;Work Environments</a>
-                  </h3>
-                  <a href="#" class="item-blog__link">Читать</a>
-                </div>
-                <!-- /.item__wrapper-text -->
-              </li>
-              <!-- /.article__list-item -->
-
-              <!-- карточка2 -->
-              <li class="article__list-item item-blog">
-                <div class="item-blog__wrapper-image">
-                  <img src="images/blog-list-2.jpg" alt="фото посетителе в библиотеке"
-                    class="article__image article__image-list article__image-list--img" />
-                </div>
-                <!-- /.item__wrapper -->
-
-                <div class="item-blog__wrapper-text">
-                  <div class="item-blog__date">28 марта 2020</div>
-                  <h3 class="item-blog__title item-blog__title--learn">
-                    <a href="#!">Learn To Love Growth and&nbsp;You Will Be A Success</a>
-                  </h3>
-                  <a href="#" class="item-blog__link">Читать</a>
-                </div>
-                <!-- /.item__wrapper-text -->
-              </li>
-              <!-- /.article__list-item -->
-
-              <li class="article__list-item item-blog">
-                <div class="item-blog__wrapper-image">
-                  <img src="images/blog-list-3.jpg" alt="фото посетителе в библиотеке"
-                    class="article__image article__image-list article__image-list--img" />
-                </div>
-                <!-- /.item-blog__wrapper -->
-
-                <div class="item-blog__wrapper-text">
-                  <div class="item-blog__date">28 марта 2020</div>
-                  <h3 class="item-blog__title">
-                    <a href="#!">Motivation How To&nbsp;Build Trust&nbsp;at your Work</a>
-                  </h3>
-                  <a href="#" class="item-blog__link">Читать</a>
-                </div>
-                <!-- /.item-blog__wrapper-text -->
-              </li>
-              <!-- /.article__list-item-blog -->
-            </ul>
-            <!-- /.article__list -->
-          </div>
-          <!-- /.articles__block-list -->
-        </div>
-        <!-- /.blog__articles-wrapper -->
-      </div>
-      <!-- /.blog__top-wrapper -->
-    </div>
-    <!-- /.container blog__container -->
-  </section>
-  <!-- /.blog -->
-
-
-
-  <script defer src="js/jquery-3.6.0.min.js"></script>
-  <script defer src="js/jquery.validate.min.js"></script>
-  <script defer src="js/jquery.mask.min.js"></script>
-  <script defer src="js/swiper-bundle.min.js"></script>
-  <script defer src="js/jquery.fancybox.min.js"></script>
-  <script defer src="js/iframe_api.js"></script>
-  <script defer src="js/swiper-bundle.min.js"></script>
-  <script defer src="js/main.js"></script>
+<body id="top">
+			<header class="header header--fixed" >
+				<div class="container">
+					<div class="header-wrapper">
+						<a href="index.html" class="logo logo-mobile">
+							<img class="logo__image" src="img/header/logo.jpg" alt="Logo" />
+						</a>
+						<div class="nav nav--mobile--hidden">
+							<nav class="nav-wrapper">
+								<ul class="nav__list">
+									<li class="nav__item" id="recom">
+										<a href="#recomend" class="nav__link">Рекомендации</a>
+									</li>
+									<li class="nav__item" id="books">
+										<a href="#book" class="nav__link">Книги</a>
+									</li>
+									<li class="nav__item" id="blogs">
+										<a href="#blog" class="nav__link">Блог</a>
+									</li>
+								</ul>
+								<!-- /.nav__list -->
+							</nav>
+							<!-- /.nav-wrapper -->
+							<button data-toggle="modal" class="button-get">Получить</button>
+						</div>
+						<!-- /.nav -->
+						<button class="menu-button menu-button--mobile--hidden">
+							<span class="menu-button__line"></span>
+							<span class="menu-button__line"></span>
+							<span class="menu-button__line"></span>
+						</button>
+					</div>
+					<!-- /.header-wrapper -->
+				</div>
+				<!-- /.container -->
+			</header>
+			<!-- /.header -->
+			<main class="book">
+				<div class="container">
+					<div class="book-wrapper">
+						<div class="book-text">
+							<h1 class="book__title">
+								<span class="book__section">Design Theory:</span>
+								<span class="book__name">The Psychology of <br />
+									Graphic Design Pricing</span>
+							</h1>
+							<h3 class="book__author">КНИГА МИШЕЛЯ ЯНГА</h3>
+							<p class="book__description">
+								Спустя 15 лет я управляю собственной студией, выполнив тысячи
+								проектов для крупных клиентов. Теперь я делюсь своими золотыми
+								стратегиями ценообразования на творческую работу.
+							</p>
+							<div class="book-buttons">
+								<button data-toggle="modal" class="book__button book__button__buy-now">
+									Купить сейчас
+								</button>
+								<button class="book__button book__button__view-demo">
+									читать демо
+								</button>
+							</div>
+							<!-- /.book-buttons -->
+						</div>
+						<!-- /.book-text -->
+						<div class="book-image">
+							<div class="book-image__background"></div>
+							<!-- /.background-image -->
+							<img src="img/main-book/book-img.jpg" alt="Image: Book" class="book-image__img" />
+						</div>
+						<!-- /.book-image -->
+					</div>
+					<!-- /.book-wrapper -->
+				</div>
+				<!-- /.container -->
+			</main>
+			<!-- /.book -->
+
+			<section id="recomend" class="other-book">
+				<div class="container">
+					<div class="other-book-wrapper">
+						<div class="recommendation">
+							<h2 class="other-book__title">Рекомендации</h2>
+							<ul class="recommendation__list">
+								<li class="recommendation__item">
+									<img src="img/other-book/book-1.jpg" alt="Image: Book" class="recommendation__img" />
+									<div class="recommendation__info">
+										<h3 class="recommendation__title">
+											The World of Abstract Art
+										</h3>
+										<span class="recommendation__section">Art & Design</span>
+										<span class="other-book__price other-book__price-recommendation">$25.00</span>
+										<div class="other-book__buy">
+											<button data-toggle="modal" class="other-book__button other-book__button-recommendation">
+												Купить
+											</button>
+											<svg width="18" height="36" viewBox="1 -4 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+												class="recommendation__like">
+												<path class="icon-like"
+													d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+													fill="#959EAD" />
+											</svg>
+										</div>
+									</div>
+									<!-- /.recommendation__info -->
+								</li>
+								<li class="recommendation__item">
+									<img src="img/other-book/book-2.jpg" alt="Image: Book" class="recommendation__img" />
+									<div class="recommendation__info">
+										<h3 class="recommendation__title">
+											Educated : <br />
+											a Memoir
+										</h3>
+										<span class="recommendation__section">Education</span>
+										<span class="other-book__price other-book__price-recommendation">$28.00</span>
+										<div class="other-book__buy">
+											<button data-toggle="modal" class="other-book__button other-book__button-recommendation">
+												Купить
+											</button>
+											<svg width="18" height="36" viewBox="1 -4 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+												class="recommendation__like">
+												<path class="icon-like"
+													d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+													fill="#959EAD" />
+											</svg>
+										</div>
+									</div>
+									<!-- /.recommendation__info -->
+								</li>
+								<li class="recommendation__item">
+									<img src="img/other-book/book-3.jpg" alt="Image: Book" class="recommendation__img" />
+									<div class="recommendation__info">
+										<h3 class="recommendation__title">The Blue Flowers Ray…</h3>
+										<span class="recommendation__section">Novel</span>
+										<span class="other-book__price other-book__price-recommendation">$19.50</span>
+										<div class="other-book__buy">
+											<button data-toggle="modal" class="other-book__button other-book__button-recommendation">
+												Купить
+											</button>
+											<svg width="18" height="36" viewBox="1 -4 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+												class="recommendation__like">
+												<path class="icon-like"
+													d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+													fill="#959EAD" />
+											</svg>
+										</div>
+									</div>
+									<!-- /.recommendation__info -->
+								</li>
+								<li class="recommendation__item">
+									<img src="img/other-book/book-4.jpg" alt="Image: Book" class="recommendation__img" />
+									<div class="recommendation__info">
+										<h3 class="recommendation__title">
+											There There : <br />
+											a Novel by TO
+										</h3>
+										<span class="recommendation__section">Novel</span>
+										<span class="other-book__price other-book__price-recommendation">$20.00</span>
+										<div class="other-book__buy">
+											<button data-toggle="modal" class="other-book__button other-book__button-recommendation">
+												Купить
+											</button>
+											<svg width="18" height="36" viewBox="1 -4 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+												class="recommendation__like">
+												<path class="icon-like"
+													d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+													fill="#959EAD" />
+											</svg>
+										</div>
+									</div>
+									<!-- /.recommendation__info -->
+								</li>
+								<li class="recommendation__item">
+									<img src="img/other-book/book-5.jpg" alt="Image: Book" class="recommendation__img" />
+									<div class="recommendation__info">
+										<h3 class="recommendation__title">
+											WMNDFL : <br />
+											The Inspiration
+										</h3>
+										<span class="recommendation__section">Business</span>
+										<span class="other-book__price other-book__price-recommendation">$23.00</span>
+										<div class="other-book__buy">
+											<button data-toggle="modal" class="other-book__button other-book__button-recommendation">
+												Купить
+											</button>
+											<svg width="18" height="36" viewBox="1 -4 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+												class="recommendation__like">
+												<path class="icon-like"
+													d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+													fill="#959EAD" />
+											</svg>
+										</div>
+									</div>
+									<!-- /.recommendation__info -->
+								</li>
+								<li class="recommendation__item">
+									<img src="img/other-book/book-6.jpg" alt="Image: Book" class="recommendation__img" />
+									<div class="recommendation__info">
+										<h3 class="recommendation__title">
+											Making <br />
+											Things Happen
+										</h3>
+										<span class="recommendation__section">Motivation</span>
+										<span class="other-book__price other-book__price-recommendation">$23.00</span>
+										<div class="other-book__buy">
+											<button data-toggle="modal" class="other-book__button other-book__button-recommendation">
+												Купить
+											</button>
+											<svg width="18" height="36" viewBox="1 -4 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+												class="recommendation__like">
+												<path class="icon-like"
+													d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+													fill="#959EAD" />
+											</svg>
+										</div>
+									</div>
+									<!-- /.recommendation__info -->
+								</li>
+							</ul>
+							<div class="other-book-more">
+								<div class="other-book-more__background"></div>
+								<button class="other-book-more__button">Больше рекомендаций</button>
+							</div>
+							<!-- /.other-book-more -->
+						</div>
+						<!-- /.recommendation -->
+						<div class="best">
+							<h2 class="other-book__title other-book__title-month">Топ Месяца</h2>
+							<div class="best-wrapper">
+								<ul class="best__list">
+									<li class="best__item">
+										<img src="img/other-book/best-book-1.jpg" alt="Image: Book" class="best__img" />
+										<div class="best__info">
+											<h3 class="best__title">Sprint : Solve, Test in 5 Days</h3>
+											<span class="other-book__price other-book__price-best">$23.00</span>
+											<div class="other-book__buy other-book__buy-best">
+												<button data-toggle="modal" class="other-book__button">
+													Купить
+												</button>
+											</div>
+										</div>
+										<!-- /.best_info -->
+									</li>
+									<li class="best__item">
+										<img src="img/other-book/best-book-2.jpg" alt="Image: Book" class="best__img" />
+										<div class="best__info">
+											<h3 class="best__title">Hacking Growth Break Problem</h3>
+											<span class="other-book__price other-book__price-best">$23.00</span>
+											<div class="other-book__buy other-book__buy-best">
+												<button data-toggle="modal" class="other-book__button">
+													Купить
+												</button>
+											</div>
+										</div>
+										<!-- /.best_info -->
+									</li>
+									<li class="best__item">
+										<img src="img/other-book/best-book-3.jpg" alt="Image: Book" class="best__img" />
+										<div class="best__info">
+											<h3 class="best__title">Very Nice a Novel by Mercy</h3>
+											<span class="other-book__price other-book__price-best">$23.00</span>
+											<div class="other-book__buy other-book__buy-best">
+												<button data-toggle="modal" class="other-book__button">
+													Купить
+												</button>
+											</div>
+										</div>
+										<!-- /.best_info -->
+									</li>
+									<li class="best__item">
+										<img src="img/other-book/best-book-4.jpg" alt="Image: Book" class="best__img" />
+										<div class="best__info">
+											<h3 class="best__title">Hooked : How to Build Products</h3>
+											<span class="other-book__price other-book__price-best">$23.00</span>
+											<div class="other-book__buy other-book__buy-best">
+												<button data-toggle="modal" class="other-book__button">
+													Купить
+												</button>
+											</div>
+										</div>
+										<!-- /.best_info -->
+									</li>
+								</ul>
+								<a href="#" class="best__link" onclick="return false">Лучшие книги</a>
+							</div>
+							<!-- /.best-wrapper -->
+						</div>
+						<!-- /.best -->
+					</div>
+					<!-- /.other-book-wrapper -->
+				</div>
+			</section>
+			<!-- /.other-book -->
+
+			<hr class="container horizontal-line" />
+
+			<section class="category" >
+				<div class="container container-category">
+					<button class="category-button category-button--prev">
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M8.0625 12.9062C8.375 12.5938 8.34375 12.125 8.0625 11.8125L4.28125 8.25H13.25C13.6875 8.25 14 7.90625 14 7.5V6.5C14 6.0625 13.6875 5.75 13.25 5.75L4.28125 5.75L8.0625 2.15625C8.34375 1.84375 8.34375 1.375 8.0625 1.0625L7.375 0.375C7.0625 0.09375 6.59375 0.09375 6.3125 0.375L0.21875 6.46875C-0.0625 6.75 -0.0625 7.21875 0.21875 7.53125L6.3125 13.5938C6.59375 13.875 7.0625 13.875 7.375 13.5938L8.0625 12.9062Z"
+								fill="#183B56" class="category-button__img" />
+						</svg>
+					</button>
+					<button class="category-button category-button--next">
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.9375 1.09375C5.625 1.40625 5.65625 1.875 5.9375 2.1875L9.71875 5.75H0.75C0.3125 5.75 0 6.09375 0 6.5V7.5C0 7.9375 0.3125 8.25 0.75 8.25H9.71875L5.9375 11.8438C5.65625 12.1562 5.65625 12.625 5.9375 12.9375L6.625 13.625C6.9375 13.9062 7.40625 13.9062 7.6875 13.625L13.7812 7.53125C14.0625 7.25 14.0625 6.78125 13.7812 6.46875L7.6875 0.40625C7.40625 0.125 6.9375 0.125 6.625 0.40625L5.9375 1.09375Z"
+								fill="#183B56" class="category-button__img" />
+						</svg>
+					</button>
+					<div class="category-wrap">
+						<div class="swiper-container category-container">
+							<div class="swiper-wrapper category-wrapper">
+								<div class="swiper-slide category-slide">
+									<div class="category__item">
+										<div class="category__img-wrapper">
+											<img src="img/category/icon-1.svg" alt="Icon" class="category__img" />
+										</div>
+										<h3 class="category__title">Бизнес & Финансы</h3>
+										<span class="category__section">Книги про мир бизнеса</span>
+									</div>
+								</div>
+								<div class="swiper-slide category-slide">
+									<div class="category__item">
+										<div class="category__img-wrapper">
+											<img src="img/category/icon-2.svg" alt="Icon" class="category__img" />
+										</div>
+										<h3 class="category__title">Самомотивация</h3>
+										<span class="category__section">Книги о мотивации</span>
+									</div>
+								</div>
+								<div class="swiper-slide category-slide">
+									<div class="category__item">
+										<div class="category__img-wrapper">
+											<img src="img/category/icon-3.svg" alt="Icon" class="category__img" />
+										</div>
+										<h3 class="category__title">Романы Теленовеллы</h3>
+										<span class="category__section">Книги с крутыми историями</span>
+									</div>
+								</div>
+								<div class="swiper-slide category-slide">
+									<div class="category__item">
+										<div class="category__img-wrapper">
+											<img src="img/category/icon-4.svg" alt="Icon" class="category__img" />
+										</div>
+										<h3 class="category__title">Навыки будущего</h3>
+										<span class="category__section">Книги для самоподготовки</span>
+									</div>
+								</div>
+								<div class="swiper-slide category-slide">
+									<div class="category__item">
+										<div class="category__img-wrapper">
+											<img src="img/category/icon-4.svg" alt="Icon" class="category__img" />
+										</div>
+										<h3 class="category__title">Навыки будущего</h3>
+										<span class="category__section">Книги для самоподготовки</span>
+									</div>
+								</div>
+								<div class="swiper-slide category-slide">
+									<div class="category__item">
+										<div class="category__img-wrapper">
+											<img src="img/category/icon-3.svg" alt="Icon" class="category__img" />
+										</div>
+										<h3 class="category__title">Романы Теленовеллы</h3>
+										<span class="category__section">Книги с крутыми историями</span>
+									</div>
+								</div>
+								<div class="swiper-slide category-slide">
+									<div class="category__item">
+										<div class="category__img-wrapper">
+											<img src="img/category/icon-4.svg" alt="Icon" class="category__img" />
+										</div>
+										<h3 class="category__title">Навыки будущего</h3>
+										<span class="category__section">Книги для самоподготовки</span>
+									</div>
+								</div>
+								<div class="swiper-slide category-slide">
+									<div class="category__item">
+										<div class="category__img-wrapper">
+											<img src="img/category/icon-1.svg" alt="Icon" class="category__img" />
+										</div>
+										<h3 class="category__title">Бизнес & Финансы</h3>
+										<span class="category__section">Книги про мир бизнеса</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /.category -->
+
+			<section class="unreleased" id="book">
+				<div class="container">
+					<div class="unreleased-wrap">
+						<h2 class="unreleased__title">Неизданные книги</h2>
+						<button class="unreleased-button unreleased-button--prev">
+							<svg width="54" height="56" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="unreleased-button__svg">
+								<rect x="1" y="1" width="52" height="54" rx="26" stroke="white" stroke-width="2"
+									class="unreleased-button__img" />
+								<path
+									d="M27.317 34.9375C27.6295 34.625 27.5982 34.1562 27.317 33.8438L23.5357 30.25H32.5357C32.942 30.25 33.2857 29.9375 33.2857 29.5V28.5C33.2857 28.0938 32.942 27.75 32.5357 27.75H23.5357L27.317 24.1875C27.5982 23.875 27.6295 23.4062 27.317 23.0938L26.6295 22.4062C26.3482 22.125 25.8482 22.125 25.567 22.4062L19.5045 28.5C19.192 28.7812 19.192 29.25 19.5045 29.5312L25.567 35.625C25.8482 35.9062 26.317 35.9062 26.6295 35.625L27.317 34.9375Z"
+									fill="white" class="unreleased-button__img" />
+							</svg>
+						</button>
+						<button class="unreleased-button unreleased-button--next">
+							<svg width="54" height="56" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="unreleased-button__svg">
+								<rect x="1" y="1" width="52" height="54" rx="26" stroke="white" stroke-width="2"
+									class="unreleased-button__img" />
+								<path
+									d="M25.2232 23.0938C24.9107 23.4062 24.942 23.875 25.2232 24.1875L29.0045 27.75H20.0357C19.5982 27.75 19.2857 28.0938 19.2857 28.5V29.5C19.2857 29.9375 19.5982 30.25 20.0357 30.25H29.0045L25.2232 33.8438C24.942 34.1562 24.942 34.625 25.2232 34.9375L25.9107 35.625C26.2232 35.9062 26.692 35.9062 26.9732 35.625L33.067 29.5312C33.3482 29.25 33.3482 28.7812 33.067 28.4688L26.9732 22.4062C26.692 22.125 26.2232 22.125 25.9107 22.4062L25.2232 23.0938Z"
+									fill="white" class="unreleased-button__img" />
+							</svg>
+						</button>
+						<div class="swiper-container unreleased-container">
+							<div class="swiper-wrapper unreleased-wrapper">
+								<div class="swiper-slide unreleased-slide">
+									<img src="img/unpublished-books/book-1.jpg" alt="Image: Book" class="unreleased__img" />
+								</div>
+								<div class="swiper-slide unreleased-slide">
+									<img src="img/unpublished-books/book-2.jpg" alt="Image: Book" class="unreleased__img" />
+								</div>
+								<div class="swiper-slide unreleased-slide">
+									<img src="img/unpublished-books/book-3.jpg" alt="Image: Book" class="unreleased__img" />
+								</div>
+								<div class="swiper-slide unreleased-slide">
+									<img src="img/unpublished-books/book-4.jpg" alt="Image: Book" class="unreleased__img" />
+								</div>
+								<div class="swiper-slide unreleased-slide">
+									<img src="img/unpublished-books/book-5.jpg" alt="Image: Book" class="unreleased__img" />
+								</div>
+								<div class="swiper-slide unreleased-slide">
+									<img src="img/unpublished-books/book-3.jpg" alt="Image: Book" class="unreleased__img" />
+								</div>
+								<div class="swiper-slide unreleased-slide unreleased-slide--last">
+									<img src="img/unpublished-books/book-2.jpg" alt="Image: Book" class="unreleased__img" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.unrealesed-wrap -->
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.unrealesed -->
+
+			<section class="story">
+				<div class="container story-container">
+					<div class="story-wrapper">
+						<div class="story__text">
+							<h2 class="story__title">История Автора</h2>
+							<p class="story__description">
+								Это раздел авторского рассказа. Каждую неделю мы стараемся
+								рассказать вам историю писателя. Расскажем всем о закулисье их
+								книг.
+							</p>
+						</div>
+						<!-- /.story__text -->
+						<div class="story__video-main" id="main-player">
+							<script src="https://www.youtube.com/iframe_api"></script>
+							<div class="video-play-button">
+								<svg width="100%" height="100%" viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="video-play-white-blue">
+									<path
+										d="M28.2812 14.5273L4.90625 0.714844C2.98047 -0.414062 0.125 0.714844 0.125 3.4375V31.0625C0.125 33.5859 2.78125 35.1133 4.90625 33.8516L28.2812 20.0391C30.3398 18.7773 30.3398 15.7891 28.2812 14.5273Z"
+										fill="blue" />
+								</svg>
+							</div>
+							<!-- /.video-play-button -->
+						</div>
+						<!-- /.story__video-main -->
+						<div class="other-video">
+							<div class="video-one">
+								<div class="story__video-one" id="video-one">
+									<script src="https://www.youtube.com/iframe_api"></script>
+									<svg width="100%" height="100%" viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg"
+										class="video-play-white play-video-1">
+										<path
+											d="M28.2812 14.5273L4.90625 0.714844C2.98047 -0.414062 0.125 0.714844 0.125 3.4375V31.0625C0.125 33.5859 2.78125 35.1133 4.90625 33.8516L28.2812 20.0391C30.3398 18.7773 30.3398 15.7891 28.2812 14.5273Z"
+											fill="white" />
+									</svg>
+								</div>
+								<div class="video-head">
+									<h3 class="video-title">Emelda Scandroot</h3>
+									<svg width="100%" height="100%" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg"
+										class="video-like">
+										<path
+											d="M12.0625 0.25H1.9375C0.988281 0.25 0.25 1.02344 0.25 1.9375V18.25L7 14.3125L13.75 18.25V1.9375C13.75 1.02344 12.9766 0.25 12.0625 0.25ZM12.0625 15.332L7 12.3789L1.9375 15.332V2.14844C1.9375 2.04297 2.00781 1.9375 2.14844 1.9375H11.8516C11.957 1.9375 12.0625 2.04297 12.0625 2.14844V15.332Z"
+											fill="#1565D8" class="video-like-icon" />
+									</svg>
+									<span class="video-description">Author of Books Tittle</span>
+								</div>
+							</div>
+							<!-- /.video-one -->
+							<div class="video-two">
+								<div class="story__video-two" id="video-two">
+									<script src="https://www.youtube.com/iframe_api"></script>
+									<svg width="100%" height="100%" viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg"
+										class="video-play-white play-video-2">
+										<path
+											d="M28.2812 14.5273L4.90625 0.714844C2.98047 -0.414062 0.125 0.714844 0.125 3.4375V31.0625C0.125 33.5859 2.78125 35.1133 4.90625 33.8516L28.2812 20.0391C30.3398 18.7773 30.3398 15.7891 28.2812 14.5273Z"
+											fill="white" />
+									</svg>
+								</div>
+								<div class="video-head">
+									<h3 class="video-title">Mar Rueda</h3>
+									<svg width="100%" height="100%" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg"
+										class="video-like">
+										<path
+											d="M12.0625 0.25H1.9375C0.988281 0.25 0.25 1.02344 0.25 1.9375V18.25L7 14.3125L13.75 18.25V1.9375C13.75 1.02344 12.9766 0.25 12.0625 0.25ZM12.0625 15.332L7 12.3789L1.9375 15.332V2.14844C1.9375 2.04297 2.00781 1.9375 2.14844 1.9375H11.8516C11.957 1.9375 12.0625 2.04297 12.0625 2.14844V15.332Z"
+											fill="#1565D8" class="video-like-icon" />
+									</svg>
+									<span class="video-description">Author of Books Tittle</span>
+								</div>
+							</div>
+							<!-- /.video-two -->
+							<div class="video-three">
+								<div class="story__video-three" id="video-three">
+									<script src="https://www.youtube.com/iframe_api"></script>
+									<svg width="100%" height="100%" viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg"
+										class="video-play-white play-video-3">
+										<path
+											d="M28.2812 14.5273L4.90625 0.714844C2.98047 -0.414062 0.125 0.714844 0.125 3.4375V31.0625C0.125 33.5859 2.78125 35.1133 4.90625 33.8516L28.2812 20.0391C30.3398 18.7773 30.3398 15.7891 28.2812 14.5273Z"
+											fill="white" />
+									</svg>
+								</div>
+								<div class="video-head">
+									<h3 class="video-title">Nembo Lukeni</h3>
+									<svg width="100%" height="100%" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg"
+										class="video-like">
+										<path
+											d="M12.0625 0.25H1.9375C0.988281 0.25 0.25 1.02344 0.25 1.9375V18.25L7 14.3125L13.75 18.25V1.9375C13.75 1.02344 12.9766 0.25 12.0625 0.25ZM12.0625 15.332L7 12.3789L1.9375 15.332V2.14844C1.9375 2.04297 2.00781 1.9375 2.14844 1.9375H11.8516C11.957 1.9375 12.0625 2.04297 12.0625 2.14844V15.332Z"
+											fill="#1565D8" class="video-like-icon" />
+									</svg>
+									<span class="video-description">Author of Books Tittle</span>
+								</div>
+							</div>
+							<!-- /.video-one -->
+						</div>
+						<!-- /.other-video -->
+					</div>
+					<!-- /.story-wrapper -->
+				</div>
+			</section>
+			<!-- /.story -->
+
+			<section class="partners">
+				<div class="container">
+					<div class="partners-wrapper">
+						<h2 class="partners__title">
+							Некоторые из издателей, с которыми мы сотрудничали
+						</h2>
+						<ul class="partners__list">
+							<li class="partners__item">
+								<svg width="100%" height="100%" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__slack">
+									<path
+										d="M19.7015 3.19998C19.2636 1.7655 17.7313 0.993084 16.3084 1.43446C14.8855 1.87584 14.1194 3.42067 14.5572 4.85515L21.5622 26.5931C22.0547 27.9172 23.4776 28.6896 24.8457 28.3034C26.2686 27.862 27.1442 26.3724 26.7064 24.9379C26.7064 24.8827 19.7015 3.19998 19.7015 3.19998Z"
+										fill="white" />
+									<path
+										d="M8.86564 6.78616C8.42783 5.35168 6.89549 4.57927 5.47261 5.02065C4.04972 5.46202 3.28355 7.00685 3.72136 8.44133L10.7263 30.1793C11.2189 31.5034 12.6418 32.2758 14.0099 31.8896C15.4328 31.4482 16.3084 29.9586 15.8706 28.5241C15.8706 28.4689 8.86564 6.78616 8.86564 6.78616Z"
+										fill="white" />
+									<path
+										d="M28.5672 21.2414C29.9901 20.8 30.7562 19.2552 30.3184 17.8207C29.8806 16.3862 28.3483 15.6138 26.9254 16.0552L5.30846 23.0621C3.99503 23.5586 3.22886 24.9931 3.61194 26.3724C4.04975 27.8069 5.52736 28.6897 6.95025 28.2483C7.0597 28.2483 28.5672 21.2414 28.5672 21.2414Z"
+										fill="white" />
+									<path
+										d="M9.796 27.3655C11.2189 26.9242 13.0249 26.3173 14.9403 25.6552C14.5025 24.2207 13.9005 22.4 13.2438 20.469L8.09949 22.1793L9.796 27.3655Z"
+										fill="white" />
+									<path
+										d="M20.6866 23.7792C22.6567 23.1172 24.4627 22.5654 25.8308 22.0689C25.393 20.6344 24.791 18.8137 24.1343 16.8827L18.9901 18.593L20.6866 23.7792Z"
+										fill="white" />
+									<path
+										d="M25.0099 10.262C26.4328 9.82065 27.199 8.27582 26.7612 6.84134C26.3234 5.40686 24.791 4.63444 23.3681 5.07582L1.80596 12.1379C0.492524 12.6344 -0.273645 14.0689 0.10944 15.4482C0.547251 16.9379 2.02486 17.8206 3.44775 17.3241C3.50247 17.3241 25.0099 10.262 25.0099 10.262Z"
+										fill="white" />
+									<path
+										d="M6.2935 16.3862C7.71639 15.9448 9.52236 15.3379 11.4378 14.6758C10.7811 12.6896 10.2338 10.8689 9.74126 9.48962L4.59698 11.2L6.2935 16.3862Z"
+										fill="white" />
+									<path
+										d="M17.1293 12.8552C19.0995 12.1931 20.9054 11.6414 22.2736 11.1448C21.6169 9.15862 21.0696 7.33793 20.5771 5.95862L15.4328 7.66896L17.1293 12.8552Z"
+										fill="white" />
+									<path
+										d="M50.403 8.9379C51.3333 9.37928 51.4428 9.65514 50.6766 11.0896C49.9104 12.5793 49.7463 12.6345 48.7612 12.2482C47.5572 11.7517 46.0796 11.3655 45.0945 11.3655C43.5075 11.3655 42.4677 11.9172 42.4677 12.8C42.4677 15.6689 51.607 14.1241 51.607 20.3034C51.607 23.3931 48.9801 25.4345 45.0398 25.4345C42.9602 25.4345 40.3881 24.7172 38.6368 23.8345C37.7612 23.3931 37.7065 23.1172 38.4726 21.6276C39.1293 20.3586 39.3483 20.1931 40.2786 20.5793C41.8109 21.2413 43.6716 21.7379 44.9851 21.7379C46.4627 21.7379 47.393 21.131 47.393 20.2482C47.393 17.4345 38.0895 18.7586 38.0895 12.8C38.0895 9.65514 40.7164 7.50342 44.602 7.50342C46.4627 7.66894 48.8159 8.22066 50.403 8.9379Z"
+										fill="white" />
+									<path
+										d="M57.791 1.65517V24.6069C57.791 24.9379 57.408 25.3241 56.9154 25.3241H54.5075C53.9602 25.3241 53.6318 24.9379 53.6318 24.6069V1.65517C53.6318 0.496553 53.9602 0.441381 55.7114 0.441381C57.6816 0.386208 57.791 0.551726 57.791 1.65517Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M74.7562 24.3862V14.5103C74.7562 10.2069 71.8557 7.66895 67.2587 7.66895C65.1791 7.66895 62.8806 8.33101 61.2388 9.43446C60.3632 9.98619 60.3632 10.262 61.2388 11.6414C62.1691 13.0207 62.3333 13.0758 63.2089 12.5793C64.3035 11.9172 65.6716 11.4758 66.8209 11.4758C69.2288 11.4758 70.6517 12.5793 70.6517 14.4V15.5586C69.5025 15.062 68.0796 14.7862 66.5472 14.7862C62.4428 14.7862 59.7612 16.9931 59.7612 20.3034C59.7612 23.3931 62.1691 25.4896 65.7263 25.4896C67.587 25.4896 69.4477 24.7172 70.7064 23.2827L70.6517 24.331C70.597 24.8827 70.9801 25.2689 71.5273 25.2689H73.8806C74.3731 25.2689 74.7562 24.9379 74.7562 24.3862ZM66.2189 22.1793C64.7413 22.1793 63.7562 21.4069 63.7562 20.2483C63.7562 18.8138 65.2338 17.7103 67.4229 17.7103C68.4627 17.7103 69.6666 17.8758 70.597 18.262V19.8069C69.6666 21.2965 68.0249 22.1793 66.2189 22.1793Z"
+										fill="white" />
+									<path
+										d="M91.0099 8.9931C91.8856 9.48965 91.8856 9.76552 90.9552 11.2552C90.0796 12.6345 89.9154 12.7448 88.9303 12.2483C88.2189 11.8621 87.0149 11.531 86.0846 11.531C83.0746 11.531 81.1045 13.5172 81.1045 16.5517C81.1045 19.6965 83.0746 21.7931 86.0846 21.7931C87.1244 21.7931 88.4378 21.4069 89.2587 20.9103C90.1343 20.4138 90.2985 20.4138 91.2288 21.7931C92.0497 23.0621 92.0497 23.3379 91.2836 23.8897C89.9701 24.8276 87.8358 25.5448 85.9751 25.5448C80.4477 25.5448 76.7263 21.9586 76.7263 16.6069C76.7263 11.2552 80.4477 7.72414 86.0298 7.72414C87.7811 7.66896 89.7512 8.22069 91.0099 8.9931Z"
+										fill="white" />
+									<path
+										d="M109.124 23.1173C109.836 24 109.562 24.3311 107.811 24.938C106.06 25.6 105.786 25.5449 105.184 24.7173L100.204 18.0414L97.9602 20.1931V24.5518C97.9602 24.8828 97.5771 25.269 97.0845 25.269H94.6766C94.1293 25.269 93.801 24.8828 93.801 24.5518V1.6552C93.801 0.496579 94.1293 0.441406 95.8806 0.441406C97.9054 0.441406 97.9602 0.606924 97.9602 1.6552V14.6759L104.746 8.11037C105.512 7.39313 105.895 7.4483 107.264 8.33106C108.741 9.26899 108.851 9.54485 108.139 10.2621L103.104 15.2276L109.124 23.1173Z"
+										fill="white" />
+								</svg>
+							</li>
+							<li class="partners__item">
+								<svg width="100%" height="100%" viewBox="0 0 96 26" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__netflix">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M10.7599 24.3497H10.7599L10.7597 24.3497L10.7596 24.3497C10.2071 24.4064 9.64628 24.4638 9.072 24.5345L4.464 11.2036V25.1018C3.024 25.2436 1.728 25.4327 0.335999 25.6691V0.189087H4.176L9.408 14.6545V0.189087H13.488V24.0145C12.5865 24.1625 11.685 24.2549 10.7599 24.3497ZM24.2917 9.50013L24.2919 9.50012L24.292 9.50012C25.2457 9.47706 26.1772 9.45454 26.88 9.45454V13.4255C25.104 13.4255 22.992 13.4255 21.456 13.52V19.4291C22.2039 19.384 22.9567 19.3341 23.7128 19.284L23.7128 19.284L23.7129 19.284L23.713 19.284H23.7131H23.7131H23.7131H23.7131H23.7131H23.7132H23.7132C25.3346 19.1766 26.9713 19.0681 28.608 19.0036V22.8327L17.424 23.6836V0.189087H28.608V4.16H21.456V9.54909C22.2668 9.54909 23.2914 9.52431 24.2915 9.50013L24.2916 9.50013H24.2917H24.2917ZM39.408 4.20727H43.584C43.584 4.20727 43.584 0.189087 43.632 0.189087H31.2V4.20727H35.376V22.5491C36.672 22.5018 38.064 22.5018 39.408 22.5018V4.20727ZM50.16 9.26545H55.68V13.2364H50.16V22.2655H46.176V0.189087H57.456V4.16H50.16V9.26545ZM68.2178 18.9573C66.8297 18.8769 65.4308 18.796 64.032 18.7673V0.189087H60V22.5018C63.696 22.5964 67.296 22.7854 70.896 23.0218V19.0982C70.0097 19.061 69.116 19.0093 68.2178 18.9573ZM75.6664 23.3926L75.6665 23.3926C76.5314 23.4441 77.4097 23.4964 78.288 23.5891V0.189087H74.304V23.3055C74.753 23.3382 75.2078 23.3653 75.6664 23.3926ZM90.816 12.2909L95.952 0.189087H91.488L88.656 6.85454L86.016 0.189087H81.696L86.4 12.1491L81.216 23.7782C81.792 23.8538 82.368 23.9143 82.944 23.9748C83.808 24.0656 84.672 24.1564 85.536 24.2982L88.512 17.5382L91.392 24.9127C91.9299 24.9955 92.4619 25.0841 92.9922 25.1724C93.9761 25.3362 94.9539 25.4989 95.952 25.6218L90.816 12.2909Z"
+										fill="white" />
+								</svg>
+							</li>
+							<li class="partners__item">
+								<svg width="100%" height="100%" viewBox="0 0 96 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__fitbit">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M14.016 1.83962C14.016 2.83019 13.152 3.67925 12.144 3.67925C11.136 3.67925 10.272 2.83019 10.272 1.83962C10.272 0.849057 11.136 0 12.144 0C13.152 0 14.016 0.849057 14.016 1.83962ZM12.144 5.18868C11.04 5.18868 10.176 6.03774 10.176 7.12264C10.176 8.20755 11.04 9.0566 12.144 9.0566C13.248 9.0566 14.112 8.20755 14.112 7.12264C14.112 5.99057 13.248 5.18868 12.144 5.18868ZM10.128 12.3113C10.128 11.2264 11.04 10.3302 12.144 10.3302C13.248 10.3302 14.208 11.2264 14.16 12.3113C14.16 13.3962 13.248 14.2925 12.144 14.2925C11.04 14.2925 10.128 13.3962 10.128 12.3113ZM12.144 15.566C11.04 15.566 10.176 16.4151 10.176 17.5C10.176 18.5849 11.04 19.434 12.144 19.434C13.248 19.434 14.112 18.5849 14.112 17.5C14.112 16.4623 13.248 15.566 12.144 15.566ZM10.272 22.7358C10.272 21.7453 11.136 20.8962 12.144 20.8962C13.2 20.8962 14.016 21.7453 14.016 22.7358C14.016 23.7264 13.152 24.5755 12.144 24.5755C11.136 24.5755 10.272 23.7264 10.272 22.7358ZM17.328 4.95283C16.128 4.95283 15.12 5.9434 15.12 7.12264C15.12 8.30189 16.128 9.29245 17.328 9.29245C18.528 9.29245 19.536 8.30189 19.536 7.12264C19.536 5.9434 18.528 4.95283 17.328 4.95283ZM15.024 12.3585C15.024 11.0849 16.08 10.0943 17.328 10.0943C18.576 10.0943 19.632 11.0849 19.632 12.3585C19.632 13.6321 18.576 14.6226 17.328 14.6226C16.032 14.6226 15.024 13.5849 15.024 12.3585ZM17.328 15.3302C16.128 15.3302 15.12 16.3208 15.12 17.5C15.12 18.6792 16.128 19.6698 17.328 19.6698C18.528 19.6698 19.536 18.6792 19.536 17.5C19.536 16.3208 18.528 15.3302 17.328 15.3302ZM20.112 12.3113C20.112 10.8962 21.312 9.81132 22.656 9.81132C24 9.81132 25.104 10.8962 25.2 12.3113C25.2 13.7264 24.096 14.8113 22.656 14.8113C21.216 14.8113 20.112 13.6321 20.112 12.3113ZM6.912 5.42453C6 5.42453 5.232 6.17924 5.232 7.07547C5.232 7.9717 6 8.72641 6.912 8.72641C7.824 8.72641 8.592 7.9717 8.592 7.07547C8.592 6.17924 7.872 5.42453 6.912 5.42453ZM5.136 12.3113C5.136 11.3208 5.904 10.566 6.912 10.566C7.92 10.566 8.688 11.3208 8.688 12.3113C8.688 13.3019 7.92 14.0566 6.912 14.0566C5.904 14.0566 5.136 13.3019 5.136 12.3113ZM6.912 15.8019C6 15.8019 5.232 16.5566 5.232 17.4528C5.232 18.3491 6 19.1038 6.912 19.1038C7.824 19.1038 8.592 18.3491 8.592 17.4528C8.592 16.5566 7.872 15.8019 6.912 15.8019ZM0.143997 12.3585C0.143997 11.5094 0.815997 10.8491 1.68 10.8491C2.544 10.8491 3.216 11.5094 3.216 12.3585C3.216 13.2075 2.544 13.8679 1.68 13.8679C0.815997 13.8679 0.143997 13.2075 0.143997 12.3585Z"
+										fill="white" />
+									<path
+										d="M44.304 9.10388C44.112 9.10388 43.968 9.29256 43.968 9.43407V22.5001C43.968 22.6888 44.16 22.8303 44.304 22.8303H45.888C46.08 22.8303 46.224 22.6416 46.224 22.5001V9.43407C46.224 9.24539 46.032 9.10388 45.888 9.10388H44.304Z"
+										fill="white" />
+									<path
+										d="M45.168 3.58496C44.304 3.58496 43.632 4.24534 43.632 5.09439C43.632 5.94345 44.304 6.60383 45.168 6.60383C46.032 6.60383 46.704 5.94345 46.704 5.09439C46.704 4.24534 45.984 3.58496 45.168 3.58496Z"
+										fill="white" />
+									<path
+										d="M78.384 9.10388C78.192 9.10388 78.048 9.29256 78.048 9.43407V22.5001C78.048 22.6888 78.24 22.8303 78.384 22.8303H79.968C80.16 22.8303 80.304 22.6416 80.304 22.5001V9.43407C80.304 9.24539 80.112 9.10388 79.968 9.10388H78.384Z"
+										fill="white" />
+									<path
+										d="M79.152 3.58496C78.288 3.58496 77.616 4.24534 77.616 5.09439C77.616 5.94345 78.288 6.60383 79.152 6.60383C80.016 6.60383 80.688 5.94345 80.688 5.09439C80.688 4.24534 80.016 3.58496 79.152 3.58496Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M95.359 21.3997C95.3491 21.4456 95.3249 21.5012 95.266 21.5567C95.266 21.651 95.166 21.7454 94.966 21.6982L95.0426 21.7865C95.0326 21.7903 95.0237 21.7926 95.016 21.7926H94.866L95.216 22.2171H95.416L95.0426 21.7865C95.0592 21.7801 95.0788 21.7693 95.1003 21.7574C95.1488 21.7306 95.2074 21.6982 95.266 21.6982C95.366 21.6982 95.366 21.6039 95.366 21.5095C95.366 21.4707 95.366 21.4319 95.359 21.3997ZM94.666 21.7926V21.651V21.2265H95.016C95.116 21.2265 95.216 21.2265 95.266 21.3209C95.3249 21.3209 95.3491 21.3536 95.359 21.3997C95.366 21.3676 95.366 21.3403 95.366 21.3209V21.2265C95.366 21.2265 95.366 21.1322 95.266 21.1322C95.266 21.1322 95.166 21.0378 95.066 21.0378H94.866H94.416V22.2171H94.616V21.7926H94.666Z"
+										fill="#8C98A4" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M93.792 21.6509C93.792 21.0849 94.32 20.566 94.896 20.566C95.52 20.566 96 21.0377 96 21.6509C96 22.217 95.472 22.7359 94.896 22.7359C94.32 22.7359 93.792 22.217 93.792 21.6509ZM93.888 21.6509C93.888 22.217 94.32 22.6415 94.896 22.6415C95.424 22.6415 95.904 22.217 95.904 21.6509C95.904 21.0849 95.472 20.6604 94.896 20.6604C94.32 20.6604 93.888 21.0849 93.888 21.6509Z"
+										fill="#8C98A4" />
+									<path
+										d="M57.504 11.2265C57.696 11.2265 57.84 11.0378 57.84 10.8963V9.3397C57.84 9.15102 57.648 9.00951 57.504 9.00951H54.096V4.00951C54.096 3.82083 53.904 3.67932 53.76 3.67932H52.176C51.984 3.67932 51.84 3.868 51.84 4.00951V9.00951H50.16C49.968 9.00951 49.824 9.19819 49.824 9.3397V10.8963C49.824 11.085 50.016 11.2265 50.16 11.2265H51.84V18.7737C51.84 21.085 53.424 22.5944 55.728 22.5944H57.408C57.6 22.5944 57.744 22.4057 57.744 22.2642V20.7076C57.744 20.5189 57.552 20.3774 57.408 20.3774H55.968C54.864 20.3774 54.096 19.6227 54.096 18.4435V11.1793H57.504V11.2265Z"
+										fill="white" />
+									<path
+										d="M91.2 11.2265C91.392 11.2265 91.536 11.0378 91.536 10.8963V9.3397C91.536 9.15102 91.344 9.00951 91.2 9.00951H87.792V4.00951C87.792 3.82083 87.6 3.67932 87.456 3.67932H85.872C85.68 3.67932 85.536 3.868 85.536 4.00951V9.00951H83.856C83.664 9.00951 83.52 9.19819 83.52 9.3397V10.8963C83.52 11.085 83.712 11.2265 83.856 11.2265H85.536V18.7737C85.536 21.085 87.12 22.5944 89.424 22.5944H91.104C91.296 22.5944 91.44 22.4057 91.44 22.2642V20.7076C91.44 20.5189 91.248 20.3774 91.104 20.3774H89.568C88.464 20.3774 87.696 19.6227 87.696 18.4435V11.1793H91.152L91.2 11.2265Z"
+										fill="white" />
+									<path
+										d="M34.224 11.2265V22.3585C34.224 22.5472 34.416 22.6887 34.56 22.6887H36.144C36.336 22.6887 36.48 22.5 36.48 22.3585V11.2265H40.224C40.416 11.2265 40.56 11.0378 40.56 10.8963V9.33967C40.56 9.15099 40.368 9.00948 40.224 9.00948H36.48V6.08495C36.48 4.90571 37.344 4.10382 38.352 4.10382H40.224C40.416 4.10382 40.56 3.91514 40.56 3.77363V2.21703C40.56 2.02835 40.368 1.88684 40.224 1.88684H38.448C36.096 1.88684 34.224 3.8208 34.224 6.03778V9.00948H32.544C32.352 9.00948 32.208 9.19816 32.208 9.33967V10.8963C32.208 11.085 32.4 11.2265 32.544 11.2265H34.224Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M68.112 8.58493C69.984 8.58493 71.76 9.33965 73.008 10.6604C74.256 11.9812 74.928 13.8208 74.928 15.8491C74.928 20.8963 71.424 23.1604 68.064 23.1604C64.656 23.1604 61.2 20.9434 61.2 15.8491V2.12267C61.2 1.98116 61.344 1.79248 61.536 1.79248H63.12C63.264 1.79248 63.456 1.93399 63.456 2.12267V10.4246C64.56 9.33965 66.336 8.58493 68.112 8.58493ZM63.408 15.8963C63.408 18.3963 64.656 21.0378 68.064 21.0378C71.472 21.0378 72.672 18.3963 72.72 15.8963C72.72 12.8774 70.848 10.8019 68.064 10.8019C65.28 10.8019 63.408 12.8302 63.408 15.8963Z"
+										fill="white" />
+								</svg>
+							</li>
+							<li class="partners__item">
+								<svg width="100%" height="100%" viewBox="0 0 96 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__google">
+									<path
+										d="M23.6269 11.1256H12.4352V14.4256H20.3938C19.9959 19.0756 16.1161 21.1256 12.485 21.1256C7.80933 21.1256 3.73057 17.4256 3.73057 12.2756C3.73057 7.22559 7.61036 3.32559 12.485 3.32559C16.2653 3.32559 18.4539 5.72559 18.4539 5.72559L20.742 3.32559C20.742 3.32559 17.7575 0.0255868 12.3358 0.0255868C5.42176 -0.0244132 0.0994835 5.82559 0.0994835 12.1756C0.0994835 18.3756 5.12332 24.4256 12.5347 24.4256C19.0508 24.4256 23.8259 19.9756 23.8259 13.3256C23.8259 11.9256 23.6269 11.1256 23.6269 11.1256Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M24.8705 16.4755C24.8705 12.2755 28.1534 8.67554 32.7295 8.67554C36.5098 8.67554 40.5886 11.3755 40.6383 16.5755C40.6383 21.1755 37.1565 24.4255 32.829 24.4255C28.0539 24.4255 24.8705 20.7755 24.8705 16.4755ZM37.1565 16.5755C37.1565 13.6755 35.0176 11.8255 32.7793 11.8255C30.2425 11.8255 28.3026 13.8255 28.3523 16.5255C28.3523 19.3255 30.2922 21.3255 32.7793 21.3255C35.0674 21.3255 37.1565 19.4755 37.1565 16.5755Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M41.9813 16.4755C41.9813 12.2755 45.2642 8.67554 49.8404 8.67554C53.6207 8.67554 57.6995 11.3755 57.7492 16.5755C57.7492 21.1755 54.2674 24.4255 49.9399 24.4255C45.1648 24.4255 41.9813 20.7755 41.9813 16.4755ZM54.2674 16.5755C54.2674 13.6755 52.1285 11.8255 49.8902 11.8255C47.3534 11.8255 45.4135 13.8255 45.4632 16.5255C45.4632 19.3255 47.4031 21.3255 49.8902 21.3255C52.1782 21.3255 54.2674 19.4755 54.2674 16.5755Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M59.0922 16.5756C59.0922 12.4256 62.3751 8.72559 66.6031 8.72559C68.4435 8.72559 69.8363 9.42559 70.7316 10.5256V9.17559H74.0145V23.3256C74.0145 28.8756 70.8311 31.5256 66.6528 31.5256C62.8228 31.5256 60.6839 29.1756 59.6394 26.9256L62.6736 25.6756C63.1212 26.6756 64.315 28.4756 66.7026 28.4756C69.1896 28.4756 70.8311 26.8256 70.8311 24.1256V22.5756C69.886 23.6256 68.742 24.4756 66.5036 24.4756C62.9223 24.4756 59.0922 21.2756 59.0922 16.5756ZM71.0798 16.6256C71.0798 13.6256 68.9409 11.8256 66.9016 11.8256C64.7129 11.8256 62.5741 13.5756 62.5243 16.6756C62.5243 19.5256 64.6135 21.3756 66.8518 21.3756C68.9907 21.3756 71.0798 19.7256 71.0798 16.6256Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M81.4259 16.5255C81.4259 11.8255 84.7585 8.67554 88.7378 8.67554C91.8218 8.67554 94.1596 10.7755 95.2041 13.1755L95.7513 14.4755L85.256 18.8755C85.9026 20.0755 86.8974 21.2755 89.086 21.2755C91.0259 21.2755 92.2197 20.2255 92.9161 19.1255L95.6518 20.9755C94.458 22.5755 92.3689 24.4255 89.086 24.4255C85.1565 24.4255 81.4259 21.4755 81.4259 16.5255ZM91.772 13.4255C91.2746 12.4755 90.2798 11.7255 88.8373 11.7255C86.599 11.7255 84.4104 14.0755 84.8083 16.3755L91.772 13.4255Z"
+										fill="white" />
+									<path d="M76.4518 23.9756H79.8839V0.775635H76.4518V23.9756Z" fill="white" />
+								</svg>
+							</li>
+							<li class="partners__item">
+								<svg width="96" height="30" viewBox="0 0 96 30" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__airbnb">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M27.4149 21.238L27.4149 21.2381C27.8448 22.3333 27.9403 23.3809 27.797 24.4285C27.4627 26.619 26.0298 28.5238 23.9284 29.3809C23.1642 29.7143 22.3522 29.8571 21.4925 29.8571C21.2537 29.8571 20.9672 29.8571 20.7284 29.8095C19.7254 29.7143 18.7224 29.3809 17.7194 28.8095C16.5254 28.1428 15.3313 27.1428 13.994 25.7143C12.6567 27.1428 11.5104 28.1428 10.2687 28.8095C9.26567 29.3809 8.26268 29.6666 7.2597 29.8095C7.14029 29.8095 7.00895 29.8214 6.87761 29.8333C6.74626 29.8452 6.61492 29.8571 6.49552 29.8571C5.63581 29.8571 4.82387 29.7143 4.0597 29.3809C2.00596 28.5238 0.477606 26.6666 0.143278 24.4285C-5.99027e-06 23.3333 0.143278 22.2857 0.525367 21.2381C0.668648 20.8095 0.811928 20.4762 0.955209 20.1429L0.955218 20.1428C1.19402 19.619 1.43283 19.0952 1.62387 18.619L1.67164 18.5714C3.77313 14.0952 5.97014 9.57141 8.26268 5.09521L8.3582 4.90474C8.59701 4.47617 8.83582 3.99998 9.07462 3.52379C9.1389 3.42308 9.20318 3.32061 9.26814 3.21705L9.26827 3.21685C9.54113 2.78186 9.82598 2.32777 10.1731 1.90474C11.1761 0.761881 12.5134 0.0952148 13.994 0.0952148C15.4269 0.0952148 16.8119 0.761881 17.7672 1.95236C18.2448 2.47617 18.5791 3.0476 18.8657 3.57141C19.1045 4.0476 19.3433 4.52379 19.5821 4.95236L19.6776 5.14283C22.0179 9.61902 24.2149 14.1428 26.2687 18.619H26.3164C26.5074 19.0952 26.7462 19.6189 26.985 20.1427L26.9851 20.1428C27.1283 20.4761 27.2716 20.857 27.4149 21.2379L27.4149 21.238L27.4149 21.238ZM50.4836 7.57141C50.4836 8.66664 49.6239 9.52379 48.5254 9.52379C47.4269 9.52379 46.5672 8.66664 46.5672 7.57141C46.5672 6.47617 47.4269 5.61902 48.5254 5.61902C49.6716 5.66664 50.4836 6.52379 50.4836 7.57141ZM42.5075 11.4762V11.9524C42.5075 11.9524 41.6 10.7619 39.594 10.7619C36.3463 10.7619 33.8149 13.2381 33.8149 16.6666C33.8149 20.0476 36.3463 22.5714 39.594 22.5714C41.6 22.5714 42.5075 21.3333 42.5075 21.3333V21.8571C42.5075 22.0952 42.6985 22.2857 42.9373 22.2857H45.3731V11.0476H42.9373C42.6507 11.0476 42.5075 11.2381 42.5075 11.4762ZM40.0716 19.8571C41.1701 19.8571 42.0776 19.2857 42.5075 18.619V14.619C42.0776 14 41.1224 13.3809 40.0716 13.3809C38.1612 13.3809 36.6806 14.5714 36.6806 16.619C36.6806 18.6666 38.1612 19.8571 40.0716 19.8571ZM49.9582 11.0476V22.2381H47.0925V11.0476H49.9582ZM87.0209 11.9524C87.0209 11.9524 87.9761 10.7619 89.9343 10.7619C93.1821 10.7619 95.7134 13.2381 95.7134 16.619C95.7134 20 93.1821 22.5238 89.9343 22.5238C87.9284 22.5238 87.0209 21.2857 87.0209 21.2857V21.8095C87.0209 22.0476 86.8298 22.2381 86.591 22.2381H84.1552V5.66664H87.0209V11.9524ZM89.4567 19.8095C88.3582 19.8095 87.4985 19.2381 87.0209 18.5714V14.5714C87.4507 13.9524 88.406 13.3333 89.4567 13.3333C91.3672 13.3333 92.8478 14.5238 92.8478 16.5714C92.8478 18.619 91.3672 19.8095 89.4567 19.8095ZM82.6746 22.2857V15.619C82.6746 13.7143 82.2925 12.6666 81.3373 11.8571C80.4776 11.1428 79.4269 10.7619 78.1851 10.7619C77.0866 10.7619 75.9881 11.0952 75.1284 11.9524V11.4762C75.1284 11.2381 74.9373 11.0476 74.6985 11.0476H72.406V22.2857H75.2716V14.4762C75.8448 13.8095 76.7522 13.3809 77.6119 13.3809C79.1881 13.3809 79.809 14.0952 79.809 15.9524V22.2857H82.6746ZM65.4328 10.7619C63.4746 10.7619 62.5194 11.9524 62.5194 11.9524V5.66664H59.6537V22.2381H62.0895C62.3284 22.2381 62.5194 22.0476 62.5194 21.8095V21.2857C62.5194 21.2857 63.4269 22.5238 65.4328 22.5238C68.6806 22.5238 71.2119 20 71.2119 16.619C71.2597 13.2381 68.7284 10.7619 65.4328 10.7619ZM62.5194 18.5714C62.997 19.2381 63.8567 19.8095 64.9552 19.8095C66.8657 19.8095 68.3463 18.619 68.3463 16.5714C68.3463 14.5238 66.8657 13.3333 64.9552 13.3333C63.9045 13.3333 62.9492 13.9524 62.5194 14.5714V18.5714ZM57.2179 10.7619C58.0776 10.7619 58.5552 10.9047 58.5552 10.9047V13.5714C58.5552 13.5714 56.1672 12.7619 54.6866 14.4762V22.2857H51.8209V11.0476H54.2567C54.4955 11.0476 54.6866 11.2381 54.6866 11.4762V11.9524C55.1642 11.3333 56.3104 10.7619 57.2179 10.7619ZM13.9463 22.7619C12.3224 20.7143 11.2716 18.8095 10.9373 17.2381C10.794 16.5714 10.7463 15.9524 10.8418 15.4285C10.8895 14.9524 11.0806 14.5238 11.3194 14.1905C11.8925 13.3809 12.8478 12.8571 13.9463 12.8571C15.0448 12.8571 16.0478 13.3333 16.5731 14.1905C16.8119 14.5714 17.003 14.9524 17.0507 15.4285C17.1463 15.9524 17.0985 16.5714 16.9552 17.2381C16.6209 18.8095 15.5701 20.7143 13.9463 22.7619ZM23.1642 27.6666C24.6448 27.0952 25.6955 25.7619 25.8866 24.1905C25.9821 23.3809 25.8866 22.6666 25.7433 21.9047C25.6916 21.7501 25.6259 21.5954 25.5537 21.4256C25.4926 21.2817 25.4269 21.1271 25.3612 20.9524C25.2418 20.7143 25.1343 20.4643 25.0269 20.2143C24.9194 19.9643 24.8119 19.7143 24.6925 19.4762V19.4285C22.6388 15 20.4418 10.4762 18.1492 6.0476L18.0537 5.85712C17.8149 5.38093 17.5761 4.90474 17.3373 4.47617C17.0985 3.99998 16.8119 3.52379 16.4776 3.14283C15.8567 2.42855 14.997 2.0476 14.0895 2.0476C13.1821 2.0476 12.3224 2.42855 11.7015 3.14283C11.3672 3.57141 11.0806 3.99998 10.8418 4.47617C10.603 4.95236 10.3642 5.42855 10.1254 5.85712L10.0298 6.0476C7.68955 10.4762 5.49253 15 3.4388 19.4285L3.39104 19.4762C3.15223 19.9524 2.91343 20.4762 2.72238 20.9524L2.72237 20.9524C2.57909 21.2857 2.43581 21.619 2.34029 21.9047C2.00596 22.7619 1.9582 23.4762 2.05373 24.2381C2.24477 25.7619 3.29552 27.0952 4.77611 27.7143C5.44477 27.9524 6.20895 28.0952 7.02089 28C7.78507 27.9047 8.54925 27.6666 9.31343 27.2381C10.3642 26.619 11.4627 25.7143 12.7045 24.3333C10.7463 21.9047 9.50447 19.6666 9.07462 17.7143C8.83581 16.8095 8.78805 15.9524 8.93134 15.1905C9.07462 14.4285 9.31343 13.7619 9.74328 13.1428C10.6507 11.8571 12.2269 11.0476 13.9463 11.0476C15.6657 11.0476 17.2418 11.8095 18.1492 13.1428C18.5791 13.7619 18.8179 14.4285 18.9612 15.1905C19.0567 15.9524 19.0089 16.8095 18.8179 17.7143C18.3403 19.6666 17.1463 21.8571 15.1881 24.2857C16.4298 25.6666 17.4806 26.5714 18.5791 27.1905C19.391 27.619 20.1075 27.8571 20.8716 27.9524C21.6836 28.0476 22.4478 27.9524 23.1642 27.6666Z"
+										fill="white" />
+								</svg>
+							</li>
+							<li class="partners__item">
+								<svg width="96" height="21" viewBox="0 0 96 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__uber">
+									<path
+										d="M15.0448 0.732513V12.0139C15.0448 15.7744 13.4209 17.3372 9.6 17.3372C5.77911 17.3372 4.15522 15.7744 4.15522 12.0139V0.244141H0.477612C0.143284 0.244141 0 0.390652 0 0.732513V12.1604C0 18.4604 3.91642 20.6581 9.6 20.6581C15.2836 20.6581 19.2 18.4604 19.2 12.1604V0.244141H15.5224C15.2358 0.244141 15.0448 0.390652 15.0448 0.732513Z"
+										fill="white" />
+									<path
+										d="M68.394 3.51623C68.6806 3.51623 68.8239 3.41856 68.9194 3.17437L69.9701 0.488327C70.0179 0.341815 69.9701 0.244141 69.8269 0.244141H55.0209C53.6358 0.244141 53.1104 0.683676 53.1104 1.66042V19.1441C53.1104 19.9744 53.4925 20.3162 54.591 20.3162H68.394C68.6806 20.3162 68.8239 20.2186 68.9194 19.9744L69.9701 17.2883C70.0179 17.1418 69.9701 17.0441 69.8269 17.0441H57.1701V13.479C57.1701 12.2581 57.8388 11.672 59.606 11.672H65.0985C65.3851 11.672 65.5284 11.5744 65.6239 11.3302L66.6269 8.74181C66.6746 8.5953 66.6269 8.49763 66.4836 8.49763H57.1224V3.51623H68.394Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M44.609 5.32321C44.609 7.22786 43.9403 8.83949 42.3164 9.71856C44.5134 10.3534 45.5164 12.3558 45.4687 14.7488C45.4687 18.7534 42.6985 20.3162 38.8299 20.3162H28.5612C27.4627 20.3162 27.0806 19.9744 27.0806 19.1441V1.66042C27.0806 0.683676 27.606 0.244141 28.991 0.244141H37.397C41.0746 0.244141 44.609 0.879024 44.609 5.32321ZM31.1881 3.4674H37.6836C39.8328 3.4674 40.4537 4.29763 40.4537 6.05577C40.4537 7.76507 39.8328 8.64414 37.6836 8.64414H31.1881V3.4674ZM38.4478 17.093H31.1881V13.4302C31.1881 12.2093 31.8567 11.6232 33.6239 11.6232H38.4478C40.7403 11.6232 41.409 12.5511 41.409 14.3581C41.409 16.2139 40.7403 17.093 38.4478 17.093Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M91.2717 12.2581L95.6657 19.9744C95.7612 20.072 95.7612 20.3162 95.4269 20.3162H91.7015C91.4261 20.3162 91.3271 20.1809 91.1926 19.9969C91.1872 19.9895 91.1817 19.982 91.1761 19.9744L87.212 12.6488H83.5821C81.8149 12.6488 81.1463 13.2348 81.1463 14.4558V20.3162H77.5642C77.2299 20.3162 77.0866 20.1697 77.0866 19.8279V1.66042C77.0866 0.683676 77.612 0.244141 78.997 0.244141H87.403C92.2746 0.244141 95.2358 1.56275 95.2358 6.44647C95.2358 10.2069 93.4687 11.672 91.2717 12.2581ZM81.1463 9.57205H87.9761C90.5552 9.57205 91.0806 8.54647 91.0806 6.4953C91.0806 4.49298 90.5075 3.4674 87.9761 3.4674H81.1463V9.57205Z"
+										fill="white" />
+								</svg>
+							</li>
+							<li class="partners__item">
+								<svg width="100%" height="100%" viewBox="0 0 96 26" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__netflix">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M10.7599 24.3497H10.7599L10.7597 24.3497L10.7596 24.3497C10.2071 24.4064 9.64628 24.4638 9.072 24.5345L4.464 11.2036V25.1018C3.024 25.2436 1.728 25.4327 0.335999 25.6691V0.189087H4.176L9.408 14.6545V0.189087H13.488V24.0145C12.5865 24.1625 11.685 24.2549 10.7599 24.3497ZM24.2917 9.50013L24.2919 9.50012L24.292 9.50012C25.2457 9.47706 26.1772 9.45454 26.88 9.45454V13.4255C25.104 13.4255 22.992 13.4255 21.456 13.52V19.4291C22.2039 19.384 22.9567 19.3341 23.7128 19.284L23.7128 19.284L23.7129 19.284L23.713 19.284H23.7131H23.7131H23.7131H23.7131H23.7131H23.7132H23.7132C25.3346 19.1766 26.9713 19.0681 28.608 19.0036V22.8327L17.424 23.6836V0.189087H28.608V4.16H21.456V9.54909C22.2668 9.54909 23.2914 9.52431 24.2915 9.50013L24.2916 9.50013H24.2917H24.2917ZM39.408 4.20727H43.584C43.584 4.20727 43.584 0.189087 43.632 0.189087H31.2V4.20727H35.376V22.5491C36.672 22.5018 38.064 22.5018 39.408 22.5018V4.20727ZM50.16 9.26545H55.68V13.2364H50.16V22.2655H46.176V0.189087H57.456V4.16H50.16V9.26545ZM68.2178 18.9573C66.8297 18.8769 65.4308 18.796 64.032 18.7673V0.189087H60V22.5018C63.696 22.5964 67.296 22.7854 70.896 23.0218V19.0982C70.0097 19.061 69.116 19.0093 68.2178 18.9573ZM75.6664 23.3926L75.6665 23.3926C76.5314 23.4441 77.4097 23.4964 78.288 23.5891V0.189087H74.304V23.3055C74.753 23.3382 75.2078 23.3653 75.6664 23.3926ZM90.816 12.2909L95.952 0.189087H91.488L88.656 6.85454L86.016 0.189087H81.696L86.4 12.1491L81.216 23.7782C81.792 23.8538 82.368 23.9143 82.944 23.9748C83.808 24.0656 84.672 24.1564 85.536 24.2982L88.512 17.5382L91.392 24.9127C91.9299 24.9955 92.4619 25.0841 92.9922 25.1724C93.9761 25.3362 94.9539 25.4989 95.952 25.6218L90.816 12.2909Z"
+										fill="white" />
+								</svg>
+							</li>
+							<li class="partners__item">
+								<svg width="96" height="30" viewBox="0 0 96 30" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__airbnb">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M27.4149 21.238L27.4149 21.2381C27.8448 22.3333 27.9403 23.3809 27.797 24.4285C27.4627 26.619 26.0298 28.5238 23.9284 29.3809C23.1642 29.7143 22.3522 29.8571 21.4925 29.8571C21.2537 29.8571 20.9672 29.8571 20.7284 29.8095C19.7254 29.7143 18.7224 29.3809 17.7194 28.8095C16.5254 28.1428 15.3313 27.1428 13.994 25.7143C12.6567 27.1428 11.5104 28.1428 10.2687 28.8095C9.26567 29.3809 8.26268 29.6666 7.2597 29.8095C7.14029 29.8095 7.00895 29.8214 6.87761 29.8333C6.74626 29.8452 6.61492 29.8571 6.49552 29.8571C5.63581 29.8571 4.82387 29.7143 4.0597 29.3809C2.00596 28.5238 0.477606 26.6666 0.143278 24.4285C-5.99027e-06 23.3333 0.143278 22.2857 0.525367 21.2381C0.668648 20.8095 0.811928 20.4762 0.955209 20.1429L0.955218 20.1428C1.19402 19.619 1.43283 19.0952 1.62387 18.619L1.67164 18.5714C3.77313 14.0952 5.97014 9.57141 8.26268 5.09521L8.3582 4.90474C8.59701 4.47617 8.83582 3.99998 9.07462 3.52379C9.1389 3.42308 9.20318 3.32061 9.26814 3.21705L9.26827 3.21685C9.54113 2.78186 9.82598 2.32777 10.1731 1.90474C11.1761 0.761881 12.5134 0.0952148 13.994 0.0952148C15.4269 0.0952148 16.8119 0.761881 17.7672 1.95236C18.2448 2.47617 18.5791 3.0476 18.8657 3.57141C19.1045 4.0476 19.3433 4.52379 19.5821 4.95236L19.6776 5.14283C22.0179 9.61902 24.2149 14.1428 26.2687 18.619H26.3164C26.5074 19.0952 26.7462 19.6189 26.985 20.1427L26.9851 20.1428C27.1283 20.4761 27.2716 20.857 27.4149 21.2379L27.4149 21.238L27.4149 21.238ZM50.4836 7.57141C50.4836 8.66664 49.6239 9.52379 48.5254 9.52379C47.4269 9.52379 46.5672 8.66664 46.5672 7.57141C46.5672 6.47617 47.4269 5.61902 48.5254 5.61902C49.6716 5.66664 50.4836 6.52379 50.4836 7.57141ZM42.5075 11.4762V11.9524C42.5075 11.9524 41.6 10.7619 39.594 10.7619C36.3463 10.7619 33.8149 13.2381 33.8149 16.6666C33.8149 20.0476 36.3463 22.5714 39.594 22.5714C41.6 22.5714 42.5075 21.3333 42.5075 21.3333V21.8571C42.5075 22.0952 42.6985 22.2857 42.9373 22.2857H45.3731V11.0476H42.9373C42.6507 11.0476 42.5075 11.2381 42.5075 11.4762ZM40.0716 19.8571C41.1701 19.8571 42.0776 19.2857 42.5075 18.619V14.619C42.0776 14 41.1224 13.3809 40.0716 13.3809C38.1612 13.3809 36.6806 14.5714 36.6806 16.619C36.6806 18.6666 38.1612 19.8571 40.0716 19.8571ZM49.9582 11.0476V22.2381H47.0925V11.0476H49.9582ZM87.0209 11.9524C87.0209 11.9524 87.9761 10.7619 89.9343 10.7619C93.1821 10.7619 95.7134 13.2381 95.7134 16.619C95.7134 20 93.1821 22.5238 89.9343 22.5238C87.9284 22.5238 87.0209 21.2857 87.0209 21.2857V21.8095C87.0209 22.0476 86.8298 22.2381 86.591 22.2381H84.1552V5.66664H87.0209V11.9524ZM89.4567 19.8095C88.3582 19.8095 87.4985 19.2381 87.0209 18.5714V14.5714C87.4507 13.9524 88.406 13.3333 89.4567 13.3333C91.3672 13.3333 92.8478 14.5238 92.8478 16.5714C92.8478 18.619 91.3672 19.8095 89.4567 19.8095ZM82.6746 22.2857V15.619C82.6746 13.7143 82.2925 12.6666 81.3373 11.8571C80.4776 11.1428 79.4269 10.7619 78.1851 10.7619C77.0866 10.7619 75.9881 11.0952 75.1284 11.9524V11.4762C75.1284 11.2381 74.9373 11.0476 74.6985 11.0476H72.406V22.2857H75.2716V14.4762C75.8448 13.8095 76.7522 13.3809 77.6119 13.3809C79.1881 13.3809 79.809 14.0952 79.809 15.9524V22.2857H82.6746ZM65.4328 10.7619C63.4746 10.7619 62.5194 11.9524 62.5194 11.9524V5.66664H59.6537V22.2381H62.0895C62.3284 22.2381 62.5194 22.0476 62.5194 21.8095V21.2857C62.5194 21.2857 63.4269 22.5238 65.4328 22.5238C68.6806 22.5238 71.2119 20 71.2119 16.619C71.2597 13.2381 68.7284 10.7619 65.4328 10.7619ZM62.5194 18.5714C62.997 19.2381 63.8567 19.8095 64.9552 19.8095C66.8657 19.8095 68.3463 18.619 68.3463 16.5714C68.3463 14.5238 66.8657 13.3333 64.9552 13.3333C63.9045 13.3333 62.9492 13.9524 62.5194 14.5714V18.5714ZM57.2179 10.7619C58.0776 10.7619 58.5552 10.9047 58.5552 10.9047V13.5714C58.5552 13.5714 56.1672 12.7619 54.6866 14.4762V22.2857H51.8209V11.0476H54.2567C54.4955 11.0476 54.6866 11.2381 54.6866 11.4762V11.9524C55.1642 11.3333 56.3104 10.7619 57.2179 10.7619ZM13.9463 22.7619C12.3224 20.7143 11.2716 18.8095 10.9373 17.2381C10.794 16.5714 10.7463 15.9524 10.8418 15.4285C10.8895 14.9524 11.0806 14.5238 11.3194 14.1905C11.8925 13.3809 12.8478 12.8571 13.9463 12.8571C15.0448 12.8571 16.0478 13.3333 16.5731 14.1905C16.8119 14.5714 17.003 14.9524 17.0507 15.4285C17.1463 15.9524 17.0985 16.5714 16.9552 17.2381C16.6209 18.8095 15.5701 20.7143 13.9463 22.7619ZM23.1642 27.6666C24.6448 27.0952 25.6955 25.7619 25.8866 24.1905C25.9821 23.3809 25.8866 22.6666 25.7433 21.9047C25.6916 21.7501 25.6259 21.5954 25.5537 21.4256C25.4926 21.2817 25.4269 21.1271 25.3612 20.9524C25.2418 20.7143 25.1343 20.4643 25.0269 20.2143C24.9194 19.9643 24.8119 19.7143 24.6925 19.4762V19.4285C22.6388 15 20.4418 10.4762 18.1492 6.0476L18.0537 5.85712C17.8149 5.38093 17.5761 4.90474 17.3373 4.47617C17.0985 3.99998 16.8119 3.52379 16.4776 3.14283C15.8567 2.42855 14.997 2.0476 14.0895 2.0476C13.1821 2.0476 12.3224 2.42855 11.7015 3.14283C11.3672 3.57141 11.0806 3.99998 10.8418 4.47617C10.603 4.95236 10.3642 5.42855 10.1254 5.85712L10.0298 6.0476C7.68955 10.4762 5.49253 15 3.4388 19.4285L3.39104 19.4762C3.15223 19.9524 2.91343 20.4762 2.72238 20.9524L2.72237 20.9524C2.57909 21.2857 2.43581 21.619 2.34029 21.9047C2.00596 22.7619 1.9582 23.4762 2.05373 24.2381C2.24477 25.7619 3.29552 27.0952 4.77611 27.7143C5.44477 27.9524 6.20895 28.0952 7.02089 28C7.78507 27.9047 8.54925 27.6666 9.31343 27.2381C10.3642 26.619 11.4627 25.7143 12.7045 24.3333C10.7463 21.9047 9.50447 19.6666 9.07462 17.7143C8.83581 16.8095 8.78805 15.9524 8.93134 15.1905C9.07462 14.4285 9.31343 13.7619 9.74328 13.1428C10.6507 11.8571 12.2269 11.0476 13.9463 11.0476C15.6657 11.0476 17.2418 11.8095 18.1492 13.1428C18.5791 13.7619 18.8179 14.4285 18.9612 15.1905C19.0567 15.9524 19.0089 16.8095 18.8179 17.7143C18.3403 19.6666 17.1463 21.8571 15.1881 24.2857C16.4298 25.6666 17.4806 26.5714 18.5791 27.1905C19.391 27.619 20.1075 27.8571 20.8716 27.9524C21.6836 28.0476 22.4478 27.9524 23.1642 27.6666Z"
+										fill="white" />
+								</svg>
+							</li>
+							<li class="partners__item">
+								<svg width="100%" height="100%" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__slack">
+									<path
+										d="M19.7015 3.19998C19.2636 1.7655 17.7313 0.993084 16.3084 1.43446C14.8855 1.87584 14.1194 3.42067 14.5572 4.85515L21.5622 26.5931C22.0547 27.9172 23.4776 28.6896 24.8457 28.3034C26.2686 27.862 27.1442 26.3724 26.7064 24.9379C26.7064 24.8827 19.7015 3.19998 19.7015 3.19998Z"
+										fill="white" />
+									<path
+										d="M8.86564 6.78616C8.42783 5.35168 6.89549 4.57927 5.47261 5.02065C4.04972 5.46202 3.28355 7.00685 3.72136 8.44133L10.7263 30.1793C11.2189 31.5034 12.6418 32.2758 14.0099 31.8896C15.4328 31.4482 16.3084 29.9586 15.8706 28.5241C15.8706 28.4689 8.86564 6.78616 8.86564 6.78616Z"
+										fill="white" />
+									<path
+										d="M28.5672 21.2414C29.9901 20.8 30.7562 19.2552 30.3184 17.8207C29.8806 16.3862 28.3483 15.6138 26.9254 16.0552L5.30846 23.0621C3.99503 23.5586 3.22886 24.9931 3.61194 26.3724C4.04975 27.8069 5.52736 28.6897 6.95025 28.2483C7.0597 28.2483 28.5672 21.2414 28.5672 21.2414Z"
+										fill="white" />
+									<path
+										d="M9.796 27.3655C11.2189 26.9242 13.0249 26.3173 14.9403 25.6552C14.5025 24.2207 13.9005 22.4 13.2438 20.469L8.09949 22.1793L9.796 27.3655Z"
+										fill="white" />
+									<path
+										d="M20.6866 23.7792C22.6567 23.1172 24.4627 22.5654 25.8308 22.0689C25.393 20.6344 24.791 18.8137 24.1343 16.8827L18.9901 18.593L20.6866 23.7792Z"
+										fill="white" />
+									<path
+										d="M25.0099 10.262C26.4328 9.82065 27.199 8.27582 26.7612 6.84134C26.3234 5.40686 24.791 4.63444 23.3681 5.07582L1.80596 12.1379C0.492524 12.6344 -0.273645 14.0689 0.10944 15.4482C0.547251 16.9379 2.02486 17.8206 3.44775 17.3241C3.50247 17.3241 25.0099 10.262 25.0099 10.262Z"
+										fill="white" />
+									<path
+										d="M6.2935 16.3862C7.71639 15.9448 9.52236 15.3379 11.4378 14.6758C10.7811 12.6896 10.2338 10.8689 9.74126 9.48962L4.59698 11.2L6.2935 16.3862Z"
+										fill="white" />
+									<path
+										d="M17.1293 12.8552C19.0995 12.1931 20.9054 11.6414 22.2736 11.1448C21.6169 9.15862 21.0696 7.33793 20.5771 5.95862L15.4328 7.66896L17.1293 12.8552Z"
+										fill="white" />
+									<path
+										d="M50.403 8.9379C51.3333 9.37928 51.4428 9.65514 50.6766 11.0896C49.9104 12.5793 49.7463 12.6345 48.7612 12.2482C47.5572 11.7517 46.0796 11.3655 45.0945 11.3655C43.5075 11.3655 42.4677 11.9172 42.4677 12.8C42.4677 15.6689 51.607 14.1241 51.607 20.3034C51.607 23.3931 48.9801 25.4345 45.0398 25.4345C42.9602 25.4345 40.3881 24.7172 38.6368 23.8345C37.7612 23.3931 37.7065 23.1172 38.4726 21.6276C39.1293 20.3586 39.3483 20.1931 40.2786 20.5793C41.8109 21.2413 43.6716 21.7379 44.9851 21.7379C46.4627 21.7379 47.393 21.131 47.393 20.2482C47.393 17.4345 38.0895 18.7586 38.0895 12.8C38.0895 9.65514 40.7164 7.50342 44.602 7.50342C46.4627 7.66894 48.8159 8.22066 50.403 8.9379Z"
+										fill="white" />
+									<path
+										d="M57.791 1.65517V24.6069C57.791 24.9379 57.408 25.3241 56.9154 25.3241H54.5075C53.9602 25.3241 53.6318 24.9379 53.6318 24.6069V1.65517C53.6318 0.496553 53.9602 0.441381 55.7114 0.441381C57.6816 0.386208 57.791 0.551726 57.791 1.65517Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M74.7562 24.3862V14.5103C74.7562 10.2069 71.8557 7.66895 67.2587 7.66895C65.1791 7.66895 62.8806 8.33101 61.2388 9.43446C60.3632 9.98619 60.3632 10.262 61.2388 11.6414C62.1691 13.0207 62.3333 13.0758 63.2089 12.5793C64.3035 11.9172 65.6716 11.4758 66.8209 11.4758C69.2288 11.4758 70.6517 12.5793 70.6517 14.4V15.5586C69.5025 15.062 68.0796 14.7862 66.5472 14.7862C62.4428 14.7862 59.7612 16.9931 59.7612 20.3034C59.7612 23.3931 62.1691 25.4896 65.7263 25.4896C67.587 25.4896 69.4477 24.7172 70.7064 23.2827L70.6517 24.331C70.597 24.8827 70.9801 25.2689 71.5273 25.2689H73.8806C74.3731 25.2689 74.7562 24.9379 74.7562 24.3862ZM66.2189 22.1793C64.7413 22.1793 63.7562 21.4069 63.7562 20.2483C63.7562 18.8138 65.2338 17.7103 67.4229 17.7103C68.4627 17.7103 69.6666 17.8758 70.597 18.262V19.8069C69.6666 21.2965 68.0249 22.1793 66.2189 22.1793Z"
+										fill="white" />
+									<path
+										d="M91.0099 8.9931C91.8856 9.48965 91.8856 9.76552 90.9552 11.2552C90.0796 12.6345 89.9154 12.7448 88.9303 12.2483C88.2189 11.8621 87.0149 11.531 86.0846 11.531C83.0746 11.531 81.1045 13.5172 81.1045 16.5517C81.1045 19.6965 83.0746 21.7931 86.0846 21.7931C87.1244 21.7931 88.4378 21.4069 89.2587 20.9103C90.1343 20.4138 90.2985 20.4138 91.2288 21.7931C92.0497 23.0621 92.0497 23.3379 91.2836 23.8897C89.9701 24.8276 87.8358 25.5448 85.9751 25.5448C80.4477 25.5448 76.7263 21.9586 76.7263 16.6069C76.7263 11.2552 80.4477 7.72414 86.0298 7.72414C87.7811 7.66896 89.7512 8.22069 91.0099 8.9931Z"
+										fill="white" />
+									<path
+										d="M109.124 23.1173C109.836 24 109.562 24.3311 107.811 24.938C106.06 25.6 105.786 25.5449 105.184 24.7173L100.204 18.0414L97.9602 20.1931V24.5518C97.9602 24.8828 97.5771 25.269 97.0845 25.269H94.6766C94.1293 25.269 93.801 24.8828 93.801 24.5518V1.6552C93.801 0.496579 94.1293 0.441406 95.8806 0.441406C97.9054 0.441406 97.9602 0.606924 97.9602 1.6552V14.6759L104.746 8.11037C105.512 7.39313 105.895 7.4483 107.264 8.33106C108.741 9.26899 108.851 9.54485 108.139 10.2621L103.104 15.2276L109.124 23.1173Z"
+										fill="white" />
+								</svg>
+							</li>
+							<li class="partners__item">
+								<svg width="96" height="21" viewBox="0 0 96 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__uber">
+									<path
+										d="M15.0448 0.732513V12.0139C15.0448 15.7744 13.4209 17.3372 9.6 17.3372C5.77911 17.3372 4.15522 15.7744 4.15522 12.0139V0.244141H0.477612C0.143284 0.244141 0 0.390652 0 0.732513V12.1604C0 18.4604 3.91642 20.6581 9.6 20.6581C15.2836 20.6581 19.2 18.4604 19.2 12.1604V0.244141H15.5224C15.2358 0.244141 15.0448 0.390652 15.0448 0.732513Z"
+										fill="white" />
+									<path
+										d="M68.394 3.51623C68.6806 3.51623 68.8239 3.41856 68.9194 3.17437L69.9701 0.488327C70.0179 0.341815 69.9701 0.244141 69.8269 0.244141H55.0209C53.6358 0.244141 53.1104 0.683676 53.1104 1.66042V19.1441C53.1104 19.9744 53.4925 20.3162 54.591 20.3162H68.394C68.6806 20.3162 68.8239 20.2186 68.9194 19.9744L69.9701 17.2883C70.0179 17.1418 69.9701 17.0441 69.8269 17.0441H57.1701V13.479C57.1701 12.2581 57.8388 11.672 59.606 11.672H65.0985C65.3851 11.672 65.5284 11.5744 65.6239 11.3302L66.6269 8.74181C66.6746 8.5953 66.6269 8.49763 66.4836 8.49763H57.1224V3.51623H68.394Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M44.609 5.32321C44.609 7.22786 43.9403 8.83949 42.3164 9.71856C44.5134 10.3534 45.5164 12.3558 45.4687 14.7488C45.4687 18.7534 42.6985 20.3162 38.8299 20.3162H28.5612C27.4627 20.3162 27.0806 19.9744 27.0806 19.1441V1.66042C27.0806 0.683676 27.606 0.244141 28.991 0.244141H37.397C41.0746 0.244141 44.609 0.879024 44.609 5.32321ZM31.1881 3.4674H37.6836C39.8328 3.4674 40.4537 4.29763 40.4537 6.05577C40.4537 7.76507 39.8328 8.64414 37.6836 8.64414H31.1881V3.4674ZM38.4478 17.093H31.1881V13.4302C31.1881 12.2093 31.8567 11.6232 33.6239 11.6232H38.4478C40.7403 11.6232 41.409 12.5511 41.409 14.3581C41.409 16.2139 40.7403 17.093 38.4478 17.093Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M91.2717 12.2581L95.6657 19.9744C95.7612 20.072 95.7612 20.3162 95.4269 20.3162H91.7015C91.4261 20.3162 91.3271 20.1809 91.1926 19.9969C91.1872 19.9895 91.1817 19.982 91.1761 19.9744L87.212 12.6488H83.5821C81.8149 12.6488 81.1463 13.2348 81.1463 14.4558V20.3162H77.5642C77.2299 20.3162 77.0866 20.1697 77.0866 19.8279V1.66042C77.0866 0.683676 77.612 0.244141 78.997 0.244141H87.403C92.2746 0.244141 95.2358 1.56275 95.2358 6.44647C95.2358 10.2069 93.4687 11.672 91.2717 12.2581ZM81.1463 9.57205H87.9761C90.5552 9.57205 91.0806 8.54647 91.0806 6.4953C91.0806 4.49298 90.5075 3.4674 87.9761 3.4674H81.1463V9.57205Z"
+										fill="white" />
+								</svg>
+							</li>
+							<li class="partners__item">
+								<svg width="100%" height="100%" viewBox="0 0 96 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__fitbit">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M14.016 1.83962C14.016 2.83019 13.152 3.67925 12.144 3.67925C11.136 3.67925 10.272 2.83019 10.272 1.83962C10.272 0.849057 11.136 0 12.144 0C13.152 0 14.016 0.849057 14.016 1.83962ZM12.144 5.18868C11.04 5.18868 10.176 6.03774 10.176 7.12264C10.176 8.20755 11.04 9.0566 12.144 9.0566C13.248 9.0566 14.112 8.20755 14.112 7.12264C14.112 5.99057 13.248 5.18868 12.144 5.18868ZM10.128 12.3113C10.128 11.2264 11.04 10.3302 12.144 10.3302C13.248 10.3302 14.208 11.2264 14.16 12.3113C14.16 13.3962 13.248 14.2925 12.144 14.2925C11.04 14.2925 10.128 13.3962 10.128 12.3113ZM12.144 15.566C11.04 15.566 10.176 16.4151 10.176 17.5C10.176 18.5849 11.04 19.434 12.144 19.434C13.248 19.434 14.112 18.5849 14.112 17.5C14.112 16.4623 13.248 15.566 12.144 15.566ZM10.272 22.7358C10.272 21.7453 11.136 20.8962 12.144 20.8962C13.2 20.8962 14.016 21.7453 14.016 22.7358C14.016 23.7264 13.152 24.5755 12.144 24.5755C11.136 24.5755 10.272 23.7264 10.272 22.7358ZM17.328 4.95283C16.128 4.95283 15.12 5.9434 15.12 7.12264C15.12 8.30189 16.128 9.29245 17.328 9.29245C18.528 9.29245 19.536 8.30189 19.536 7.12264C19.536 5.9434 18.528 4.95283 17.328 4.95283ZM15.024 12.3585C15.024 11.0849 16.08 10.0943 17.328 10.0943C18.576 10.0943 19.632 11.0849 19.632 12.3585C19.632 13.6321 18.576 14.6226 17.328 14.6226C16.032 14.6226 15.024 13.5849 15.024 12.3585ZM17.328 15.3302C16.128 15.3302 15.12 16.3208 15.12 17.5C15.12 18.6792 16.128 19.6698 17.328 19.6698C18.528 19.6698 19.536 18.6792 19.536 17.5C19.536 16.3208 18.528 15.3302 17.328 15.3302ZM20.112 12.3113C20.112 10.8962 21.312 9.81132 22.656 9.81132C24 9.81132 25.104 10.8962 25.2 12.3113C25.2 13.7264 24.096 14.8113 22.656 14.8113C21.216 14.8113 20.112 13.6321 20.112 12.3113ZM6.912 5.42453C6 5.42453 5.232 6.17924 5.232 7.07547C5.232 7.9717 6 8.72641 6.912 8.72641C7.824 8.72641 8.592 7.9717 8.592 7.07547C8.592 6.17924 7.872 5.42453 6.912 5.42453ZM5.136 12.3113C5.136 11.3208 5.904 10.566 6.912 10.566C7.92 10.566 8.688 11.3208 8.688 12.3113C8.688 13.3019 7.92 14.0566 6.912 14.0566C5.904 14.0566 5.136 13.3019 5.136 12.3113ZM6.912 15.8019C6 15.8019 5.232 16.5566 5.232 17.4528C5.232 18.3491 6 19.1038 6.912 19.1038C7.824 19.1038 8.592 18.3491 8.592 17.4528C8.592 16.5566 7.872 15.8019 6.912 15.8019ZM0.143997 12.3585C0.143997 11.5094 0.815997 10.8491 1.68 10.8491C2.544 10.8491 3.216 11.5094 3.216 12.3585C3.216 13.2075 2.544 13.8679 1.68 13.8679C0.815997 13.8679 0.143997 13.2075 0.143997 12.3585Z"
+										fill="white" />
+									<path
+										d="M44.304 9.10388C44.112 9.10388 43.968 9.29256 43.968 9.43407V22.5001C43.968 22.6888 44.16 22.8303 44.304 22.8303H45.888C46.08 22.8303 46.224 22.6416 46.224 22.5001V9.43407C46.224 9.24539 46.032 9.10388 45.888 9.10388H44.304Z"
+										fill="white" />
+									<path
+										d="M45.168 3.58496C44.304 3.58496 43.632 4.24534 43.632 5.09439C43.632 5.94345 44.304 6.60383 45.168 6.60383C46.032 6.60383 46.704 5.94345 46.704 5.09439C46.704 4.24534 45.984 3.58496 45.168 3.58496Z"
+										fill="white" />
+									<path
+										d="M78.384 9.10388C78.192 9.10388 78.048 9.29256 78.048 9.43407V22.5001C78.048 22.6888 78.24 22.8303 78.384 22.8303H79.968C80.16 22.8303 80.304 22.6416 80.304 22.5001V9.43407C80.304 9.24539 80.112 9.10388 79.968 9.10388H78.384Z"
+										fill="white" />
+									<path
+										d="M79.152 3.58496C78.288 3.58496 77.616 4.24534 77.616 5.09439C77.616 5.94345 78.288 6.60383 79.152 6.60383C80.016 6.60383 80.688 5.94345 80.688 5.09439C80.688 4.24534 80.016 3.58496 79.152 3.58496Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M95.359 21.3997C95.3491 21.4456 95.3249 21.5012 95.266 21.5567C95.266 21.651 95.166 21.7454 94.966 21.6982L95.0426 21.7865C95.0326 21.7903 95.0237 21.7926 95.016 21.7926H94.866L95.216 22.2171H95.416L95.0426 21.7865C95.0592 21.7801 95.0788 21.7693 95.1003 21.7574C95.1488 21.7306 95.2074 21.6982 95.266 21.6982C95.366 21.6982 95.366 21.6039 95.366 21.5095C95.366 21.4707 95.366 21.4319 95.359 21.3997ZM94.666 21.7926V21.651V21.2265H95.016C95.116 21.2265 95.216 21.2265 95.266 21.3209C95.3249 21.3209 95.3491 21.3536 95.359 21.3997C95.366 21.3676 95.366 21.3403 95.366 21.3209V21.2265C95.366 21.2265 95.366 21.1322 95.266 21.1322C95.266 21.1322 95.166 21.0378 95.066 21.0378H94.866H94.416V22.2171H94.616V21.7926H94.666Z"
+										fill="#8C98A4" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M93.792 21.6509C93.792 21.0849 94.32 20.566 94.896 20.566C95.52 20.566 96 21.0377 96 21.6509C96 22.217 95.472 22.7359 94.896 22.7359C94.32 22.7359 93.792 22.217 93.792 21.6509ZM93.888 21.6509C93.888 22.217 94.32 22.6415 94.896 22.6415C95.424 22.6415 95.904 22.217 95.904 21.6509C95.904 21.0849 95.472 20.6604 94.896 20.6604C94.32 20.6604 93.888 21.0849 93.888 21.6509Z"
+										fill="#8C98A4" />
+									<path
+										d="M57.504 11.2265C57.696 11.2265 57.84 11.0378 57.84 10.8963V9.3397C57.84 9.15102 57.648 9.00951 57.504 9.00951H54.096V4.00951C54.096 3.82083 53.904 3.67932 53.76 3.67932H52.176C51.984 3.67932 51.84 3.868 51.84 4.00951V9.00951H50.16C49.968 9.00951 49.824 9.19819 49.824 9.3397V10.8963C49.824 11.085 50.016 11.2265 50.16 11.2265H51.84V18.7737C51.84 21.085 53.424 22.5944 55.728 22.5944H57.408C57.6 22.5944 57.744 22.4057 57.744 22.2642V20.7076C57.744 20.5189 57.552 20.3774 57.408 20.3774H55.968C54.864 20.3774 54.096 19.6227 54.096 18.4435V11.1793H57.504V11.2265Z"
+										fill="white" />
+									<path
+										d="M91.2 11.2265C91.392 11.2265 91.536 11.0378 91.536 10.8963V9.3397C91.536 9.15102 91.344 9.00951 91.2 9.00951H87.792V4.00951C87.792 3.82083 87.6 3.67932 87.456 3.67932H85.872C85.68 3.67932 85.536 3.868 85.536 4.00951V9.00951H83.856C83.664 9.00951 83.52 9.19819 83.52 9.3397V10.8963C83.52 11.085 83.712 11.2265 83.856 11.2265H85.536V18.7737C85.536 21.085 87.12 22.5944 89.424 22.5944H91.104C91.296 22.5944 91.44 22.4057 91.44 22.2642V20.7076C91.44 20.5189 91.248 20.3774 91.104 20.3774H89.568C88.464 20.3774 87.696 19.6227 87.696 18.4435V11.1793H91.152L91.2 11.2265Z"
+										fill="white" />
+									<path
+										d="M34.224 11.2265V22.3585C34.224 22.5472 34.416 22.6887 34.56 22.6887H36.144C36.336 22.6887 36.48 22.5 36.48 22.3585V11.2265H40.224C40.416 11.2265 40.56 11.0378 40.56 10.8963V9.33967C40.56 9.15099 40.368 9.00948 40.224 9.00948H36.48V6.08495C36.48 4.90571 37.344 4.10382 38.352 4.10382H40.224C40.416 4.10382 40.56 3.91514 40.56 3.77363V2.21703C40.56 2.02835 40.368 1.88684 40.224 1.88684H38.448C36.096 1.88684 34.224 3.8208 34.224 6.03778V9.00948H32.544C32.352 9.00948 32.208 9.19816 32.208 9.33967V10.8963C32.208 11.085 32.4 11.2265 32.544 11.2265H34.224Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M68.112 8.58493C69.984 8.58493 71.76 9.33965 73.008 10.6604C74.256 11.9812 74.928 13.8208 74.928 15.8491C74.928 20.8963 71.424 23.1604 68.064 23.1604C64.656 23.1604 61.2 20.9434 61.2 15.8491V2.12267C61.2 1.98116 61.344 1.79248 61.536 1.79248H63.12C63.264 1.79248 63.456 1.93399 63.456 2.12267V10.4246C64.56 9.33965 66.336 8.58493 68.112 8.58493ZM63.408 15.8963C63.408 18.3963 64.656 21.0378 68.064 21.0378C71.472 21.0378 72.672 18.3963 72.72 15.8963C72.72 12.8774 70.848 10.8019 68.064 10.8019C65.28 10.8019 63.408 12.8302 63.408 15.8963Z"
+										fill="white" />
+								</svg>
+							</li>
+							<li class="partners__item">
+								<svg width="100%" height="100%" viewBox="0 0 96 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+									class="partners__google">
+									<path
+										d="M23.6269 11.1256H12.4352V14.4256H20.3938C19.9959 19.0756 16.1161 21.1256 12.485 21.1256C7.80933 21.1256 3.73057 17.4256 3.73057 12.2756C3.73057 7.22559 7.61036 3.32559 12.485 3.32559C16.2653 3.32559 18.4539 5.72559 18.4539 5.72559L20.742 3.32559C20.742 3.32559 17.7575 0.0255868 12.3358 0.0255868C5.42176 -0.0244132 0.0994835 5.82559 0.0994835 12.1756C0.0994835 18.3756 5.12332 24.4256 12.5347 24.4256C19.0508 24.4256 23.8259 19.9756 23.8259 13.3256C23.8259 11.9256 23.6269 11.1256 23.6269 11.1256Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M24.8705 16.4755C24.8705 12.2755 28.1534 8.67554 32.7295 8.67554C36.5098 8.67554 40.5886 11.3755 40.6383 16.5755C40.6383 21.1755 37.1565 24.4255 32.829 24.4255C28.0539 24.4255 24.8705 20.7755 24.8705 16.4755ZM37.1565 16.5755C37.1565 13.6755 35.0176 11.8255 32.7793 11.8255C30.2425 11.8255 28.3026 13.8255 28.3523 16.5255C28.3523 19.3255 30.2922 21.3255 32.7793 21.3255C35.0674 21.3255 37.1565 19.4755 37.1565 16.5755Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M41.9813 16.4755C41.9813 12.2755 45.2642 8.67554 49.8404 8.67554C53.6207 8.67554 57.6995 11.3755 57.7492 16.5755C57.7492 21.1755 54.2674 24.4255 49.9399 24.4255C45.1648 24.4255 41.9813 20.7755 41.9813 16.4755ZM54.2674 16.5755C54.2674 13.6755 52.1285 11.8255 49.8902 11.8255C47.3534 11.8255 45.4135 13.8255 45.4632 16.5255C45.4632 19.3255 47.4031 21.3255 49.8902 21.3255C52.1782 21.3255 54.2674 19.4755 54.2674 16.5755Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M59.0922 16.5756C59.0922 12.4256 62.3751 8.72559 66.6031 8.72559C68.4435 8.72559 69.8363 9.42559 70.7316 10.5256V9.17559H74.0145V23.3256C74.0145 28.8756 70.8311 31.5256 66.6528 31.5256C62.8228 31.5256 60.6839 29.1756 59.6394 26.9256L62.6736 25.6756C63.1212 26.6756 64.315 28.4756 66.7026 28.4756C69.1896 28.4756 70.8311 26.8256 70.8311 24.1256V22.5756C69.886 23.6256 68.742 24.4756 66.5036 24.4756C62.9223 24.4756 59.0922 21.2756 59.0922 16.5756ZM71.0798 16.6256C71.0798 13.6256 68.9409 11.8256 66.9016 11.8256C64.7129 11.8256 62.5741 13.5756 62.5243 16.6756C62.5243 19.5256 64.6135 21.3756 66.8518 21.3756C68.9907 21.3756 71.0798 19.7256 71.0798 16.6256Z"
+										fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M81.4259 16.5255C81.4259 11.8255 84.7585 8.67554 88.7378 8.67554C91.8218 8.67554 94.1596 10.7755 95.2041 13.1755L95.7513 14.4755L85.256 18.8755C85.9026 20.0755 86.8974 21.2755 89.086 21.2755C91.0259 21.2755 92.2197 20.2255 92.9161 19.1255L95.6518 20.9755C94.458 22.5755 92.3689 24.4255 89.086 24.4255C85.1565 24.4255 81.4259 21.4755 81.4259 16.5255ZM91.772 13.4255C91.2746 12.4755 90.2798 11.7255 88.8373 11.7255C86.599 11.7255 84.4104 14.0755 84.8083 16.3755L91.772 13.4255Z"
+										fill="white" />
+									<path d="M76.4518 23.9756H79.8839V0.775635H76.4518V23.9756Z" fill="white" />
+								</svg>
+							</li>
+						</ul>
+						<!-- /.partners__list -->
+					</div>
+				</div>
+			</section>
+			<!-- /.partners -->
+
+			<section class="blog" id="blog">
+				<div class="container">
+					<div class="blog-wrapper">
+						<h2 class="blog__title">Ehya Блог</h2>
+						<button class="blog__all">Все Блоги</button>
+						<div class="blog-main">
+							<img src="img/blog/blog-1.jpg" alt="Image: Blog" class="blog-main__img" />
+							<h3 class="blog-main__title">
+								<a class="blog__link" href="#" onclick="return false">Success Steps For Your Business Life</a>
+							</h3>
+							<div class="blog-main__description">
+								This is the author story section. Every week we try to give you
+								the story of book writer. Tell all of you the behind the scene of
+								their books.
+							</div>
+						</div>
+						<!-- /.blog__main-section -->
+						<div class="blog-other">
+							<ul class="blog-other__list">
+								<li class="blog-other__item">
+									<img src="img/blog/blog-2.jpg" alt="Image: Blog" class="blog-other__img" />
+									<div class="blog-other__info">
+										<span class="blog-other__date">23 марта 2020</span>
+										<h3 class="blog-other__title">
+											<a class="blog__link"  href="#" onclick="return false">29 Motivational Quotes for Work Environments</a>
+										</h3>
+										<a href="#" class="blog-other__link" onclick="return false">читать</a>
+									</div>
+								</li>
+								<li class="blog-other__item">
+									<img src="img/blog/blog-3.jpg" alt="Image: Blog" class="blog-other__img" />
+									<div class="blog-other__info">
+										<span class="blog-other__date">28 марта 2020</span>
+										<h3 class="blog-other__title">
+											<a class="blog__link"  href="#" onclick="return false">Learn To Love Growth and You Will Be A Success</a>
+										</h3>
+										<a href="#" class="blog-other__link" onclick="return false">читать</a>
+									</div>
+								</li>
+								<li class="blog-other__item">
+									<img src="img/blog/blog-4.jpg" alt="Image: Blog" class="blog-other__img" />
+									<div class="blog-other__info">
+										<span class="blog-other__date">28 марта 2020</span>
+										<h3 class="blog-other__title">
+											<a class="blog__link" href="#" onclick="return false">Motivation How To Build Trust at your Work</a>
+										</h3>
+										<a href="#" class="blog-other__link" onclick="return false">читать</a>
+									</div>
+								</li>
+							</ul>
+							<!-- /.blog-other__list -->
+						</div>
+						<!-- /.blog-other__section -->
+					</div>
+					<!-- /.blog-wrapper -->
+				</div>
+			</section>
+			<!-- /.blog -->
+
+			<section class="subscribe">
+				<div class="container subscribe-container">
+					<div class="subscribe-wrapper modal">
+						<h2 class="subscribe__title">
+							Будь первым, кто узнает о наших акциях
+						</h2>
+						<form action="send.php" class="subscribe__form form modal__form" method="POST">
+							<input type="email" class="subscribe__input" placeholder="Ваш Email" name="email" required />
+							<svg width="100%" height="100%" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="icon-email-send">
+								<path
+									d="M15.6875 3.96875C14.9688 4.53125 14.0625 5.21875 10.875 7.53125C10.25 8 9.09375 9.03125 8 9.03125C6.875 9.03125 5.75 8 5.09375 7.53125C1.90625 5.21875 1 4.53125 0.28125 3.96875C0.15625 3.875 0 3.96875 0 4.125V10.5C0 11.3438 0.65625 12 1.5 12H14.5C15.3125 12 16 11.3438 16 10.5V4.125C16 3.96875 15.8125 3.875 15.6875 3.96875ZM8 8C8.71875 8.03125 9.75 7.09375 10.2812 6.71875C14.4375 3.71875 14.75 3.4375 15.6875 2.6875C15.875 2.5625 16 2.34375 16 2.09375V1.5C16 0.6875 15.3125 0 14.5 0H1.5C0.65625 0 0 0.6875 0 1.5V2.09375C0 2.34375 0.09375 2.5625 0.28125 2.6875C1.21875 3.4375 1.53125 3.71875 5.6875 6.71875C6.21875 7.09375 7.25 8.03125 8 8Z"
+									fill="#183B56" />
+							</svg>
+							<button class="subscribe__button">Регистрация</button>
+						</form>
+					</div>
+					<!-- /.subscribe-wrapper -->
+				</div>
+			</section>
+			<!-- /.subscribe -->
+
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__wrapper">
+						<div class="footer-info">
+							<div class="footer-info__company footer-info__company">
+								<a href="index.html" class="footer__logo-link">
+									<img src="img/footer/logo.jpg" alt="Logo" class="footer__logo">
+								</a>
+								<p class="footer__text">Создайте современный и креативный веб-сайт с crealand</p>
+								<div class="footer__icon footer-block-icons">
+									<a href="https://google.com" rel="noopener nofollow" target="_blank" class="footer-block-icons__icon">
+										<svg width="42" height="40" viewBox="0 0 42 40" fill="#5A7184" class="footer-block-icons__icon-hover" xmlns="http://www.w3.org/2000/svg">
+											<rect opacity="0.1" width="42" height="40" rx="20" fill="#5A7184" />
+											<path
+												d="M28.9583 20.5208C28.9583 20.0208 28.8958 19.6458 28.8333 19.2395H21.4583V21.8958H25.8333C25.6771 23.052 24.5208 25.2395 21.4583 25.2395C18.8021 25.2395 16.6458 23.052 16.6458 20.3333C16.6458 15.9895 21.7708 13.9895 24.5208 16.6458L26.6458 14.6145C25.3021 13.3645 23.5208 12.5833 21.4583 12.5833C17.1458 12.5833 13.7083 16.052 13.7083 20.3333C13.7083 24.6458 17.1458 28.0833 21.4583 28.0833C25.9271 28.0833 28.9583 24.9583 28.9583 20.5208Z"
+												fill="#5A7184" />
+										</svg>
+									</a>
+									<a href="https://twitter.com/" rel="noopener nofollow" target="_blank" class="footer-block-icons__icon">
+										<svg width="42" height="40" viewBox="0 0 42 40" fill="#5A7184" class="footer-block-icons__icon-hover" xmlns="http://www.w3.org/2000/svg">
+											<rect opacity="0.1" width="42" height="40" rx="20" fill="#5A7184" />
+											<path
+												d="M27.6771 17.0833C28.3021 16.6145 28.8646 16.052 29.3021 15.3958C28.7396 15.6458 28.0833 15.8333 27.4271 15.8958C28.1146 15.4895 28.6146 14.8645 28.8646 14.0833C28.2396 14.4583 27.5208 14.7395 26.8021 14.8958C26.1771 14.2395 25.3333 13.8645 24.3958 13.8645C22.5833 13.8645 21.1146 15.3333 21.1146 17.1458C21.1146 17.3958 21.1458 17.6458 21.2083 17.8958C18.4896 17.7395 16.0521 16.427 14.4271 14.4583C14.1458 14.927 13.9896 15.4895 13.9896 16.1145C13.9896 17.2395 14.5521 18.2395 15.4583 18.8333C14.9271 18.802 14.3958 18.677 13.9583 18.427V18.4583C13.9583 20.052 15.0833 21.3645 16.5833 21.677C16.3333 21.7395 16.0208 21.802 15.7396 21.802C15.5208 21.802 15.3333 21.7708 15.1146 21.7395C15.5208 23.052 16.7396 23.9895 18.1771 24.0208C17.0521 24.8958 15.6458 25.427 14.1146 25.427C13.8333 25.427 13.5833 25.3958 13.3333 25.3645C14.7708 26.302 16.4896 26.8333 18.3646 26.8333C24.3958 26.8333 27.6771 21.8645 27.6771 17.5208C27.6771 17.3645 27.6771 17.2395 27.6771 17.0833Z"
+												fill="#5A7184" />
+										</svg>
+									</a>
+									<a href="https://www.instagram.com/" class="footer-block-icons__icon" rel="noopener nofollow" target="_blank">
+										<svg width="40" height="40" viewBox="0 0 40 40" fill="#5A7184" class="footer-block-icons__icon-hover" xmlns="http://www.w3.org/2000/svg">
+											<rect opacity="0.1" width="40" height="40" rx="20" fill="#5A7184" />
+											<path
+												d="M20.3333 16.7395C18.3333 16.7395 16.7396 18.3645 16.7396 20.3333C16.7396 22.3333 18.3333 23.927 20.3333 23.927C22.3021 23.927 23.9271 22.3333 23.9271 20.3333C23.9271 18.3645 22.3021 16.7395 20.3333 16.7395ZM20.3333 22.677C19.0521 22.677 17.9896 21.6458 17.9896 20.3333C17.9896 19.052 19.0208 18.0208 20.3333 18.0208C21.6146 18.0208 22.6458 19.052 22.6458 20.3333C22.6458 21.6458 21.6146 22.677 20.3333 22.677ZM24.8958 16.6145C24.8958 16.1458 24.5208 15.7708 24.0521 15.7708C23.5833 15.7708 23.2083 16.1458 23.2083 16.6145C23.2083 17.0833 23.5833 17.4583 24.0521 17.4583C24.5208 17.4583 24.8958 17.0833 24.8958 16.6145ZM27.2708 17.4583C27.2083 16.3333 26.9583 15.3333 26.1458 14.5208C25.3333 13.7083 24.3333 13.4583 23.2083 13.3958C22.0521 13.3333 18.5833 13.3333 17.4271 13.3958C16.3021 13.4583 15.3333 13.7083 14.4896 14.5208C13.6771 15.3333 13.4271 16.3333 13.3646 17.4583C13.3021 18.6145 13.3021 22.0833 13.3646 23.2395C13.4271 24.3645 13.6771 25.3333 14.4896 26.177C15.3333 26.9895 16.3021 27.2395 17.4271 27.302C18.5833 27.3645 22.0521 27.3645 23.2083 27.302C24.3333 27.2395 25.3333 26.9895 26.1458 26.177C26.9583 25.3333 27.2083 24.3645 27.2708 23.2395C27.3333 22.0833 27.3333 18.6145 27.2708 17.4583ZM25.7708 24.4583C25.5521 25.0833 25.0521 25.552 24.4583 25.802C23.5208 26.177 21.3333 26.0833 20.3333 26.0833C19.3021 26.0833 17.1146 26.177 16.2083 25.802C15.5833 25.552 15.1146 25.0833 14.8646 24.4583C14.4896 23.552 14.5833 21.3645 14.5833 20.3333C14.5833 19.3333 14.4896 17.1458 14.8646 16.2083C15.1146 15.6145 15.5833 15.1458 16.2083 14.8958C17.1146 14.5208 19.3021 14.6145 20.3333 14.6145C21.3333 14.6145 23.5208 14.5208 24.4583 14.8958C25.0521 15.1145 25.5208 15.6145 25.7708 16.2083C26.1458 17.1458 26.0521 19.3333 26.0521 20.3333C26.0521 21.3645 26.1458 23.552 25.7708 24.4583Z"
+												fill="#5A7184" />
+										</svg>
+									</a>
+									<a href="https://www.linkedin.cn" class="footer-block-icons__icon" rel="noopener nofollow" target="_blank">
+										<svg width="40" height="40" viewBox="0 0 40 40" fill="#5A7184" class="footer-block-icons__icon-hover" xmlns="http://www.w3.org/2000/svg">
+											<rect opacity="0.1" width="40" height="40" rx="20" fill="#5A7184" />
+											<path
+												d="M26.3333 13.3333H14.3021C13.7708 13.3333 13.3333 13.802 13.3333 14.3645V26.3333C13.3333 26.8958 13.7708 27.3333 14.3021 27.3333H26.3333C26.8646 27.3333 27.3333 26.8958 27.3333 26.3333V14.3645C27.3333 13.802 26.8646 13.3333 26.3333 13.3333ZM17.5521 25.3333H15.4896V18.677H17.5521V25.3333ZM16.5208 17.7395C15.8333 17.7395 15.3021 17.2083 15.3021 16.552C15.3021 15.8958 15.8333 15.3333 16.5208 15.3333C17.1771 15.3333 17.7083 15.8958 17.7083 16.552C17.7083 17.2083 17.1771 17.7395 16.5208 17.7395ZM25.3333 25.3333H23.2396V22.0833C23.2396 21.3333 23.2396 20.3333 22.1771 20.3333C21.0833 20.3333 20.9271 21.177 20.9271 22.052V25.3333H18.8646V18.677H20.8333V19.5833H20.8646C21.1458 19.052 21.8333 18.4895 22.8333 18.4895C24.9271 18.4895 25.3333 19.8958 25.3333 21.677V25.3333Z"
+												fill="#5A7184" />
+										</svg>
+									</a>
+								</div>
+								<!-- /.footer__icon -->
+							</div>
+							<!-- /.footer-info__company -->
+							<div class="footer-list">
+								<div class="footer-info__list footer-info__list">
+									<h3 class="footer-info__title">Продукт</h3>
+									<ul class="footer-info__ul">
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Лэндинг</a></li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Функции</a></li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Документация</a></li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Скидки</a></li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Расценки</a></li>
+										
+									</ul>
+								</div>
+								<!-- /.footer-info__list -->
+								<div class="footer-info__list footer-info__list">
+									<h3 class="footer-info__title">Сервисы</h3>
+									<ul class="footer-info__ul">
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Документация</a></li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Дизайн</a></li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Темы</a></li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Илюстрации</a></li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">UI</a> Kit</li>
+										
+									</ul>
+								</div>
+								<!-- /.footer-info__list -->
+								<div class="footer-info__list footer-info__list">
+									<h3 class="footer-info__title">Компания</h3>
+									<ul class="footer-info__ul">
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">О</a> нас</li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Условия</a></li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Privacy</a> Policy</li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Careers</a></li>
+										
+									</ul>
+								</div>
+								<!-- /.footer-info__list -->
+								<div class="footer-info__list footer-info__list">
+									<h3 class="footer-info__title">Еще...</h3>
+									<ul class="footer-info__ul">
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Документация</a></li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Лицензия</a></li>
+										
+										
+											<li class="footer-info__item"><a href="#" class="footer-info__link">Изменения</a></li>
+										
+									</ul>
+								</div>
+								<!-- /.footer-info__list -->
+							</div>
+							<!-- /.footer-list -->
+						</div>
+						<!-- /.footer-info -->
+						<div class="footer__footer">
+							<img src="img/footer/heart.png" alt="Icon: Heart" class="footer__icon-heart">
+							<p class="footer__copyright ">Copyright © 2019. Crafted with love.</p>
+						</div>
+						<!-- /.footer__footer -->
+					</div>
+					<!-- /.footer__wrapper -->
+					<p id="back-top" >
+						<a class="to-top" href="#top"><img src="img/footer/up.svg" alt="up-arrow"></a>
+					</p>
+				</div>
+				<!-- /.container -->
+			</footer>
+			<div class="modal">
+				<div class="modal__overlay"></div>
+				<!-- /.modal__overlay -->
+				<div class="modal__dialog">
+
+					<div class="modal__wrapper">
+						<a href="#" class="modal__close">
+							<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M10.4144 7.99995L16.6575 1.76968C17.0638 1.36443 17.0638 0.709193 16.6575 0.30394C16.2514 -0.101313 15.5948 -0.101313 15.1887 0.30394L8.94539 6.53421L2.70225 0.30394C2.29595 -0.101313 1.63953 -0.101313 1.23343 0.30394C0.827138 0.709193 0.827138 1.36443 1.23343 1.76968L7.47657 7.99995L1.23343 14.2302C0.827138 14.6355 0.827138 15.2907 1.23343 15.696C1.43582 15.8981 1.70192 15.9997 1.96784 15.9997C2.23376 15.9997 2.49967 15.8981 2.70225 15.696L8.94539 9.4657L15.1887 15.696C15.3913 15.8981 15.6572 15.9997 15.9231 15.9997C16.189 15.9997 16.455 15.8981 16.6575 15.696C17.0638 15.2907 17.0638 14.6355 16.6575 14.2302L10.4144 7.99995Z"
+									fill="white" />
+							</svg>
+						</a>
+						<h3 class="modal__title modal__title--form">Оставьте заявку</h3>
+						<form action="send.php" method="POST" class="form modal__form">
+							<div class="modal__input-group">
+								<input type="text" class="input modal__input" placeholder="Ваше полное имя*" name="name" required minlength="2" />
+							</div>
+							<!-- /.modal__input-group -->
+							<div class="modal__input-group">
+								<input type="tel" class="input modal__input phone" placeholder="Номер телефона*" name="phone" required minlength="10" />
+							</div>
+							<!-- /.modal__input-group -->
+							<div class="modal__input-group">
+								<input type="email" class="input modal__input" placeholder="Ваша почта*" name="email" required />
+							</div>
+							<!-- /.modal__input-group -->
+							<textarea class="message modal__message" placeholder="Сообщение" name="message"></textarea>
+							<div class="modal__footer">
+								<button class="button modal__button btn" type="submit">Отправить</button>
+								<span class="modal__failds">* Обязательные поля</span>
+							</div>
+							<!-- /.modal__footer -->
+						</form>
+					</div>
+					<!-- /.modal__wrapper -->
+				</div>
+				<!-- /.modal__dialog -->
+			</div>
+			<!-- /.modal -->
+
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.mask.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

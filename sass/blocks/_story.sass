@@ -1,0 +1,148 @@
+.story
+  padding-top: 104px
+  padding-bottom: 102px
+  &-wrapper
+    width: 1005px
+    margin: auto
+  &__text
+    display: flex
+    justify-content: space-between
+  &__title
+    display: block
+    font-family: Roboto Condensed
+    font-style: normal
+    font-weight: bold
+    font-size: 48px
+    line-height: 60px
+    letter-spacing: 0.2px
+    color: $secondary
+    max-width: 500px
+    max-height: 60px
+    overflow: hidden
+    text-overflow: ellipsis
+  &__description
+    font-family: Open Sans
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 32px
+    color: $text-color
+    max-width: 383px
+    max-height: 135px
+    overflow: auto
+    margin-right: 36px
+  &__video
+    &-main
+      position: relative
+      margin-top: 22px
+      margin-bottom: 30px
+      width: 100%
+      height: 380px
+      background-image: url(../img/author-story/video-1.jpg)
+      background-repeat: no-repeat
+      background-position: center
+      background-color: transparent
+      object-fit: cover
+
+.video
+  &-play
+    &-button
+      position: absolute
+      top: 50%
+      right: 50%
+      transform: translate(50%, -50%)
+      z-index: 80
+      width: 100px
+      height: 100px
+      border-radius: 50%   
+      background-color: $light
+      cursor: pointer
+    &-white 
+      position: absolute
+      width: 30px
+      height: 35px 
+      top: 50%
+      right: 50%
+      transform: translate(50%, -50%)
+      &-blue
+        width: 30px
+        height: 35px 
+        position: absolute
+        top: 50%
+        right: 50%
+        transform: translate(50%, -50%)
+
+.other
+  &-video
+    display: flex
+    justify-content: space-between
+
+.story
+  &__video
+    &-one
+      position: relative
+      width: 315px
+      height: 200px
+      background-image: url(../img/author-story/video-2.jpg)
+      background-repeat: no-repeat
+      background-position: center
+      background-color: transparent
+      margin-bottom: 22px
+      object-fit: cover
+    &-two
+      position: relative
+      width: 315px
+      height: 200px
+      background-image: url(../img/author-story/video-3.jpg)
+      background-repeat: no-repeat
+      background-position: center
+      background-color: transparent
+      margin-bottom: 22px
+      object-fit: cover
+    &-three
+      position: relative
+      width: 315px
+      height: 200px
+      background-image: url(../img/author-story/video-4.jpg)
+      background-repeat: no-repeat
+      background-position: center
+      background-color: transparent
+      margin-bottom: 22px
+      object-fit: cover
+
+.video    
+  &-head
+    display: grid
+    grid-template-columns: 80% 20%
+    grid-template-rows: 50% 50%
+    row-gap: 10px
+  &-title
+    font-family: Roboto
+    font-style: normal
+    font-weight: 500
+    font-size: 22px
+    line-height: 32px
+    letter-spacing: 0.2px
+    color: $secondary
+    grid-row: 1
+    grid-column: 1
+  &-description
+    font-family: Open Sans
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 22px
+    color: $text-color
+    grid-row: 2
+    grid-column: 1
+  &-like
+    width: 14px
+    height: 19px
+    margin-top: 10px
+    cursor: pointer
+    grid-row: 1
+    grid-column: 2
+    justify-self: end
+  &-play
+    &-white
+      cursor: pointer

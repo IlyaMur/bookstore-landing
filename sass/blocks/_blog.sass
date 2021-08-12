@@ -1,146 +1,127 @@
 .blog
-  padding-top: 101px
-  padding-bottom: 100px
-
-  &__wrapper
-    display: flex
-    align-items: center
-    justify-content: space-between
-    flex-wrap: wrap
-
+  padding: 100px 0px 104px 0px
+  &-wrapper
+    display: grid
+    grid-template-columns: 556px 1fr
+    grid-template-rows: 60px 505px
+    row-gap: 40px
+    column-gap: 30px
   &__title
-    font-family: "Roboto Condensed", sans-serif
+    font-family: Roboto Condensed
     font-style: normal
     font-weight: bold
     font-size: 48px
     line-height: 60px
     letter-spacing: 0.2px
-    color: #183b56
-    max-width: 50%
-    flex-basis: 50%
-
-  &__link
-    font-family: "Roboto Condensed", sans-serif
+    color: $secondary
+    grid-row: 1
+    grid-column: 1
+    align-self: center
+  &__all
+    grid-row: 1
+    grid-column: 2
+    width: 179px
+    height: 44px
+    border: 2px solid $primary
+    border-radius: 22px
+    cursor: pointer
+    justify-self: end
+    align-self: center
+    background-color: transparent
+    color: $primary
+    font-family: Roboto Condensed
     font-style: normal
     font-weight: bold
     font-size: 16px
     line-height: 20px
-    text-align: center
     letter-spacing: 0.2px
-    color: #1565d8
-    display: block
-    margin-left: auto
-    padding: 10px
-    width: 179px
-    min-height: 44px
-    border: 2px solid #1565d8
-    border-radius: 22px
-
-    &-wrapper
-      max-width: 50%
-      flex-basis: 50%
-
-  &__articles
-    &-wrapper
-      display: flex
-      justify-content: space-between
-      flex-basis: 100%
-      margin-top: 40px
-
-.articles__block
-  &-first
-    display: flex
-    flex-direction: column
-    max-width: 556px
-    min-height: 513px
-
-  &-list
-    max-width: 570px
-
-.article
-  &__image
-    height: 100%
+  &-main
     width: 100%
-    object-fit: cover
-
-    &-wrapper
-      max-width: 100%
+    grid-row: 2
+    grid-column: 1
+    &__img
+      width: 100%
       height: 330px
-      overflow: hidden
+      object-fit: cover
       border-radius: 8px
+      overflow: hidden
       margin-bottom: 30px
-
-  &__title
-    font-family: "Roboto Condensed", sans-serif
-    font-style: normal
-    font-weight: bold
-    font-size: 24px
-    line-height: 32px
-    letter-spacing: 0.2px
-    color: #183b56
-    margin-bottom: 16px
-    margin-left: 5px
-
-  &__text
-    font-style: normal
-    font-weight: normal
-    font-size: 18px
-    line-height: 32px
-    color: #5a7184
-    margin-left: 10px
-
-  &__list
-    list-style-type: none
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    min-height: 513px
-
-    &-item
+    &__description
+      font-family: Open Sans
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 32px
+      color: $text-color
+      padding: 0 10px
+      max-height: 100px
+      overflow: auto
+      
+    &__title
+      font-family: Roboto Condensed
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 32px
+      letter-spacing: 0.2px
+      color: $secondary
+      padding: 0 10px
+      margin-bottom: 16px
+  &-other
+    grid-row: 2
+    grid-column: 2
+    &__list
+      padding: 0
+      margin: 0
       display: flex
       justify-content: space-between
-      align-items: center
-
-.item-blog
-  &__wrapper
-    &-image
-      width: 250px
+      flex-direction: column
+    &__item
+      list-style-type: none
       height: 150px
-      overflow: hidden
+      display: flex
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0px
+    &__img
+      width: 250px
+      height: 100%
       border-radius: 8px
+      overflow: hidden
       margin-right: 36px
-
-    &-text
+      object-fit: cover
+    &__info
       display: flex
       flex-direction: column
-      justify-content: space-around
-      width: 267px
-      height: 150px
-      overflow: auto
-
-  &__date
-    font-style: normal
-    font-weight: normal
-    font-size: 14px
-    line-height: 20px
-    color: #5a7184
-    text-transform: uppercase
-
-  &__title
-    font-family: "Roboto", sans-serif
-    font-style: normal
-    font-weight: normal
-    font-size: 22px
-    line-height: 32px
-    letter-spacing: 0.2px
-    color: #183b56
-
-  &__link
-    font-family: "Roboto Condensed", sans-serif
-    font-style: normal
-    font-weight: bold
-    font-size: 16px
-    line-height: 20px
-    letter-spacing: 0.2px
-    color: #1565d8
-    text-transform: uppercase
+      justify-content: space-between
+      padding: 8px 0px
+      max-width: 261px
+    &__link
+      text-decoration: none
+      color: $primary
+      font-family: Roboto Condensed
+      font-style: normal
+      font-weight: bold
+      font-size: 16px
+      line-height: 20px
+      letter-spacing: 0.2px
+      text-transform: uppercase
+    &__date
+      font-family: Open Sans
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 20px
+      color: $text-color
+      text-transform: uppercase
+    &__title
+      font-family: Roboto
+      font-style: normal
+      font-weight: 500
+      font-size: 22px
+      line-height: 32px
+      letter-spacing: 0.2px
+      color: $secondary
+      max-height: 64px
+      overflow: hidden
+      

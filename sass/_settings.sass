@@ -1,61 +1,90 @@
 *
   box-sizing: border-box
-  margin: 0
-  padding: 0
 
 body
-  font-family: "Open Sans", sans-serif
-  color: #183b56
-  position: relative
-  scroll-behavior: smooth
-
-a
-  text-decoration: none
-  color: inherit
-
-a,
-button
-  cursor: pointer
-  outline: none
+  font-family: 'Open Sans', sans-serif
 
 .container
   max-width: 1140px
-  margin: 0 auto
-  width: 100%
-
-.invalid
-  color: #EC1F46
-  flex-basis: 100%
-
-.error
-  color: #EC1F46
-  flex-basis: 100%
+  margin: auto
 
 img
   max-width: 100%
 
-.button
+.invalid
+  color: $red
+  display: block
+
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+  padding: 0
+ul, ol
+  margin: 0
+  padding: 0
+  list-style: none
+a
+  color: inherit
+  text-decoration: none
   cursor: pointer
+input
+  border-radius: 8px
+  min-height: 30px
+  border: none
+  outline: 0
+  box-shadow: none
+  &::-moz-placeholder
+    color: $placeholder
+    font-family: Open Sans
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
 
-label
-  &.invalid
-    position: absolute
-    left: 0
-    bottom: -14px
-    font-size: 11px
-    line-height: 15px
-    margin-left: 5px
+.invalid
+  color: $text-color
+  font-size: 12px
+  font-weight: 600
+  padding: 10px
+  border-radius: 8px
+  background-color: $error
+  border: none
 
-label
-  &.error
-    position: absolute
-    left: 0
-    bottom: -14px
-    font-size: 11px
-    line-height: 15px
-    margin-left: 5px
+  &::-webkit-input-placeholder
+    color: $placeholder
+    font-family: Open Sans
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+  &::-ms-input-placeholder
+    color: $placeholder
+    font-family: Open Sans
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+  &:-ms-input-placeholder
+    color: $placeholder
+    font-family: Open Sans
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
 
-textarea:focus,
-input:focus,
-button:focus
-  outline: none
+// /* полоса прокрутки (скроллбар) */
+// ::-webkit-scrollbar 
+//     width: 6px
+//     height: 4px
+//     background-color: transform
+//     margin-left: 5px
+
+//     /* ползунок скроллбара */
+// ::-webkit-scrollbar-thumb 
+//     background-color: $secondary
+//     border-radius: 9em
+
+// ::-webkit-scrollbar-thumb:hover 
+//     background-color: rgba(230, 54, 54, 0.289)
+// html, body 
+//   scrollbar-color: inherit $primary
+//   scrollbar-width: 6px | thin | none 

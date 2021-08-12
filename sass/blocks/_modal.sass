@@ -1,0 +1,154 @@
+.modal
+  &__wrapper
+    overflow-x: hidden
+    overflow-y: auto
+  &__overlay
+    width: 100vw
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(67, 61, 146, 0.603)
+    z-index: 1000
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.4s
+    &--visible
+      visibility: visible
+      opacity: 1
+  &__dialog
+    position: fixed
+    top: 50%
+    left: 50%
+    min-width: 478px
+    padding: 33px 88px
+    background-color: $secondary
+    transform: translate(-50%, -50%)
+    border-radius: 8px
+    z-index: 1001
+    color: $light
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.2s
+    overflow: auto
+    &--visible
+      visibility: visible
+      opacity: 1
+  &__close
+    position: absolute
+    right: 18px
+    top: 17px
+  &__title
+    color: $light
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+    margin-top: 0
+    text-align: center
+  &__input
+    width: 100%
+    margin-top: 15px
+    background-color: #fff
+    min-height: 36px
+    border: none
+    padding-top: 10px
+    padding-bottom: 10px
+    padding-left: 15px
+    padding-right: 15px
+    font-size: 18px
+  &__input-group
+    position: relative
+    border: none
+  &__message
+    width: 100%
+    min-height: 70px
+    margin-top: 15px
+    border-radius: 8px
+    padding-left: 15px
+    padding-right: 15px
+    padding-top: 10px
+    padding-bottom: 10px
+    outline: 0
+  &__failds
+    font-weight: bold
+    font-size: 12px
+    font-family: Mulish
+    font-style: normal
+    line-height: 15px
+    margin-top: 20px
+    color: #E0E0E0
+    right: 0
+  &__footer
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: flex-start
+    margin-top: 25px
+  &__button
+    margin-top: 15px
+  &__form
+    label#name-error
+      position: absolute
+      top: -36px
+      z-index: 11
+      left: 6%
+      &::after
+        content: ''
+        position: absolute
+        left: 15px
+        bottom: -5px
+        background-color: $error
+        width: 10px
+        height: 10px
+        transform: rotate(45deg)
+    label#phone-error
+      position: absolute
+      top: -49px
+      z-index: 11
+      left: 6%
+      &::after
+        content: ''
+        position: absolute
+        left: 15px
+        bottom: -5px
+        background-color: $error
+        width: 10px
+        height: 10px
+        transform: rotate(45deg)
+    label#email-error
+      position: absolute
+      top: -49px
+      left: 6%
+      width: 92%
+      z-index: 11
+      &::after
+        content: ''
+        position: absolute
+        left: 15px
+        bottom: -5px
+        background-color: $error
+        width: 10px
+        height: 10px
+        transform: rotate(45deg)
+  &__button
+    width: 136px
+    height: 51px
+    padding: 14px 14px
+    border: 2px solid $light
+    border-radius: 8px
+    background-color: transparent
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    text-align: center
+    color: $light
+    cursor: pointer
+    overflow: hidden
+    text-overflow: ellipsis
+
+.overflow-hidden 
+    overflow: hidden

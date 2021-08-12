@@ -1,177 +1,250 @@
 $(document).ready(function () {
-  //Слайдер 1
+  var menuButton = document.querySelector(".menu-button");
+  var closeButton = document.querySelector("#recom #books");
+  menuButton.addEventListener("click", function () {
+    document
+      .querySelector(".nav--mobile--hidden")
+      .classList.toggle("nav__mobile--visible");
+    document.querySelector("body").classList.toggle("body-overflow-hidden");
+});
 
-  var themeSlider = new Swiper(".slider-theme__container", {
 
-    slidesPerColumnFill: 'row',
-    loop: false,
-    navigation: {
-      nextEl: ".slide-button--next",
-      prevEl: ".slide-button--prev"
-    },
-
-    simulateTouch: true,
-    grabCursor: true,
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-      pageUpDown: true,
-    },
-
-    breakpoints: {
-      320: { slidesPerView: 2, slidesPerColumn: 2 },
-      510: { slidesPerView: 3, slidesPerColumn: 2 },
-      767: { slidesPerView: 3, slidesPerColumn: 1, spaceBetween: 0 },
-      1200: { slidesPerView: 4, slidesPerColumn: 1, spaceBetween: 27 }
-    },
-
-  });
-
-  //Слайдер 2
-  var reviewsSlider = new Swiper(".slider-unedited__container", {
-
-    loop: false,
-    navigation: {
-      nextEl: ".unedited__button--next",
-      prevEl: ".unedited__button--prev",
-    },
-    slidesPerView: 5,
-    spaceBetween: 30,
-
-    simulateTouch: true,
-    grabCursor: true,
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-      pageUpDown: true,
-    },
-
-    breakpoints: {
-      200: { slidesPerView: 1 },
-      480: { slidesPerView: 2, spaceBetween: 25 },
-      767: { slidesPerView: 3 },
-      992: { slidesPerView: 4 },
-      1200: { slidesPerView: 5 }
-    },
-  });
-
-  //мобильное меню
-  var menuButton = $(".menu-button");
-  menuButton.on("click", function () {
-    $(".navbar__menu").toggleClass("navbar__menu--visible");
-    $("body").toggleClass("body__no-scroll");
-  });
-
-  //модальное окно
-  var modalButton = $("[data-toggle=modal]");
-  var closeModalButton = $(".modal__close");
-  modalButton.on("click", openModal);
-  closeModalButton.on("click", closeModal);
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key == "Escape") {
-      closeModal(event);
+  $('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { 
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); 
+            $target.focus(); 
+          };
+        });
+      }
     }
   });
 
+  // Like
+  document.querySelectorAll(".icon-like").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      if (button.getAttribute("fill") === "#959EAD") {
+        button.setAttribute("fill", "#DC143C");
+      } else if (button.getAttribute("fill") === "#DC143C") {
+        button.setAttribute("fill", "#959EAD");
+      }
+    });
+  });
+
+  // markbook
+  document.querySelectorAll(".video-like").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      if (button.querySelector("path").getAttribute("fill") === "#1565D8") {
+        button.querySelector("path").setAttribute("fill", "#DC143C");
+      } else if (
+        button.querySelector("path").getAttribute("fill") === "#DC143C"
+      ) {
+        button.querySelector("path").setAttribute("fill", "#1565D8");
+      }
+    });
+  });
+
+
+  // modal
+  let modalButton = $("[data-toggle=modal]");
+  let closeModalButton = $(".modal__close");
+  let maskModal = $(".modal__overlay");
+  modalButton.on("click", openModal);
+  closeModalButton.on("click", closeModal);
+  maskModal.on("click", closeModal);
+
   function openModal() {
-    var modalOverlay = $(".modal__overlay");
-    var modalDialog = $(".modal__dialog");
-    modalOverlay.addClass("modal__overlay--visible");
-    modalDialog.addClass("modal__dialog--visible");
+      const modalOverlay = $(".modal__overlay");
+      const modalDialog = $(".modal__dialog");
+      const overflowHidden = $("body");
+      modalOverlay.addClass("modal__overlay--visible");
+      modalDialog.addClass("modal__dialog--visible");
+      overflowHidden.addClass("overflow-hidden body-padding");
   }
 
   function closeModal(event) {
-    event.preventDefault();
-    var modalOverlay = $(".modal__overlay");
-    var modalDialog = $(".modal__dialog");
-    modalOverlay.removeClass("modal__overlay--visible");
-    modalDialog.removeClass("modal__dialog--visible");
+      event.preventDefault();
+      const modalOverlay = $(".modal__overlay");
+      const modalDialog = $(".modal__dialog");
+      const overflowHidden = $("body");
+      modalOverlay.removeClass("modal__overlay--visible");
+      modalDialog.removeClass("modal__dialog--visible");
+      overflowHidden.removeClass("overflow-hidden body-padding");
   }
 
-
-  $(".form").each(function () {
-    $(this).validate({
-      errorClass: "invalid",
-      messages: {
-        name: {
-          required: "Пожалуйста, введите свое имя",
-          minlength: "Слишком короткое имя",
-        },
-        email: {
-          required: "Напишите ваш email",
-          email: "Формат должен быть name@domain.com.",
-        },
-        phone: {
-          required: "Пожалуйста, введите номер телефона",
-          minlength: "Формат должен быть +7 (000) 000-00-00",
-        },
-      },
-    });
-  });
-  $(document).ready(function () {
-    $(".phone").mask("+7 (000) 000-00-00");
-  });
-
-
-  $(".form__modal").each(function () {
-    $(this).validate({
-      errorClass: "error",
-      messages: {
-        name: {
-          required: "Пожалуйста, введите свое имя",
-          minlength: "Слишком короткое имя",
-        },
-        email: {
-          required: "Напишите ваш email",
-          email: "Формат должен быть name@domain.com.",
-        },
-        phone: {
-          required: "Пожалуйста, введите номер телефона",
-          minlength: "Формат должен быть +7 (000) 000-00-00",
-        },
-      },
-    });
-  });
-
-
-  //видео
-  var player;
-  $(".video__play-big").on("click", function onYouTubeIframeAPIReady() {
-    player = new YT.Player("player", {
-      height: "380",
-      width: "100%",
-      videoId: "RGXpjux1HAA",
-      events: {
-        "onReady": videoPlay,
+  $(document).keyup(function(event) {
+      if (event.key === "Escape" || event.keyCode === 27) {
+          event.preventDefault();
+          const modalOverlay = $(".modal__overlay");
+          const modalDialog = $(".modal__dialog");
+          const overflowHidden = $("body");
+          modalOverlay.removeClass("modal__overlay--visible");
+          modalDialog.removeClass("modal__dialog--visible");
+          overflowHidden.removeClass("overflow-hidden body-padding");
       }
+  });
+
+
+  // form
+  $(".form").each(function() {
+    $(this).validate({
+        errorClass: "invalid",
+        rules: {
+            phone: {
+                minlength: 18,
+            },
+            name: {
+              minlength: 2,
+            },
+        },
+        messages: {
+            name: {
+                required: "Пожалуйста, введите Ваше имя",
+                minlength: "Введите минимум 2 буквы",
+            },
+            email: {
+                required: "Нам нужен Ваш адрес электронной почты, чтобы с Вами связаться",
+                email: "Ваш электронный адрес должен быть в формате name@domain.com",
+            },
+            phone: {
+                required: "Пожалуйста, заполните это поле",
+                minlength: "Пожалуйста, введите номер телефона в формате +7 (999) 999-99-99",
+            },
+        },
     });
-  })
+  });
+  $(".phone").mask("+7 (999) 999-99-99");
+
+  // slider#1
+  const swiperCategory = new Swiper(".category-container", {
+    slidesPerView: "auto",
+    slidesPerColumnFill: "row",
+    navigation: {
+      nextEl: ".category-button--next",
+      prevEl: ".category-button--prev",
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+        spaceBetween: 10,
+      },
+      // when window width is >= 576px
+      576: {
+        slidesPerView: 2,
+        slidesPerColumn: 1,
+        spaceBetween: 25,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 45,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 29,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 26,
+      },
+    },
+  });
+
+  // slider#2
+  const swiperUnreleased = new Swiper(".unreleased-container", {
+    slidesPerView: "auto",
+    navigation: {
+      nextEl: ".unreleased-button--next",
+      prevEl: ".unreleased-button--prev",
+    },
+    keyboard: {
+      enabled: true,
+    },
+  });
+
+  // video
+  $(".video-play-button").on("click", function onYouTubeIframeAPIReady() {
+    player = new YT.Player("main-player", {
+      videoId: "FA1JsSytUQE",
+      events: {
+        onReady: videoPlay,
+      },
+    });
+  });
 
   function videoPlay(event) {
     event.target.playVideo();
+    event.target.setVolume(10);
   }
 
-  // ***********
-  //* scroll to anchor link
-  // ***********
-  $('nav a[href]').click(scrollToAnchor)
+  $(".play-video-1").on("click", function onYouTubeIframeAPIReady() {
+    player = new YT.Player("video-one", {
+      videoId: "hT7zqVtMjTs",
+      events: {
+        onReady: videoPlay,
+      },
+    });
+  });
 
-  function scrollToAnchor(e) {
-    const anchor = e.target;
+  $(".play-video-2").on("click", function onYouTubeIframeAPIReady() {
+    player = new YT.Player("video-two", {
+      videoId: "wWqy4HazMrc",
+      events: {
+        onReady: videoPlay,
+      },
+    });
+  });
 
-    const hash = $(anchor).attr('href');
-    const anchorSection = $(hash);
+  $(".play-video-3").on("click", function onYouTubeIframeAPIReady() {
+    player = new YT.Player("video-three", {
+      videoId: "HUcntb7nQCs",
+      events: {
+        onReady: videoPlay,
+      },
+    });
+  });
 
-    if (!anchorSection) return console.error(`${anchor} - not found`);
 
-    $("html, body").animate({
-      scrollTop: anchorSection.offset().top
-    }, 1000)
+	// прячем кнопку #back-top
+	$("#back-top").hide();
+	
+	// появление/затухание кнопки #back-top
+	$(function (){
+		$(window).scroll(function (){
+			if ($(this).scrollTop() > 100){
+				$('#back-top').fadeIn();
+			} else{
+				$('#back-top').fadeOut();
+			}
+		});
 
-  }
-  /* 
-   * -------------------
-  */
+		// при клике на ссылку плавно поднимаемся вверх
+		$('#back-top a').click(function (){
+			$('body,html').animate({
+				scrollTop:0
+			}, 800);
+			return false;
+		});
+	});
 
 });
